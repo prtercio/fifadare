@@ -17,9 +17,9 @@ dash.controller('JogosCtrl', function($scope, $state, $localStorage, Popup, Chat
 
     var refjogos = firebase.database().ref('fifadare/users/'+key+'/jogos');
     refjogos.once("value").then(function(snapshot) {
-    	$scope.$apply(function(){
+    	//$scope.$apply(function(){
       		$scope.jogos = snapshot.val();
-      	});     
+      	//});     
     });  
 
 	/*

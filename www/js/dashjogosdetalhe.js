@@ -1,9 +1,9 @@
 'Use Strict';
 var dashdetalle = angular.module('App.DashJogosDetalle', []);
 
-dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorage, Popup, Chats, $stateParams, Utils, $window) {
+dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorage, Popup, Chats, $stateParams, Utils, $window, idJogo, $ionicNavBarDelegate) {
 
-
+  $ionicNavBarDelegate.showBackButton(true);
     console.log("camera "+navigator.camera);
 
   var itemList=[];
@@ -13,9 +13,9 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
   var data;
   var key = localStorage.getItem('key');
   $scope.verPontos = false;
-  $scope.chat = "jogo"+$stateParams.chatId; 
-  $scope.jogoNome = "Jogo "+$stateParams.chatId;
-  console.log("jogo: "+$stateParams.chatId);
+  $scope.chat = "jogo"+idJogo; 
+  $scope.jogoNome = "Jogo "+idJogo;
+  console.log("jogo: "+idJogo);
   /*
     var jogo = $scope.chat.lastText;
   

@@ -4,7 +4,17 @@
   The FriendsCtrl pulls data from the Friends service (service.js)
   The Friends service returns an array of friend data
 -->
-<ion-view view-title="{{jogoNome}}">
+<ion-view view-title="{{jogoNome}}" >
+<!--
+<ion-nav-buttons>
+<ion-nav-bar>
+  <ion-nav-back-button class="button-clear"
+    ng-click="myGoBack()">
+    <i class="ion-arrow-left-c"></i> Back
+  </ion-nav-back-button>
+</ion-nav-bar>
+</ion-nav-buttons>
+-->
   <ion-content class="padding">
   
     <div ng-if="detalheJogo.estado == 'Pendente'">
@@ -73,15 +83,6 @@
     </main>
 
     -->
-
-    <div id="spin"></div>
-  <h1>Firepano</h1>
-  <input class="hidden" type="file" accept="image/*" capture="camera" id="file-upload">
-  <br/>
-  <img class="pano" id="pano" />
-
-
-
 
 
 

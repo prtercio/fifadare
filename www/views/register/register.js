@@ -10,18 +10,13 @@ angular.module('App').controller('registerController', function($scope, $state, 
       password: ''
     };
   })
-
   
   var jogos = {
     "jogo1":{"estado":"Pendente","jogo":1, "pontos":0},
     "jogo2":{"estado":"Pendente", "jogo":2, "pontos":0},
     "jogo3":{"estado":"Pendente","jogo":3,"pontos":0}
   }
-  
-  
-
-
-
+    
   $scope.register = function(user) {
     //Check if form is filled up.
     if (angular.isDefined(user)) {
@@ -41,6 +36,7 @@ angular.module('App').controller('registerController', function($scope, $state, 
                 dateCreated: Date(),
                 provider: 'Firebase',
                 pontos: 0,
+                jogosQuantidade:0,
                 jogos: jogos
 
               }).then(function(response) {

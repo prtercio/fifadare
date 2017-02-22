@@ -59,14 +59,10 @@ angular.module('App', ['ionic', 'App.controllers', 'App.Dash', 'App.services', '
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
 
-  // Ionic uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
-  // Set up the various states which the app can be in.
-  // Each state's controller can be found in controllers.js
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+  $ionicConfigProvider.platform.android.navBar.alignTitle('center');
   $stateProvider
-
   // setup an abstract state for the tabs directive
     .state('tab', {
     url: '/tab',
@@ -96,13 +92,18 @@ angular.module('App', ['ionic', 'App.controllers', 'App.Dash', 'App.services', '
       }
     })
     .state('tab.chat-detail', {
-      url: '/chats/:chatId',
+      url: '/chats/:jogoId',
       views: {
         'tab-chats': {
           templateUrl: 'views/chat-detail.html',
-          controller: 'JogosDetalheCtrl'
+          controller: 'JogosDetalheCtrl as idJogo'
         }
-      }
+      },
+        resolve:{
+          idJogo: function($stateParams){
+            return $stateParams.jogoId;
+          }
+        }
     })
 
   .state('tab.account', {
