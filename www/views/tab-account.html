@@ -23,6 +23,35 @@
     </form>
     </div>
     <br />
+
+    <div class="list">
+
+      <a class="item item-icon-left">
+        <i class="icon ion-email"></i>
+        {{email}}
+      </a>  
+
+      <a class="item item-icon-left">
+        <i class="icon ion-ios-game-controller-b"></i>
+        {{gamertag}}
+      </a> 
+     
+      <a class="item item-icon-left">
+        <i class="icon ion-ios-football"></i>
+        Jogos
+        <span class="badge badge-positive">{{jogosQuantidade}}</span>
+      </a>
+
+      <a class="item item-icon-left">
+        <i class="icon ion-android-checkbox-outline"></i>
+        Pontos
+        <span class="badge badge-positive">{{pontos}}</span>
+      </a>         
+  
+
+      
+
+    </div>
     
    <button class="button button-block button-assertive" ng-click="logout()">Logout</button>
    <br />

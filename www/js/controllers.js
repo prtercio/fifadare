@@ -43,6 +43,9 @@ tab.controller('AccountCtrl', function($scope, $state, $localStorage, Popup) {
       //Set the variables to be shown on home.html
       $scope.email = $localStorage.account.email;
       $scope.provider = $localStorage.account.provider;
+      $scope.gamertag = $localStorage.account.gamertag;
+      $scope.pontos = $localStorage.account.pontos;
+      $scope.jogosQuantidade = $localStorage.account.jogosQuantidade;
 
       if($localStorage.account.email == "benbaodan@outlook.com"){
         $scope.agregarRegra = true;
