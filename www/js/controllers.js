@@ -1,6 +1,7 @@
 'Use Strict';
 var tab = angular.module('App.controllers', []);
 
+/*
 tab.controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -14,11 +15,13 @@ tab.controller('ChatsCtrl', function($scope, Chats) {
   $scope.remove = function(chat) {
     Chats.remove(chat);
   };
-});
+});*/
 
+/*
 tab.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);
 })
+*/
 
 tab.controller('AccountCtrl', function($scope, $state, $localStorage, Popup) {
   $scope.settings = {

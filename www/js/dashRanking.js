@@ -7,13 +7,15 @@ dashRanking.controller('RankingCtrl', function($scope, $state, $localStorage, Po
 
 	var refTodosjogos = firebase.database().ref('fifadare/users');
     refTodosjogos.orderByChild('pontos').once("value").then(function(snapshot) {
-      $scope.jogos = snapshot.val(); 
-       snapshot.forEach(function(minisnapshot) {
+      $scope.$apply(function(){
+        $scope.jogos = snapshot.val(); 
+          snapshot.forEach(function(minisnapshot) {
           	console.log(minisnapshot.val().pontos);
-          	ranking.push({"gamertag":minisnapshot.val().gamertag, "quantidade":minisnapshot.val().jogosQuantidade, "pontos":minisnapshot.val().pontos})
-       });
-      
-    });  
+          
+          	   ranking.push({"gamertag":minisnapshot.val().gamertag, "quantidade":minisnapshot.val().jogosQuantidade, "pontos":minisnapshot.val().pontos})
+          });
+       });      
+      });  
     console.log(ranking);
     $scope.resultado = ranking;
 });
