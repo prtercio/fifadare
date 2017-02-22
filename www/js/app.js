@@ -62,6 +62,7 @@ angular.module('App', ['ionic', 'App.controllers', 'App.Dash', 'App.services', '
 
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
   $ionicConfigProvider.platform.android.navBar.alignTitle('center');
+  $ionicConfigProvider.platform.android.tabs.position("bottom");
   $stateProvider
   // setup an abstract state for the tabs directive
     .state('tab', {

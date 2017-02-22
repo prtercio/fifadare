@@ -19,8 +19,6 @@
   
     <div ng-if="detalheJogo.estado == 'Pendente'">
     <!-- <img ng-src="{{chat.face}}" style="width: 64px; height: 64px"> -->
-    <h4 class="center"> Selecione aqui as consquistas do {{jogoNome}}</h4>
-    <br />
 <!--
      <form name="regraSend" novalidate ng-submit="regraSend.$valid && enviarregra(mySelectA)">
     <select ng-model="mySelect" ng-options="item.titulo for item in regra"></select>
@@ -37,10 +35,19 @@
     <input type="submit" value="Enviar" class="button button-block button-positive" ng-disabled="regraSend.$invalid" />
     <form>
     -->
-  <select  ng-model="blisterPackTemplateSelected" ng-change="changedValue(blisterPackTemplateSelected)" 
+    <p>Selecione uma ou mais conquistas:</p>
+    <div class="list">
+            <label class="item item-input item-select">
+                <div class="input-label">
+                  Conquistas:
+                </div>
+  <select class="styled-select" ng-model="blisterPackTemplateSelected" ng-change="changedValue(blisterPackTemplateSelected)" 
     data-ng-options="blisterPackTemplate as blisterPackTemplate.titulo for blisterPackTemplate in blisterPackTemplates">
-    <option value="">Conquista:</option>
+    <!--<option value="">Conquista:</option> -->
   </select>
+  </label>
+  </div>
+
   <br />
   <br />
   {{itemList}} 

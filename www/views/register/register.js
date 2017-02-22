@@ -101,7 +101,8 @@ angular.module('App').controller('registerController', function($scope, $state, 
       var account = response.val();
       $localStorage.account = account;
     });
-    $state.go('tab.dash');
+    //$state.go('tab.dash');
+    $state.go('login');
   };
 
 });

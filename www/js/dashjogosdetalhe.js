@@ -40,8 +40,10 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
 
   	var ref = firebase.database().ref("fifadare/regra");
   	ref.once("value").then(function(snapshot) {
-  	   $scope.regra = snapshot.val(); 
-  	   $scope.blisterPackTemplates=snapshot.val();
+       $scope.$apply(function(){
+    	   $scope.regra = snapshot.val(); 
+    	   $scope.blisterPackTemplates=snapshot.val();
+       });
   	});
 
   	$scope.enviarPontos = function() {
