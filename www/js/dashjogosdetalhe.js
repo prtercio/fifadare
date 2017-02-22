@@ -66,7 +66,7 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
         
         firebase.database().ref().child('fifadare/users/'+key+'/jogos/'+$scope.chat).update({
           estado:"Enviado",
-          jogo: parseInt($stateParams.chatId),
+          jogo: idJogo,
           pontos: $scope.suma,
           conquistas:conquistas
         }).then(function(response) {
