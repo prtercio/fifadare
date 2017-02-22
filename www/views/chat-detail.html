@@ -1,0 +1,105 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{jogoNome}}">
+  <ion-content class="padding">
+  
+    <div ng-if="detalheJogo.estado == 'Pendente'">
+    <!-- <img ng-src="{{chat.face}}" style="width: 64px; height: 64px"> -->
+    <h4 class="center"> Selecione aqui as consquistas do {{jogoNome}}</h4>
+    <br />
+<!--
+     <form name="regraSend" novalidate ng-submit="regraSend.$valid && enviarregra(mySelectA)">
+    <select ng-model="mySelect" ng-options="item.titulo for item in regra"></select>
+
+    <p> age of selected item is : {{mySelect.pontos}} </p>
+      <br />
+        <br />
+       <select ng-model="mySelectA" ng-options="key as value.titulo for (key , value) in regra"></select>
+       <p> age of selected item is : {{mySelectA.pontos}} </p>
+        <br />
+        <br />
+     <select ng-model="mySelectB" ng-options="item.titulo group by item.pontos for item in regra track by item.titulo"></select>
+    <p> age of selected item is : {{mySelectA}} </p>
+    <input type="submit" value="Enviar" class="button button-block button-positive" ng-disabled="regraSend.$invalid" />
+    <form>
+    -->
+  <select  ng-model="blisterPackTemplateSelected" ng-change="changedValue(blisterPackTemplateSelected)" 
+    data-ng-options="blisterPackTemplate as blisterPackTemplate.titulo for blisterPackTemplate in blisterPackTemplates">
+    <option value="">Conquista:</option>
+  </select>
+  <br />
+  <br />
+  {{itemList}} 
+
+  <ion-list>
+    <ion-item ng-repeat="shop in items" class="item item-icon-left"  >
+      <i class="icon ion-checkmark"></i>
+      <h2>{{shop[0]}} Pontos: {{shop[1]}}</h2>
+      <ion-option-button class="button-assertive" ng-click="removeLista(shop)">
+        Delete
+      </ion-option-button>
+    </ion-item>  
+  </ion-list>
+<br />
+  <div class="center" ng-if="verPontos">
+  <h5>Total de Pontos da Partida: <strong class="verde">{{suma}}<strong></h5>
+  </div>
+  <br />
+
+  <ion-checkbox ng-model="checked" ng-show="verPontos" >Já revisei todas as conquistas.</ion-checkbox>
+  <br />
+
+<!--
+  <main class="mdl-layout__content mdl-color--grey-100">
+      <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
+
+        <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop">
+          <div class="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white">
+            <h2 class="mdl-card__title-text">Upload a file</h2>
+          </div>
+          <div class="mdl-card__supporting-text mdl-color-text--grey-600" id="messagesDiv">
+            <p>Selecione um archivo.</p>
+            <h6>Choose File</h6>
+            <input type="file" id="file" name="file" ng-model="image"/>
+            <h6>File URL:</h6>
+            <span id="linkbox"></span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    -->
+
+    <div id="spin"></div>
+  <h1>Firepano</h1>
+  <input class="hidden" type="file" accept="image/*" capture="camera" id="file-upload">
+  <br/>
+  <img class="pano" id="pano" />
+
+
+
+
+
+
+  <br />
+  <button class="button button-block button-balanced" ng-show="verPontos" ng-disabled="!checked" ng-click="enviarPontos()">Enviar Conquista</button>
+  </div>
+  <div ng-if="detalheJogo.estado == 'Enviado'">
+    <h5 class="center vermelho">Este jogo já foi enviado.</h5>
+    <ion-item class="item">
+      <h2 class="center verde">Pontos: {{detalheJogo.pontos}}</h2>
+    </ion-item>
+    <h5 class="center">Detalle das conquistas:</h5>
+    <ion-list>
+      <ion-item ng-repeat="detalhe in detalheJogo.conquistas track by $index">
+        <p>{{detalhe}}</p>
+      </ion-item>
+    </ion-list>
+
+  </div>
+</ion-content>
+</ion-view>

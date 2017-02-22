@@ -1,0 +1,16 @@
+<ion-view view-title="Ranking">
+	<ion-content class="padding">
+		<div class="row">		
+			<div class="col col-10"><strong>#</strong></div>
+			<div class="col col-50"><strong>Gamertag</strong></div>
+			<div class="col col-10"><strong>J</strong></div>
+			<div class="col"><strong>Pontos</strong></div>			
+		</div>
+		<div class="row" ng-repeat="value in resultado | orderBy:'pontos':true">
+			<div class="col col-10">{{$index + 1}}</div>
+			<div class="col col-50">{{value.gamertag}}</div>
+			<div class="col col-10">{{value.quantidade}}</div>
+			<div class="col">{{value.pontos}}</div>
+			</div>		
+	</ion-content>
+</ion-view>

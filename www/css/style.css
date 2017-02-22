@@ -1,0 +1,33 @@
+img.resize{
+    width:200px; /* you can use % */
+    height: auto;
+}
+
+.verde{
+	color: green;
+}
+
+.vermelho{
+	color: red;
+}
+
+.right {
+  float: right;
+}
+
+.center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.pano {
+  height: 85%;
+  max-height: 85%;
+}
+
+#spin {
+  height: 60px;
+}
