@@ -28,6 +28,8 @@ tab.controller('AccountCtrl', function($scope, $state, $localStorage, Popup) {
     enableFriends: true
   };
 
+  var key = localStorage.getItem('key');
+
   $scope.$on('$ionicView.enter', function() {
     //Check if there's an authenticated user, if there is non, redirect to login.
     if(firebase.auth().currentUser) {
@@ -47,8 +49,16 @@ tab.controller('AccountCtrl', function($scope, $state, $localStorage, Popup) {
       $scope.email = $localStorage.account.email;
       $scope.provider = $localStorage.account.provider;
       $scope.gamertag = $localStorage.account.gamertag;
-      $scope.pontos = $localStorage.account.pontos;
-      $scope.jogosQuantidade = $localStorage.account.jogosQuantidade;
+
+      var ref = firebase.database().ref("fifadare/users/"+key);
+      ref.once("value").then(function(snapshot) {
+         $scope.$apply(function(){
+            $scope.games = snapshot.val(); // {first:"Ada",last:"Lovelace"}
+            $scope.pontos = $scope.games.pontos;
+            $scope.jogosQuantidade = $scope.games.jogosQuantidade;
+         });
+      });
+     
 
       if($localStorage.account.email == "benbaodan@outlook.com"){
         $scope.agregarRegra = true;

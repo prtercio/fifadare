@@ -12,9 +12,11 @@ angular.module('App').controller('registerController', function($scope, $state, 
   })
   
   var jogos = {
-    "jogo1":{"estado":"Pendente","jogo":1, "pontos":0},
-    "jogo2":{"estado":"Pendente", "jogo":2, "pontos":0},
-    "jogo3":{"estado":"Pendente","jogo":3,"pontos":0}
+    "jogo1":{"estado":"Próximo","jogo":1,"pontos":0, "bloqueado":false},
+    "jogo2":{"estado":"Próximo","jogo":2,"pontos":0, "bloqueado":true},
+    "jogo3":{"estado":"Próximo","jogo":3,"pontos":0, "bloqueado":true},
+    "jogo4":{"estado":"Próximo","jogo":4,"pontos":0, "bloqueado":true},
+    "jogo5":{"estado":"Próximo","jogo":5,"pontos":0, "bloqueado":true}
   }
     
   $scope.register = function(user) {
@@ -36,7 +38,7 @@ angular.module('App').controller('registerController', function($scope, $state, 
                 dateCreated: Date(),
                 provider: 'Firebase',
                 pontos: 0,
-                jogosQuantidade:0,
+                jogosQuantidade:0,                
                 jogos: jogos
 
               }).then(function(response) {

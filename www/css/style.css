@@ -3,12 +3,51 @@ img.resize{
     height: auto;
 }
 
+.borderGris{
+  border: 1px;
+  border-color: grey;
+  border-style: solid; 
+}
+ 
+
 .verde{
 	color: green;
 }
 
+.item.item-verde {
+  border-color: green;
+}
+
+.bgverde{
+  background: #CCFFCC;
+}
+
+.bgazul{
+    background: #E0FFFF;
+}
+
+.bgbisque{
+  background: #FFFFCC;
+}
+
+.bgazure{
+  background:  #F8F8FF;
+}
+
 .vermelho{
 	color: red;
+}
+
+.gris{
+  color: grey;
+}
+
+.azul{
+  color: blue;
+}
+
+.item.item-azul {
+  border-color: blue;
 }
 
 .right {

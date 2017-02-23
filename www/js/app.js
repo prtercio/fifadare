@@ -40,7 +40,8 @@ angular.module('App', ['ionic', 'App.controllers', 'App.Dash', 'App.services', '
     welcomeBack: "Welcome back! It seems like you should still be logged in. Logging you in now.",
     manyRequests: "Sorry, but we\'re still proccessing your previous login. Please try again later.",
     PontosSuccess:"Os pontos foram enviados com sucesso!",
-    SelecioneConquista: "Antes de enviar selecione uma ou mais conquistas!"
+    SelecioneConquista: "Antes de enviar selecione uma ou mais conquistas!",
+    concluir50Jogos:"Os pontos foram enviados com sucesso!   Parabéns, você concluiu os 50 jogos!!!"
   })
 
 .run(function($ionicPlatform) {

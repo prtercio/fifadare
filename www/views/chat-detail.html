@@ -17,7 +17,7 @@
 -->
   <ion-content class="padding">
   
-    <div ng-if="detalheJogo.estado == 'Pendente'">
+    <div ng-if="detalheJogo.estado == 'Próximo'">
     <!-- <img ng-src="{{chat.face}}" style="width: 64px; height: 64px"> -->
 <!--
      <form name="regraSend" novalidate ng-submit="regraSend.$valid && enviarregra(mySelectA)">
@@ -47,25 +47,28 @@
   </select>
   </label>
   </div>
-
-  <br />
-  <p class="center">Conquistas selecionadas: </p>
+  <div ng-if="verPontos">
+  <h5 class="center" >Conquistas selecionadas: </h5>
+  <p class="gris">Elimine um elemento movendo a conquista da direita para a esquerda e presionando o botão Delete.</p>
+  </div>
   <ion-list>
-    <ion-item ng-repeat="shop in items" class="item item-icon-left"  >
-      <i class="icon ion-checkmark"></i>
-      <h2>{{shop[0]}} Pontos: {{shop[1]}}</h2>
+    <ion-item ng-repeat="shop in items" class="item item-icon-left item-verde"  >
+      <i class="icon ion-checkmark verde"></i>
+      <h2 class="verde">{{shop[0]}} Pontos: {{shop[1]}}</h2>
       <ion-option-button class="button-assertive" ng-click="removeLista(shop)">
         Delete
       </ion-option-button>
     </ion-item>  
   </ion-list>
 <br />
-  <div class="center" ng-if="verPontos">
-  <h5>Total de Pontos das Conquistas selecionadas: <strong class="verde">{{suma}}<strong></h5>
+<div class="center" ng-if="verPontos">
+    <h5>Total de Pontos das Conquistas selecionadas: <strong class="verde">{{suma}}</strong></h5>
+</div>
+<br />
+<div ng-show="verPontos">
+  <p class="gris">Confirme antes de enviar:</p>
+  <ion-checkbox ng-model="checked"  class="azul item-azul">Confirmar.</ion-checkbox>
   </div>
-  <br />
-
-  <ion-checkbox ng-model="checked" ng-show="verPontos" >Já revisei todas as conquistas.</ion-checkbox>
   <br />
 
 <!--
@@ -88,20 +91,16 @@
     </main>
 
     -->
-
-
-
-  <br />
   <button class="button button-block button-balanced" ng-show="verPontos" ng-disabled="!checked" ng-click="enviarPontos()">Enviar Conquista</button>
   </div>
-  <div ng-if="detalheJogo.estado == 'Enviado'">
+  <div ng-if="detalheJogo.estado == 'Terminado'">
     <h5 class="center vermelho">Este jogo já foi enviado.</h5>
     <ion-item class="item">
       <h2 class="center verde">Pontos: {{detalheJogo.pontos}}</h2>
     </ion-item>
-    <h5 class="center">Detalle das conquistas:</h5>
+    <h5 class="center">Detalhe das conquistas:</h5>
     <ion-list>
-      <ion-item ng-repeat="detalhe in detalheJogo.conquistas track by $index">
+      <ion-item ng-repeat="detalhe in detalheJogo.conquistas track by $index" class="verde">
         <p>{{detalhe}}</p>
       </ion-item>
     </ion-list>

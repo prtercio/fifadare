@@ -24,17 +24,27 @@
     </ion-list>
    -->
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="jogo in jogos" type="item-text-wrap" href="#/tab/chats/{{jogo.jogo}}">
-      <img src="img/fifa.png"/>
-        <h3>Jogo {{jogo.jogo}}</h3>
-        <h3 ng-class="(jogo.estado=='Enviado') ? 'verde' : 'vermelho'">{{jogo.estado}}</h3>
-        <p class="right" ng-if="jogo.pontos > 0">Pontos: <strong>{{jogo.pontos}}</strong></p>
-        <i class="icon ion-chevron-right icon-accessory"></i>
-
-        <ion-option-button class="button-assertive" ng-click="remove(chat)">
-          Delete
-        </ion-option-button>
-      </ion-item>
+      <a class="item item-icon-left item-icon-right" ng-repeat="jogo in jogos" type="item-text-wrap" href="#/tab/chats/{{jogo.jogo}}" ng-if="!jogo.bloqueado">
+          <!-- <img src="img/fifa.png"/>
+          <h3>Jogo {{jogo.jogo}}</h3>
+          <h3 ng-class="(jogo.estado=='Enviado') ? 'verde' : 'vermelho'">{{jogo.estado}}</h3>
+          <span>
+          <p class="right" ng-if="jogo.pontos > 0">Pontos: <strong>{{jogo.pontos}}</strong></p>
+          </span>
+          <i class="icon ion-chevron-right icon-accessory"></i>   -->
+                        
+            <i class="icon ion-ios-game-controller-a"></i>
+            <!--
+            <h3>Jogo {{jogo.jogo}}</h3>
+            <div ng-class="(jogo.estado=='Enviado') ? 'verde' : 'vermelho'">{{jogo.estado}}</div>
+            -->
+            <strong>Jogo {{jogo.jogo}}</strong>
+            <in ng-class="(jogo.estado=='Terminado') ? 'verde' : 'vermelho'">{{jogo.estado}}</in>
+            <span class="item-note">
+               <p class="right" ng-if="jogo.pontos > 0">Pontos: <strong>{{jogo.pontos}}</strong></p>
+            </span>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+      </a>
     </ion-list>
 
   </ion-content>

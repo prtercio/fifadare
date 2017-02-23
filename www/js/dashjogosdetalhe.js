@@ -6,6 +6,7 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
   $ionicNavBarDelegate.showBackButton(true);
     console.log("camera "+navigator.camera);
 
+
   var itemList=[];
   $scope.suma = 0; 
   var jogosDisputados = 0;
@@ -35,8 +36,7 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
     refjogos.once("value").then(function(snapshot) {
       $scope.detalheJogo = snapshot.val();    
     });  
-  
-  	
+    	
 
   	var ref = firebase.database().ref("fifadare/regra");
   	ref.once("value").then(function(snapshot) {
@@ -67,24 +67,43 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
         }
         
         firebase.database().ref().child('fifadare/users/'+key+'/jogos/'+$scope.chat).update({
-          estado:"Enviado",
+          estado:"Terminado",
           jogo: idJogo,
           pontos: $scope.suma,
           conquistas:conquistas
         }).then(function(response) {
 
-
            firebase.database().ref().child('fifadare/users/'+key).update({
              pontos: pontosSomados + $scope.suma,
              jogosQuantidade: jogosDisputados + 1
             }).then(function(response) {
-                data = new Date();
-                calcularTempo();
-                 Utils.message(Popup.successIcon, Popup.PontosSuccess).then(function() {
-                    console.log("Pontos enviados.");
+                var sumaNum = parseInt(idJogo) +1;
+                var proximoJogo = "jogo"+sumaNum;
+
+                if(idJogo < 5){
+                   console.log("menor que 6");
+                  firebase.database().ref().child('fifadare/users/'+key+'/jogos/'+proximoJogo).update({
+                    bloqueado:false
+                  }).then(function(response) {
+                    data = new Date();
+                    calcularTempo();
+                    Utils.message(Popup.successIcon, Popup.PontosSuccess).then(function() {                      
+                      $state.go('tab.chats');
+                      $window.location.reload();
+                      
+                    })
+                  });
+
+                }  else { 
+
+                  data = new Date();
+                  calcularTempo();
+                  Utils.message(Popup.successIcon, Popup.concluir50Jogos).then(function() {                   
+                    $state.go('tab.chats');
                     $window.location.reload();
-                    $state.go('tab.chats', {}, {reload: true});
-                  })
+                  });
+
+                }// if
           });
         }); 
 
