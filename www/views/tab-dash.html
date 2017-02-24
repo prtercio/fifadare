@@ -4,14 +4,16 @@
 			<div class="col col-10"><strong>#</strong></div>
 			<div class="col col-50"><strong>Gamertag</strong></div>
 			<div class="col col-10"><strong>J</strong></div>
-			<div class="col"><strong>Pontos</strong></div>			
+			<div class="col"><strong>Pontos</strong></div>
+			<div class="col-10"></div>			
 		</div>
 		<div class="borderGris bgazure">
 		<div class="row" ng-repeat="value in resultado | orderBy:'pontos':true">		
 			<div class="col col-10" ng-class="{bgverde:$index==0,bgazul:$index==1, bgbisque:$index==2, bgazure:$index>=3}">{{$index + 1}}</div>
 			<div class="col col-50" ng-class="{bgverde:$index==0,bgazul:$index==1, bgbisque:$index==2, bgazure:$index>=3}">{{value.gamertag}}</div>
 			<div class="col col-10" ng-class="{bgverde:$index==0,bgazul:$index==1, bgbisque:$index==2, bgazure:$index>=3}">{{value.quantidade}}</div>
-			<div class="col" ng-class="{bgverde:$index==0,bgazul:$index==1, bgbisque:$index==2, bgazure:$index>=3}">{{value.pontos}}</div>	
+			<div class="col" ng-class="{bgverde:$index==0,bgazul:$index==1, bgbisque:$index==2, bgazure:$index>=3}">{{value.pontos}}</div>
+			<div class="col" ng-class="{bgverde:$index==0,bgazul:$index==1, bgbisque:$index==2, bgazure:$index>=3}"><a class="icon ion-arrow-right-a"></a></div>
 		</div>	
 		</div>
 	</ion-content>

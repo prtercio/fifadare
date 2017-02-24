@@ -127,6 +127,12 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
       var encontrouPlacar5a0 = buscarConflictos("Placar 5 a 0");
       var encontrouPlacar6a0 = buscarConflictos("Placar 6 a 0 ou mais");
       var vitoriaOponenteTorneio = buscarConflictos("Vitória Oponente Torneio");
+      var encontrouPosse70 = buscarConflictos("Posse de Bola 70%");
+      var encontrouPosse80 = buscarConflictos("Posse de Bola 80%");
+      var encontrouPosse90 = buscarConflictos("Posse de Bola 90%");
+      var encontrouSequencia3 = buscarConflictos("Sequencia 3 Vitórias");
+      var encontrouSequencia4 = buscarConflictos("Sequencia 4 Vitórias");
+      var encontrouSequencia5 = buscarConflictos("Sequencia 5 Vitórias");
 
             // si nao encontra o item
     	if(buscarItemIgual(item) === false){
@@ -293,6 +299,10 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
         if(item.titulo === "Posse de Bola 70%"){
           if(encontrouDerrota){
             mensagemConflito();
+          } else if(encontrouPosse80){
+            mensagemConflito();
+          } else if(encontrouPosse90){
+            mensagemConflito();
           } else {            
             agregarDatos();
           }
@@ -302,6 +312,10 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
         if(item.titulo === "Posse de Bola 80%"){
           if(encontrouDerrota){
             mensagemConflito();
+          } else if(encontrouPosse70){
+            mensagemConflito();
+          } else if(encontrouPosse90){
+            mensagemConflito();
           } else {            
             agregarDatos();
           }
@@ -310,6 +324,10 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
         //__________________________________________________________________________// Posse 90%
         if(item.titulo === "Posse de Bola 90%"){
           if(encontrouDerrota){
+            mensagemConflito();
+          } else if(encontrouPosse70){
+            mensagemConflito();
+          } else if(encontrouPosse80){
             mensagemConflito();
           } else {            
             agregarDatos();
@@ -322,16 +340,24 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
             mensagemConflito();
           } else if(encontrouEmpate){
             mensagemConflito();
-          } else {            
+          } else if(encontrouSequencia4){
+            mensagemConflito();
+          } else if(encontrouSequencia5){
+            mensagemConflito();
+          }else {            
             agregarDatos();
           }
         }                                           
        
        //__________________________________________________________________________// 4 Vitórias
         if(item.titulo === "Sequencia 4 Vitórias"){
-          if(encontrouDerrota){
+           if(encontrouDerrota){
             mensagemConflito();
           } else if(encontrouEmpate){
+            mensagemConflito();
+          } else if(encontrouSequencia3){
+            mensagemConflito();
+          } else if(encontrouSequencia5){
             mensagemConflito();
           }else {            
             agregarDatos();
@@ -340,9 +366,13 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
         
         //__________________________________________________________________________// 5 Vitórias
         if(item.titulo === "Sequencia 5 Vitórias"){
-          if(encontrouDerrota){
+           if(encontrouDerrota){
             mensagemConflito();
           } else if(encontrouEmpate){
+            mensagemConflito();
+          } else if(encontrouSequencia3){
+            mensagemConflito();
+          } else if(encontrouSequencia4){
             mensagemConflito();
           }else {            
             agregarDatos();
