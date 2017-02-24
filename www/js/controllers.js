@@ -29,6 +29,7 @@ tab.controller('AccountCtrl', function($scope, $state, $localStorage, Popup) {
   };
 
   var key = localStorage.getItem('key');
+  var imageSelecionada;
 
   $scope.$on('$ionicView.enter', function() {
     //Check if there's an authenticated user, if there is non, redirect to login.
@@ -116,4 +117,40 @@ tab.controller('AccountCtrl', function($scope, $state, $localStorage, Popup) {
                
               });           
    }
+
+
+   $(document).ready(function(){
+    $('#uploadButton').hide();
+   });
+
+   $('#file').on("change", function(event){
+    imageSelecionada = event.target.files[0];
+    console.log(imageSelecionada)
+    $('#uploadButton').show();
+   })
+
+   $scope.uploadFile = function(){
+    var filename = imageSelecionada.name;
+    var storageRef = firebase.storage().ref('/primeirotorneio50/'+filename);
+
+    // Upload the file to the path 'images/rivers.jpg'
+    // We can use the 'name' property on the File API to get our file name
+    var uploadTask = storageRef.put(imageSelecionada);
+
+    // Register three observers:
+    // 1. 'state_changed' observer, called any time the state changes
+    // 2. Error observer, called on failure
+    // 3. Completion observer, called on successful completion
+    uploadTask.on('state_changed', function(snapshot){
+      // Observe state change events such as progress, pause, and resume
+      // See below for more detail
+    }, function(error) {
+      // Handle unsuccessful uploads
+    }, function() {
+      var downloadURL = uploadTask.snapshot.downloadURL;
+      console.log(downloadURL);
+    });    
+   }
+
+
 });
