@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('App', ['ionic', 'App.controllers', 'App.Dash', 'App.services', 'App.DashJogos', 'App.DashJogosDetalle','App.DashRanking','ngStorage', 'ngCordovaOauth'])
+angular.module('App', ['ionic', 'App.controllers', 'App.Dash', 'App.services', 'App.DashJogos', 'App.DashJogosDetalle','App.DashRanking', 'App.RankingJogosDetalhe', 'App.RankingJogos', 'ngStorage', 'ngCordovaOauth'])
 
 .constant('Social', {
     facebookAppId: "1025234637591184",
@@ -86,6 +86,36 @@ angular.module('App', ['ionic', 'App.controllers', 'App.Dash', 'App.services', '
       }
     }
   })
+  .state('tab.rankingjogos', {
+      url: '/dash/:jogoId',
+      views: {
+        'tab-dash': {
+          templateUrl: 'views/rankingjogos.html',
+          controller: 'RankingJogosCtrl as idRankJogo'
+        }
+      },
+        resolve:{
+          idRankJogo: function($stateParams){
+            return $stateParams.jogoId;
+          }
+        }
+  })
+
+  .state('tab.rankingjogosdetalhe', {
+      url: '/rankingjogosdetalhe/:jogoId',
+      views: {
+        'tab-dash': {
+          templateUrl: 'views/rankingjogosdetalhe.html',
+          controller: 'RankingJogosDetalheCtrl as idJogoDetalhe'
+        }
+      },
+        resolve:{
+          idJogoDetalhe: function($stateParams){
+            return $stateParams.jogoId;
+          }
+        }
+  })
+
 
   .state('tab.chats', {
       url: '/chats',
@@ -95,8 +125,8 @@ angular.module('App', ['ionic', 'App.controllers', 'App.Dash', 'App.services', '
           controller: 'JogosCtrl'
         }
       }
-    })
-    .state('tab.chat-detail', {
+  })
+  .state('tab.chat-detail', {
       url: '/chats/:jogoId',
       views: {
         'tab-chats': {
@@ -104,12 +134,12 @@ angular.module('App', ['ionic', 'App.controllers', 'App.Dash', 'App.services', '
           controller: 'JogosDetalheCtrl as idJogo'
         }
       },
-        resolve:{
-          idJogo: function($stateParams){
+      resolve:{
+        idJogo: function($stateParams){
             return $stateParams.jogoId;
-          }
         }
-    })
+      }
+  })
 
   .state('tab.account', {
     url: '/account',

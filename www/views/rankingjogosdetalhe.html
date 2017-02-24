@@ -1,0 +1,21 @@
+
+<ion-view view-title="Detalhe do Jogo" >
+
+  <ion-content class="padding">
+
+  <h5 class="center" >Conquistas: </h5>
+
+  <div ng-if="detalheJogo.estado == 'Terminado'">
+    <ion-item class="item">
+      <h2 class="center verde">Pontos: {{detalheJogo.pontos}}</h2>
+    </ion-item>
+    <h5 class="center">Detalhe das conquistas:</h5>
+    <ion-list>
+      <ion-item ng-repeat="detalhe in detalheJogo.conquistas track by $index" class="verde">
+        <p>{{detalhe}}</p>
+      </ion-item>
+    </ion-list>
+
+  </div>
+</ion-content>
+</ion-view>

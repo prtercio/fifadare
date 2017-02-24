@@ -8,11 +8,6 @@ dash.controller('DashCtrl', function($scope, $state, $localStorage, Popup) {
 	   $scope.$apply(function(){
 	   	var datos = snapshot.val(); // {first:"Ada",last:"Lovelace"}
 	   });
-	   //var firstName = snapshot.child("name/first").val(); // "Ada"
-	   //var lastName = snapshot.child("name").child("last").val(); // "Lovelace"
-	   //var age = snapshot.child("age").val(); // null
-	});
-
-	
+	});	
 
 });
