@@ -41,7 +41,10 @@ angular.module('App', ['ionic', 'App.controllers', 'App.Dash', 'App.services', '
     manyRequests: "Sorry, but we\'re still proccessing your previous login. Please try again later.",
     PontosSuccess:"Os pontos foram enviados com sucesso!",
     SelecioneConquista: "Antes de enviar selecione uma ou mais conquistas!",
-    concluir50Jogos:"Os pontos foram enviados com sucesso!   Parabéns, você concluiu os 50 jogos!!!"
+    concluir50Jogos:"Os pontos foram enviados com sucesso!   Parabéns, você concluiu os 50 jogos!!!",
+    enviarRegra: "A regra foi enviada com sucesso!",
+    conflictoConquista:"Você não pode adicionar esta Conquista"
+   
   })
 
 .run(function($ionicPlatform) {

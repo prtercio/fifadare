@@ -98,6 +98,11 @@ tab.controller('AccountCtrl', function($scope, $state, $localStorage, Popup) {
                 descricao: regra.descricao                
               }).then(function(response) {
                 console.log(response);
+                enviarRegra
+                  Utils.message(Popup.successIcon, Popup.enviarRegra)
+                  .then(function() {
+                    $scope.regra = "";
+                  })                  
                 //Account created successfully, logging user in automatically after a short delay.
                 /*Utils.message(Popup.successIcon, Popup.accountCreateSuccess)
                   .then(function() {
