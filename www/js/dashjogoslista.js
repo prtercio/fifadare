@@ -1,7 +1,7 @@
 'Use Strict';
 var dashdetalle = angular.module('App.DashJogosDetalle', []);
 
-dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorage, Popup, Chats, $stateParams, Utils, $window, idJogo, $ionicNavBarDelegate) {
+dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorage, Popup, Chats, $stateParams, Utils, $window, idJogo, $ionicNavBarDelegate, $ionicLoading) {
 
   $ionicNavBarDelegate.showBackButton(true);
   var imageSelecionada1;
@@ -70,6 +70,11 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
       //enviarImagen();
 
         $scope.checked = false;
+        $ionicLoading.show({
+          template: 'Enviando...'
+        }).then(function(){
+           console.log("Ativou loading");
+        });
 
       upoadFile();
   	};
@@ -103,6 +108,9 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
                   firebase.database().ref().child('fifadare/users/'+key+'/jogos/'+proximoJogo).update({
                     bloqueado:false
                   }).then(function(response) {
+                    $ionicLoading.hide().then(function(){
+                       console.log("The loading indicator is now hidden");
+                    });
                     data = new Date();
                     calcularTempo();
                     Utils.message(Popup.successIcon, Popup.PontosSuccess).then(function() {                      
@@ -116,6 +124,9 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
 
                   data = new Date();
                   calcularTempo();
+                  $ionicLoading.hide().then(function(){
+                       console.log("The loading indicator is now hidden");
+                    });
                   Utils.message(Popup.successIcon, Popup.concluir50Jogos).then(function() {
                   fotosEnviadas = false;                   
                     $state.go('tab.chats');
