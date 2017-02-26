@@ -4,7 +4,9 @@ var dashdetalle = angular.module('App.DashJogosDetalle', []);
 dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorage, Popup, Chats, $stateParams, Utils, $window, idJogo, $ionicNavBarDelegate) {
 
   $ionicNavBarDelegate.showBackButton(true);
-    console.log("camera "+navigator.camera);
+  var imageSelecionada1;
+  var imageSelecionada2;
+  var fotosEnviadas = false;
 
 
   var itemList=[];
@@ -16,7 +18,7 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
   $scope.verPontos = false;
   $scope.chat = "jogo"+idJogo; 
   $scope.jogoNome = "Jogo "+idJogo;
-  console.log("jogo: "+idJogo);
+  var keyImagen;
   /*
     var jogo = $scope.chat.lastText;
   
@@ -35,7 +37,15 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
     var refjogos = firebase.database().ref('fifadare/users/'+key+'/jogos/'+$scope.chat);
     refjogos.once("value").then(function(snapshot) {
       $scope.detalheJogo = snapshot.val();    
-    });  
+    }); 
+
+    var refImagens = firebase.database().ref('fifadare/users/'+key+'/jogos/'+$scope.chat+'/capturas/');
+    refImagens.once("value").then(function(snapshot) {
+       $scope.$apply(function(){
+         $scope.imagenes = snapshot.val();         
+         console.log("imag "+snapshot.key)
+       });
+    }); 
     	
 
   	var ref = firebase.database().ref("fifadare/regra");
@@ -58,7 +68,15 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
       }); 
       */
       //enviarImagen();
-      if($scope.suma !== 0){
+
+        $scope.checked = false;
+
+      upoadFile();
+  	};
+
+    // if as imagens forem enviadas
+    function enviarDatos (){
+       if($scope.suma !== 0){
 
         var conquistas = [];
         for(var i =0; i < itemList.length; i++){
@@ -98,7 +116,8 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
 
                   data = new Date();
                   calcularTempo();
-                  Utils.message(Popup.successIcon, Popup.concluir50Jogos).then(function() {                   
+                  Utils.message(Popup.successIcon, Popup.concluir50Jogos).then(function() {
+                  fotosEnviadas = false;                   
                     $state.go('tab.chats');
                     $window.location.reload();
                   });
@@ -113,9 +132,9 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
         })
 
       }
+    } 
 
-  	};
-        
+
     $scope.changedValue=function(item){
       console.log(itemList);
       var encontrouEmpate = buscarConflictos("Empate");
@@ -134,6 +153,8 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
       var encontrouSequencia4 = buscarConflictos("Sequencia 4 Vitórias");
       var encontrouSequencia5 = buscarConflictos("Sequencia 5 Vitórias");
 
+      // si no selecionou uma foto
+      if(imageSelecionada1){
             // si nao encontra o item
     	if(buscarItemIgual(item) === false){
 
@@ -380,6 +401,10 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
         }        
               	
       } //if
+    } else {
+      Utils.message(Popup.errorIcon, Popup.fotoNaoSelecionada).then(function() { 
+            });
+    }
     	
     }
 
@@ -530,6 +555,123 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
     }
 
     */
+
+   
+  $(document).ready(function(){
+    $('#uploadButton').hide();
+    $('#botao2').hide();
+   });
+
+   $('#file').on("change", function(event){
+    imageSelecionada1 = event.target.files[0];
+    $('#uploadButton').show();
+    verArchivo1(imageSelecionada1);
+    $('#botao2').show();
+   })
+
+   $('#file3').on("change", function(event){
+    imageSelecionada2 = event.target.files[0];
+    $('#uploadButton').show();
+    verArchivo2(imageSelecionada2);
+   })
+
+   function verArchivo1(img) {
+      $scope.$apply(function(){
+        $scope.imagen1 = img;
+      });
+
+    }
+
+    function verArchivo2(img) {
+      $scope.$apply(function(){
+        $scope.imagen2 = img;
+      });
+
+    }
+        
+
+   function upoadFile(){
+    var filename = imageSelecionada1.name;
+    var storageRef = firebase.storage().ref('/primeirotorneio50/'+key+'/'+filename);
+    var uploadTask = storageRef.put(imageSelecionada1);
+
+      uploadTask.on('state_changed', function(snapshot){
+        var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        console.log(progress);
+        if(progress === 100){
+          console.log("Primeira imagen enviada com sucesso "+ imageSelecionada2);
+          
+          
+        }
+      }, function(error) {
+        // Handle unsuccessful uploads
+      }, function() {
+        var downloadURL = uploadTask.snapshot.downloadURL;
+        console.log(downloadURL);
+        firebase.database().ref().child('fifadare/users/'+key+'/jogos/'+$scope.chat+'/capturas').push({
+          imagem1:downloadURL,
+          imagem2:0
+
+        }).then(function(response) {
+          keyImagen = response.key;
+                if(imageSelecionada2){
+                  enviarOutraImg();
+                } else {
+                  /*
+                  $scope.$apply(function(){
+                    $scope.imagen1 = "";
+                    $scope.imagen2 = "";
+                  });
+
+                  $('#botao2').hide();
+                  $('#uploadButton').hide();
+                  fotosEnviadas = true;
+                     */
+                  console.log("Enviando Dados da primeira imagem" );
+                  enviarDatos();
+                }
+              });
+
+
+      });
+
+    } 
+
+    function enviarOutraImg(){
+      var filename = imageSelecionada2.name;
+    var storageRef = firebase.storage().ref('/primeirotorneio50/'+key+'/'+filename);
+    var uploadTask = storageRef.put(imageSelecionada2);
+
+      uploadTask.on('state_changed', function(snapshot){
+        var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        console.log(progress);
+        if(progress === 100){  
+          console.log("Segunda imagen enviada com sucesso");
+          
+        }
+      }, function(error) {
+        // Handle unsuccessful uploads
+      }, function() {
+        var downloadURL = uploadTask.snapshot.downloadURL;
+        console.log(downloadURL);
+        firebase.database().ref().child('fifadare/users/'+key+'/jogos/'+$scope.chat+'/capturas/'+keyImagen).update({
+          imagem2:downloadURL
+        }).then(function(response) {
+          /*
+                  $scope.$apply(function(){
+                    $scope.imagen1 = "";
+                    $scope.imagen2 = "";
+                  });
+          $('#botao2').hide();
+          fotosEnviadas = true;
+          */
+          console.log("Enviando Dados da segunda imagem" );
+
+          enviarDatos();
+        });
+      });
+    }   
+
 
 
 

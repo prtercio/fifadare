@@ -1,35 +1,14 @@
 'Use Strict';
 var tab = angular.module('App.controllers', []);
 
-/*
-tab.controller('ChatsCtrl', function($scope, Chats) {
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
-
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  };
-});*/
-
-/*
-tab.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
-})
-*/
-
 tab.controller('AccountCtrl', function($scope, $state, $localStorage, Popup) {
   $scope.settings = {
     enableFriends: true
   };
 
   var key = localStorage.getItem('key');
-  var imageSelecionada;
+  var imageSelecionada1;
+  var imageSelecionada2;
 
   $scope.$on('$ionicView.enter', function() {
     //Check if there's an authenticated user, if there is non, redirect to login.
@@ -121,36 +100,91 @@ tab.controller('AccountCtrl', function($scope, $state, $localStorage, Popup) {
 
    $(document).ready(function(){
     $('#uploadButton').hide();
+    $('#botao2').hide();
    });
 
    $('#file').on("change", function(event){
-    imageSelecionada = event.target.files[0];
-    console.log(imageSelecionada)
+    imageSelecionada1 = event.target.files[0];
     $('#uploadButton').show();
+    verArchivo1(imageSelecionada1);
+    $('#botao2').show();
    })
 
+   $('#file3').on("change", function(event){
+    imageSelecionada2 = event.target.files[0];
+    $('#uploadButton').show();
+    verArchivo2(imageSelecionada2);
+   })
+
+   function verArchivo1(img) {
+      $scope.$apply(function(){
+        $scope.imagen1 = img;
+      });
+
+    }
+
+    function verArchivo2(img) {
+      $scope.$apply(function(){
+        $scope.imagen2 = img;
+      });
+
+    }
+        
+
    $scope.uploadFile = function(){
-    var filename = imageSelecionada.name;
-    var storageRef = firebase.storage().ref('/primeirotorneio50/'+filename);
+    var filename = imageSelecionada1.name;
+    var storageRef = firebase.storage().ref('/primeirotorneio50/'+key+'/'+filename);
+    var uploadTask = storageRef.put(imageSelecionada1);
 
-    // Upload the file to the path 'images/rivers.jpg'
-    // We can use the 'name' property on the File API to get our file name
-    var uploadTask = storageRef.put(imageSelecionada);
+      uploadTask.on('state_changed', function(snapshot){
+        var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        console.log(progress);
+        if(progress === 100){
+          console.log("Primeira imagen enviada com sucesso "+ imageSelecionada2);
+          if(imageSelecionada2){
+            enviarOutraImg();
+          } else {
+            $scope.$apply(function(){
+              $scope.imagen1 = "";
+              $scope.imagen2 = "";
+            });
+            $('#botao2').hide();
+            $('#uploadButton').hide();
+          }
+          
+        }
+      }, function(error) {
+        // Handle unsuccessful uploads
+      }, function() {
+        var downloadURL = uploadTask.snapshot.downloadURL;
+        console.log(downloadURL);
+      });
 
-    // Register three observers:
-    // 1. 'state_changed' observer, called any time the state changes
-    // 2. Error observer, called on failure
-    // 3. Completion observer, called on successful completion
-    uploadTask.on('state_changed', function(snapshot){
-      // Observe state change events such as progress, pause, and resume
-      // See below for more detail
-    }, function(error) {
-      // Handle unsuccessful uploads
-    }, function() {
-      var downloadURL = uploadTask.snapshot.downloadURL;
-      console.log(downloadURL);
-    });    
-   }
+    } 
+
+    function enviarOutraImg(){
+      var filename = imageSelecionada2.name;
+    var storageRef = firebase.storage().ref('/primeirotorneio50/'+key+'/'+filename);
+    var uploadTask = storageRef.put(imageSelecionada2);
+
+      uploadTask.on('state_changed', function(snapshot){
+        var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        console.log(progress);
+        if(progress === 100){
+          $scope.$apply(function(){
+            $scope.imagen1 = "";
+            $scope.imagen2 = "";
+          });
+          $('#botao2').hide(); 
+          console.log("Segunda imagen enviada com sucesso");
+        }
+      }, function(error) {
+        // Handle unsuccessful uploads
+      }, function() {
+        var downloadURL = uploadTask.snapshot.downloadURL;
+        console.log(downloadURL);
+      });
+    }   
 
 
 });

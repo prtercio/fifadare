@@ -38,7 +38,15 @@ dashdetalle.controller('RankingJogosDetalheCtrl', function($scope, $state, $loca
     var refjogos = firebase.database().ref('fifadare/users/'+key+'/jogos/'+$scope.chat);
     refjogos.once("value").then(function(snapshot) {
       $scope.detalheJogo = snapshot.val();    
-    });  
+    });
+
+    var refImagens = firebase.database().ref('fifadare/users/'+key+'/jogos/'+$scope.chat+'/capturas/');
+    refImagens.once("value").then(function(snapshot) {
+       $scope.$apply(function(){
+         $scope.imagenes = snapshot.val();         
+         console.log("imag "+snapshot.key)
+       });
+    });   
     	
 
   	var ref = firebase.database().ref("fifadare/regra");

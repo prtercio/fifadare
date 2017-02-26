@@ -77,18 +77,33 @@ img.resize{
 }
 
 
-label.upload-group{
-  width: 100px;
-  height: 40px;
-  color: white;
-  padding: 10 10 10 10;
-  text-align: center;
-  background-image: linear-gradient(to bottom, #337ab7 0,#265a88 100%);
-}
-
 input#file{
   width: 0.1px;
   height: 0.1px;
   position: absolute;
   z-index: -1;
+}
+
+input#file3{
+  width: 0.1px;
+  height: 0.1px;
+  position: absolute;
+  z-index: -1;
+}
+
+
+.botaoSubir{
+  box-shadow: rgb(242, 156, 147) 0px 1px 0px 0px inset; 
+  background: linear-gradient(rgb(254, 26, 0) 5%, rgb(206, 1, 0) 100%) rgb(254, 26, 0); 
+  border-radius: 6px; 
+  border: 1px solid rgb(216, 53, 38); 
+  display: inline-block; 
+  cursor: pointer; 
+  color: rgb(255, 255, 255); 
+  font-family: Arial; 
+  font-size: 20px; 
+  font-weight: bold; 
+  padding: 6px 35px; 
+  text-decoration: none; 
+  text-shadow: rgb(178, 62, 53) 0px 1px 0px;
 }

@@ -6,14 +6,6 @@ dash.controller('JogosCtrl', function($scope, $state, $localStorage, Popup, Chat
 		$window.location.reload();
 	}
 
-/*
-	$scope.chats = Chats.all();
-	var lista = Chats.all();
-
-	$scope.remove = function(chat) {
-	   Chats.remove(chat);
-	};
-*/
 	 var key = localStorage.getItem('key');
 
     var refjogos = firebase.database().ref('fifadare/users/'+key+'/jogos');

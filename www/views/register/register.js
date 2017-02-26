@@ -16,7 +16,22 @@ angular.module('App').controller('registerController', function($scope, $state, 
     "jogo2":{"estado":"Próximo","jogo":2,"pontos":0, "bloqueado":true},
     "jogo3":{"estado":"Próximo","jogo":3,"pontos":0, "bloqueado":true},
     "jogo4":{"estado":"Próximo","jogo":4,"pontos":0, "bloqueado":true},
-    "jogo5":{"estado":"Próximo","jogo":5,"pontos":0, "bloqueado":true}
+    "jogo5":{"estado":"Próximo","jogo":5,"pontos":0, "bloqueado":true},
+    "jogo6":{"estado":"Próximo","jogo":6,"pontos":0, "bloqueado":true},
+    "jogo7":{"estado":"Próximo","jogo":7,"pontos":0, "bloqueado":true},
+    "jogo8":{"estado":"Próximo","jogo":8,"pontos":0, "bloqueado":true},
+    "jogo9":{"estado":"Próximo","jogo":9,"pontos":0, "bloqueado":true},
+    "jogo10":{"estado":"Próximo","jogo":10,"pontos":0, "bloqueado":true},
+    "jogo11":{"estado":"Próximo","jogo":11,"pontos":0, "bloqueado":true},
+    "jogo12":{"estado":"Próximo","jogo":12,"pontos":0, "bloqueado":true},
+    "jogo13":{"estado":"Próximo","jogo":13,"pontos":0, "bloqueado":true},
+    "jogo14":{"estado":"Próximo","jogo":14,"pontos":0, "bloqueado":true},
+    "jogo15":{"estado":"Próximo","jogo":15,"pontos":0, "bloqueado":true},
+    "jogo16":{"estado":"Próximo","jogo":16,"pontos":0, "bloqueado":true},
+    "jogo17":{"estado":"Próximo","jogo":17,"pontos":0, "bloqueado":true},
+    "jogo18":{"estado":"Próximo","jogo":18,"pontos":0, "bloqueado":true},
+    "jogo19":{"estado":"Próximo","jogo":19,"pontos":0, "bloqueado":true},
+    "jogo20":{"estado":"Próximo","jogo":20,"pontos":0, "bloqueado":true}
   }
     
   $scope.register = function(user) {
