@@ -6,14 +6,25 @@ dash.controller('RankingJogosCtrl', function($scope, $state, $localStorage, Popu
 	var usuario = idRankJogo.substring(0, idRankJogo.indexOf("|"));
 	var	keyUsuario = idRankJogo.substring(idRankJogo.indexOf("|") + 1);
 	$scope.keyUsuario = keyUsuario;
+  var resultado = [];
 
 	$scope.titulo = usuario+ " - Jogos";
 
-    var refjogos = firebase.database().ref('fifadare/users/'+keyUsuario+'/jogos');
+    var refjogos = firebase.database().ref('fifadare/users/'+keyUsuario+'/jogos').orderByChild('jogo');
     refjogos.once("value").then(function(snapshot) {
     	$scope.$apply(function(){
-      		$scope.jogos = snapshot.val();
-      	});     
+          //$scope.jogos = snapshot.val();
+          snapshot.forEach(function(minisnapshot) {
+               
+               resultado.push({
+                "jogo":minisnapshot.val().jogo, 
+                "bloqueado":minisnapshot.val().bloqueado, 
+                "estado":minisnapshot.val().estado, 
+                "pontos":minisnapshot.val().pontos
+              })
+          });
+        });
+        $scope.jogos = resultado;  
     });  
 
     var refResumo = firebase.database().ref('fifadare/users/'+keyUsuario);
