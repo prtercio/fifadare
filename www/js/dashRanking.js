@@ -1,8 +1,10 @@
 'Use Strict';
 var dashRanking = angular.module('App.DashRanking', []);
 
-dashRanking.controller('RankingCtrl', function($scope, $state, $localStorage, Popup, Chats, $window) {
-
+dashRanking.controller('RankingCtrl', function($scope, $state, $localStorage, Popup, Chats, $window, $ionicLoading) {
+  $ionicLoading.show().then(function(){
+    console.log("Loading");
+  });
 	
   $scope.usuario = $localStorage.account.gamertag;
 
@@ -13,11 +15,20 @@ dashRanking.controller('RankingCtrl', function($scope, $state, $localStorage, Po
       $scope.$apply(function(){
         $scope.jogos = snapshot.val(); 
           snapshot.forEach(function(minisnapshot) {
-          	console.log(minisnapshot.val().pontos);
-          	   ranking.push({"key":minisnapshot.key, "gamertag":minisnapshot.val().gamertag, "quantidade":minisnapshot.val().jogosQuantidade, "pontos":minisnapshot.val().pontos})
+               $ionicLoading.hide().then(function(){
+                  console.log("Loading Hide");
+                });
+          	   ranking.push({
+                "key":minisnapshot.key, 
+                "gamertag":minisnapshot.val().gamertag, 
+                "quantidade":minisnapshot.val().jogosQuantidade, 
+                "pontos":minisnapshot.val().pontos,
+                "vitoria":minisnapshot.val().vitoria,
+                "empate":minisnapshot.val().empate,
+                "derrota":minisnapshot.val().derrota
+              })
           });
        });      
       });  
-    console.log(ranking);
     $scope.resultado = ranking;
 });

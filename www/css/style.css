@@ -72,7 +72,6 @@ img.resize{
 
 .styled-select {
    overflow: hidden;
-   background: url(http://rccgroseofsharon.co.za/images/more4.png) no-repeat right !important;
    border: 1px solid #ccc;
 }
 
@@ -107,3 +106,33 @@ input#file3{
   text-decoration: none; 
   text-shadow: rgb(178, 62, 53) 0px 1px 0px;
 }
+
+item.linearer{
+  border-color: red;
+}
+
+#Vitória{
+  background: url('../img/vitoria.png');
+  background-color: transparent;
+  background-repeat:no-repeat;
+  width: 60px;
+  height: 60px;
+
+}
+
+#Empate{
+  background: url('../img/empate.png');
+   background-color: transparent;
+  background-repeat:no-repeat;
+  width: 60px;
+  height: 60px;
+}
+
+#Derrota{
+  background: url('../img/derrota.png');
+   background-color: transparent;
+  background-repeat:no-repeat;
+  width: 60px;
+  height: 60px;
+}
+

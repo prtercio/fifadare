@@ -5,14 +5,25 @@ dash.controller('JogosCtrl', function($scope, $state, $localStorage, Popup, Chat
 	$scope.atualizarPagina = function(){
 		$window.location.reload();
 	}
+	var resultado = [];
 
 	 var key = localStorage.getItem('key');
 
-    var refjogos = firebase.database().ref('fifadare/users/'+key+'/jogos');
+    var refjogos = firebase.database().ref('fifadare/users/'+key+'/jogos').orderByChild('jogo');
     refjogos.once("value").then(function(snapshot) {
     	$scope.$apply(function(){
-      		$scope.jogos = snapshot.val();
-      	});     
+      		//$scope.jogos = snapshot.val();
+      		snapshot.forEach(function(minisnapshot) {
+               
+          	   resultado.push({
+                "jogo":minisnapshot.val().jogo, 
+                "bloqueado":minisnapshot.val().bloqueado, 
+                "estado":minisnapshot.val().estado, 
+                "pontos":minisnapshot.val().pontos
+              })
+          });
+      	});
+      	$scope.jogos = resultado;  
     });  
 
 	/*

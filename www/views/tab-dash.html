@@ -2,18 +2,20 @@
 	<ion-content class="padding">
 		<div class="row borderGris bgazure">		
 			<div class="col col-10"><strong>#</strong></div>
-			<div class="col col-50"><strong>Gamertag</strong></div>
+			<div class="col col-40"><strong>Gamertag</strong></div>
 			<div class="col col-10"><strong>J</strong></div>
-			<div class="col"><strong>Pontos</strong></div>
-			<div class="col-10"></div>			
+			<div class="col col-10"><strong>V</strong></div>
+			<div class="col col-20"><strong>Pontos</strong></div>
+			<div class="col col-10"></div>			
 		</div>
 		<div class="borderGris bgazure">
 		<div class="row" ng-repeat="value in resultado | orderBy:'pontos':true">		
 			<div class="col col-10" ng-class="{bgverde:$index==0,bgazul:$index==1, bgbisque:$index==2, bgazure:$index>=3}">{{$index + 1}}</div>
-			<div class="col col-50" ng-class="{bgverde:$index==0,bgazul:$index==1, bgbisque:$index==2, bgazure:$index>=3}">{{value.gamertag}}</div>
+			<div class="col col-40" ng-class="{bgverde:$index==0,bgazul:$index==1, bgbisque:$index==2, bgazure:$index>=3}">{{value.gamertag}}</div>
 			<div class="col col-10" ng-class="{bgverde:$index==0,bgazul:$index==1, bgbisque:$index==2, bgazure:$index>=3}">{{value.quantidade}}</div>
-			<div class="col" ng-class="{bgverde:$index==0,bgazul:$index==1, bgbisque:$index==2, bgazure:$index>=3}">{{value.pontos}}</div>
-			<div class="col" ng-class="{bgverde:$index==0,bgazul:$index==1, bgbisque:$index==2, bgazure:$index>=3}" ng-if="value.quantidade > 0 && usuario!=value.gamertag"><a class="button button-small button-balanced" href="#/tab/dash/{{value.gamertag}}|{{value.key}}"> <i class="icon ion-eye"></i></a></div>
+			<div class="col col-10" ng-class="{bgverde:$index==0,bgazul:$index==1, bgbisque:$index==2, bgazure:$index>=3}">{{value.vitoria}}</div>
+			<div class="col col-20" ng-class="{bgverde:$index==0,bgazul:$index==1, bgbisque:$index==2, bgazure:$index>=3}">{{value.pontos}}</div>
+			<div class="col col-10" ng-class="{bgverde:$index==0,bgazul:$index==1, bgbisque:$index==2, bgazure:$index>=3}" ng-if="value.quantidade > 0 && usuario!=value.gamertag"><a class="button button-small button-balanced" href="#/tab/dash/{{value.gamertag}}|{{value.key}}"> <i class="icon ion-ios-redo"></i></a></div>
 		</div>	
 		</div>
 	</ion-content>

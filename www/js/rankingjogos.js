@@ -16,4 +16,15 @@ dash.controller('RankingJogosCtrl', function($scope, $state, $localStorage, Popu
       	});     
     });  
 
+    var refResumo = firebase.database().ref('fifadare/users/'+keyUsuario);
+    refResumo.once("value").then(function(snapshot) {
+      $scope.$apply(function(){
+          $scope.resumo = snapshot.val();
+          $scope.jogosQuantidade = $scope.resumo.jogosQuantidade;
+          $scope.vitoria = $scope.resumo.vitoria;
+          $scope.empate = $scope.resumo.empate;
+          $scope.derrota = $scope.resumo.derrota;
+          $scope.pontos = $scope.resumo.pontos;
+        });     
+    });  
 });

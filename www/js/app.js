@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('App', ['ionic', 'App.controllers', 'App.Dash', 'App.services', 'App.DashJogos', 'App.DashJogosDetalle','App.DashRanking', 'App.RankingJogosDetalhe', 'App.RankingJogos', 'ngStorage', 'ngCordovaOauth'])
+angular.module('App', ['ionic', 'App.controllers', 'App.Dash', 'App.services', 'App.DashJogos', 'App.DashJogosDetalle','App.DashRanking', 'App.RankingJogosDetalhe', 'App.RankingJogos', 'App.Social', 'ngStorage', 'ngCordovaOauth'])
 
 .constant('Social', {
     facebookAppId: "1025234637591184",
@@ -141,7 +141,15 @@ angular.module('App', ['ionic', 'App.controllers', 'App.Dash', 'App.services', '
         }
       }
   })
-
+  .state('tab.social', {
+      url: '/social',
+      views: {
+        'tab-social': {
+          templateUrl: 'views/social/social.html',
+          controller: 'SocialCtrl'
+        }
+      }
+  })
   .state('tab.account', {
     url: '/account',
     views: {

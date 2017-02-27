@@ -1,6 +1,5 @@
-<ion-view view-title="Configuração">
+<ion-view view-title="Regras">
   <ion-content class="padding"> 
-    <br />
     <div ng-if="agregarRegra">
      <form name="regraForm" novalidate ng-submit="regraForm.$valid && enviarregra(regra)">
       <div class="list">
@@ -8,12 +7,13 @@
           <span class="input-label">Titulo:</span>
           <input name="text" type="text" ng-model="regra.titulo" placeholder="Titulo" ng-minlength="5" ng-maxlength="50" required>
         </label>
+
         <label class="item item-input" style="border-radius:5px; margin-bottom: 10px;">
           <span class="input-label">Pontos:</span>
           <input name="number" type="number" ng-model="regra.pontos" placeholder="Pontos" required>
         </label> 
         <label class="item item-input item-stacked-label">
-          <span class="input-label">Descricao</span>
+          <span class="input-label">Descrição</span>
 
           <textarea placeholder="yyy" rows="8" cols="10" ng-model="regra.descricao">
           </textarea>
@@ -35,7 +35,7 @@
         <i class="icon ion-ios-game-controller-b"></i>
         {{gamertag}}
       </a> 
-     
+     <!--
       <a class="item item-icon-left">
         <i class="icon ion-ios-football"></i>
         Jogos
@@ -47,7 +47,59 @@
         Pontos
         <span class="badge badge-positive">{{pontos}}</span>
       </a> 
-    </div>    
+      -->
+    </div>
+    <h4 class="center">Regras</h4>
+    <div class="card">
+
+    <a class="item item-text-wrap">
+      <i class="icon ion-checkmark"></i>
+      O campeonato tem duração de 50 jogos, sendo que o vencedor será aquele que somar mais pontos ao final de seus jogos.
+    </a>
+    <a class="item item-text-wrap">
+      <i class="icon ion-checkmark"></i>
+      A derrota não soma nenhum ponto para o ranking.
+Caso perca um jogo, escolha apenas 'Derrota'.
+    </a>
+    <a class="item item-text-wrap">
+      <i class="icon ion-checkmark"></i>
+      Caso vença ou empate um jogo, você pode escolher várias conquistas.
+Por exemplo:
+<p>Vitória + Fair Play + Posse de bola + Vitória sobre oponente do torneio</p>
+
+<p>Empate + Fair Play + Posse de bola</p>
+    </a>
+     <a class="item item-text-wrap">
+      <i class="icon ion-checkmark"></i>
+      Ao final de cada partida, o participante DEVE tirar uma foto (de preferencia na horizontal) que mostre o resultado e as estatísticas do jogo e subir junto com as conquistas.
+    </a>
+    <a class="item item-text-wrap">
+      <i class="icon ion-checkmark"></i>      
+Caso o participante escolha a conquista 'Sequência de vitórias' DEVE tirar uma foto (de preferencia na horizontal) do seu histórico, a fim de comprovar a sequência de vitórias.
+    </a>
+     <a class="item item-text-wrap">
+      <i class="icon ion-checkmark"></i>      
+      Em caso de desconexão, contará o resultado do histórico do jogo.
+    </a>
+
+
+    </div>
+    <div class="padding">
+    --------------------------
+<p>Para mais informações, tire suas dúvidas pelo whatsapp ou na Live com Tercio (Benbaodan) ou Lucas (Lucas11Diniz).</p>
+
+<p><strong>Obrigado á todos e boa sorte no torneio!</strong></p>
+    </div>
+
+
+
+
+
+
+
+
+
+
    <button  class="button button-block button-assertive" ng-click="logout()">Logout</button>
    <br />
    <!--

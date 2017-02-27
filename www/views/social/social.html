@@ -1,0 +1,23 @@
+<ion-view view-title="Social">
+	<ion-content class="padding">
+	{{prova}}
+	<div class="list">
+		<a class="item item-icon-left item-text-wrap" ng-repeat="value in datos | orderBy:'data':true">
+		    <i class="icon"><div id="{{value.resultado}}"></div></i>
+		    <strong >{{value.gamertag}}</strong> teve uma {{value.resultado}} e somou + {{value.pontos}} ponto(s). {{value.data | date:'dd/MM/yyyy HH:m' : 'UTC'}}
+	  	</a>
+	  	<!--
+	  	<a class="item item-icon-left item-text-wrap" href="#">
+		    <i class="icon ion-arrow-right-a azul"></i>
+		    <strong>Benbaodan</strong> teve um empate e somou 100 pontos.
+	  	</a>
+	  	<a class="item item-icon-left item-text-wrap" href="#">
+		    <i class="icon ion-arrow-down-a vermelho"></i>
+		    <strong>Benbaodan</strong> teve uma derrota e somou 100 pontos.
+	  	</a>
+	  	-->
+
+	 </div>
+	</ion-content>
+</ion-view>
+

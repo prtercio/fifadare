@@ -31,7 +31,37 @@ angular.module('App').controller('registerController', function($scope, $state, 
     "jogo17":{"estado":"Próximo","jogo":17,"pontos":0, "bloqueado":true},
     "jogo18":{"estado":"Próximo","jogo":18,"pontos":0, "bloqueado":true},
     "jogo19":{"estado":"Próximo","jogo":19,"pontos":0, "bloqueado":true},
-    "jogo20":{"estado":"Próximo","jogo":20,"pontos":0, "bloqueado":true}
+    "jogo20":{"estado":"Próximo","jogo":20,"pontos":0, "bloqueado":true},
+    "jogo21":{"estado":"Próximo","jogo":21,"pontos":0, "bloqueado":true},
+    "jogo22":{"estado":"Próximo","jogo":22,"pontos":0, "bloqueado":true},
+    "jogo23":{"estado":"Próximo","jogo":23,"pontos":0, "bloqueado":true},
+    "jogo24":{"estado":"Próximo","jogo":24,"pontos":0, "bloqueado":true},
+    "jogo25":{"estado":"Próximo","jogo":25,"pontos":0, "bloqueado":true},
+    "jogo26":{"estado":"Próximo","jogo":26,"pontos":0, "bloqueado":true},
+    "jogo27":{"estado":"Próximo","jogo":27,"pontos":0, "bloqueado":true},
+    "jogo28":{"estado":"Próximo","jogo":28,"pontos":0, "bloqueado":true},
+    "jogo29":{"estado":"Próximo","jogo":29,"pontos":0, "bloqueado":true},
+    "jogo30":{"estado":"Próximo","jogo":30,"pontos":0, "bloqueado":true},
+    "jogo31":{"estado":"Próximo","jogo":31,"pontos":0, "bloqueado":true},
+    "jogo32":{"estado":"Próximo","jogo":32,"pontos":0, "bloqueado":true},
+    "jogo33":{"estado":"Próximo","jogo":33,"pontos":0, "bloqueado":true},
+    "jogo34":{"estado":"Próximo","jogo":34,"pontos":0, "bloqueado":true},
+    "jogo35":{"estado":"Próximo","jogo":35,"pontos":0, "bloqueado":true},
+    "jogo36":{"estado":"Próximo","jogo":36,"pontos":0, "bloqueado":true},
+    "jogo37":{"estado":"Próximo","jogo":37,"pontos":0, "bloqueado":true},
+    "jogo38":{"estado":"Próximo","jogo":38,"pontos":0, "bloqueado":true},
+    "jogo39":{"estado":"Próximo","jogo":39,"pontos":0, "bloqueado":true},
+    "jogo40":{"estado":"Próximo","jogo":40,"pontos":0, "bloqueado":true},
+    "jogo41":{"estado":"Próximo","jogo":41,"pontos":0, "bloqueado":true},
+    "jogo42":{"estado":"Próximo","jogo":42,"pontos":0, "bloqueado":true},
+    "jogo43":{"estado":"Próximo","jogo":43,"pontos":0, "bloqueado":true},
+    "jogo44":{"estado":"Próximo","jogo":44,"pontos":0, "bloqueado":true},
+    "jogo45":{"estado":"Próximo","jogo":45,"pontos":0, "bloqueado":true},
+    "jogo46":{"estado":"Próximo","jogo":46,"pontos":0, "bloqueado":true},
+    "jogo47":{"estado":"Próximo","jogo":47,"pontos":0, "bloqueado":true},
+    "jogo48":{"estado":"Próximo","jogo":48,"pontos":0, "bloqueado":true},
+    "jogo49":{"estado":"Próximo","jogo":49,"pontos":0, "bloqueado":true},
+    "jogo50":{"estado":"Próximo","jogo":50,"pontos":0, "bloqueado":true}
   }
     
   $scope.register = function(user) {
@@ -54,7 +84,10 @@ angular.module('App').controller('registerController', function($scope, $state, 
                 provider: 'Firebase',
                 pontos: 0,
                 jogosQuantidade:0,                
-                jogos: jogos
+                jogos: jogos,
+                vitoria: 0,
+                empate: 0,
+                derrota: 0
 
               }).then(function(response) {
                 //Account created successfully, logging user in automatically after a short delay.

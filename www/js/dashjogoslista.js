@@ -7,6 +7,15 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
   var imageSelecionada1;
   var imageSelecionada2;
   var fotosEnviadas = false;
+  var gamertag; 
+
+  var vitoria;
+  var empate;
+  var derrota;
+
+  var vitoriaEnviar = 0;
+  var empateEnviar = 0;
+  var derrotaEnviar = 0;
 
 
   var itemList=[];
@@ -19,6 +28,13 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
   $scope.chat = "jogo"+idJogo; 
   $scope.jogoNome = "Jogo "+idJogo;
   var keyImagen;
+
+  var fechaSeleccionada = new Date();
+  var fechaFormatada;
+
+  fechaFormatada = Date.UTC(fechaSeleccionada.getFullYear(), fechaSeleccionada.getMonth(),
+  fechaSeleccionada.getDate(),fechaSeleccionada.getHours(),fechaSeleccionada.getMinutes(),fechaSeleccionada.getSeconds());
+
   /*
     var jogo = $scope.chat.lastText;
   
@@ -31,6 +47,10 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
     $scope.todo = snapshot.val();
     jogosDisputados = $scope.todo.jogosQuantidade;
     pontosSomados = $scope.todo.pontos
+    vitoria = $scope.todo.vitoria;
+    derrota = $scope.todo.derrota;
+    empate = $scope.todo.empate;
+    gamertag = $scope.todo.gamertag; 
    });
 
     
@@ -81,7 +101,7 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
 
     // if as imagens forem enviadas
     function enviarDatos (){
-       if($scope.suma !== 0){
+       if(itemList.length !== 0){
 
         var conquistas = [];
         for(var i =0; i < itemList.length; i++){
@@ -93,45 +113,83 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
           estado:"Terminado",
           jogo: idJogo,
           pontos: $scope.suma,
-          conquistas:conquistas
+          conquistas:conquistas          
         }).then(function(response) {
 
            firebase.database().ref().child('fifadare/users/'+key).update({
              pontos: pontosSomados + $scope.suma,
-             jogosQuantidade: jogosDisputados + 1
+             jogosQuantidade: jogosDisputados + 1,
+             vitoria: vitoria + vitoriaEnviar,
+             empate: empate + empateEnviar,
+             derrota: derrota +  derrotaEnviar
             }).then(function(response) {
                 var sumaNum = parseInt(idJogo) +1;
                 var proximoJogo = "jogo"+sumaNum;
 
-                if(idJogo < 5){
-                   console.log("menor que 6");
+                if(idJogo < 51){
+                   console.log("menor que 51");
                   firebase.database().ref().child('fifadare/users/'+key+'/jogos/'+proximoJogo).update({
                     bloqueado:false
                   }).then(function(response) {
-                    $ionicLoading.hide().then(function(){
-                       console.log("The loading indicator is now hidden");
+                    var resultado;
+
+                    if(vitoriaEnviar == 1){
+                      resultado = "Vitória"
+                    } else if(empateEnviar == 1){
+                      resultado = "Empate"
+                    } else {
+                      resultado = "Derrota"
+                    }
+
+                    firebase.database().ref().child('fifadare/social').push({
+                      gamertag: gamertag,
+                      resultado: resultado,
+                      pontos: $scope.suma,
+                      data:fechaFormatada
+                    }).then(function(response) {
+                      $ionicLoading.hide().then(function(){
+                         console.log("The loading indicator is now hidden");
+                      });
+                      data = new Date();
+                      calcularTempo();
+                      Utils.message(Popup.successIcon, Popup.PontosSuccess).then(function() {
+
+                        $state.go('tab.chats');
+                        $window.location.reload();
+                        
+                      });
                     });
-                    data = new Date();
-                    calcularTempo();
-                    Utils.message(Popup.successIcon, Popup.PontosSuccess).then(function() {                      
-                      $state.go('tab.chats');
-                      $window.location.reload();
-                      
-                    })
+
                   });
 
                 }  else { 
 
                   data = new Date();
                   calcularTempo();
-                  $ionicLoading.hide().then(function(){
-                       console.log("The loading indicator is now hidden");
+                  var resultado;
+                    if(vitoriaEnviar == 1){
+                      resultado = "Vitória"
+                    } else if(empateEnviar == 1){
+                      resultado = "Empate"
+                    } else {
+                      resultado = "Derrota"
+                    }
+
+                    firebase.database().ref().child('fifadare/social').push({
+                      gamertag: gamertag,
+                      resultado: resultado,
+                      pontos: $scope.suma,
+                      data:fechaFormatada
+                    }).then(function(response) {
+                      $ionicLoading.hide().then(function(){
+                        console.log("The loading indicator is now hidden");
+                      });
+                      Utils.message(Popup.successIcon, Popup.concluir50Jogos).then(function() {
+                      fotosEnviadas = false;                   
+                        $state.go('tab.chats');
+                        $window.location.reload();
+                      });
                     });
-                  Utils.message(Popup.successIcon, Popup.concluir50Jogos).then(function() {
-                  fotosEnviadas = false;                   
-                    $state.go('tab.chats');
-                    $window.location.reload();
-                  });
 
                 }// if
           });
@@ -191,6 +249,9 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
           } else if(encontrouDerrota){
              mensagemConflito();
           } else {
+            vitoriaEnviar = 1;
+            derrotaEnviar = 0;
+            empateEnviar = 0;
             agregarDatos(); 
           }
         }
@@ -219,6 +280,9 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
           } else if(vitoriaOponenteTorneio){
            mensagemConflito();
           } else{
+            vitoriaEnviar = 0;
+            derrotaEnviar = 1;
+            empateEnviar = 0;
             agregarDatos();                   
           }              
             
@@ -234,6 +298,9 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
           } else if(vitoriaOponenteTorneio){
             mensagemConflito();
           } else {
+            vitoriaEnviar = 0;
+            derrotaEnviar = 0;
+            empateEnviar = 1;
             agregarDatos();
           }          
         } 
@@ -421,6 +488,7 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
 
     // remover elementos da lista
     $scope.removeLista = function(shop){
+     
     	itemList.splice(itemList.indexOf(shop), 1);
        if(itemList.length === 0){
           console.log("nao há elementos");
