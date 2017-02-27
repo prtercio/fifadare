@@ -10,9 +10,9 @@
 		    </span>
 		    de 
 		    <strong >{{value.gamertag}}</strong>
-		    <span ng-if="value.resultado=='Vitória'">, somou + {{value.pontos}} pontos. </span>
-		    <span ng-if="value.resultado=='Empate'">, somou + {{value.pontos}} pontos. </span>
-		    <span ng-if="value.resultado=='Derrota'">, não somou pontos. </span>
+		    <span ng-if="value.resultado=='Vitória'">no seu jogo {{value.jogo}}, somou + {{value.pontos}} pontos. </span>
+		    <span ng-if="value.resultado=='Empate'">no seu jogo {{value.jogo}}, somou + {{value.pontos}} pontos. </span>
+		    <span ng-if="value.resultado=='Derrota'">no seu jogo {{value.jogo}}.</span>
 		    <span class="gris fontepequena">{{value.data | date:'dd/MM/yyyy HH:m:s' : 'UTC'}}</span>
 	  	</a>
 	  	<!--

@@ -22,7 +22,8 @@ social.controller('SocialCtrl', function($scope, $state, $localStorage, Popup, $
 		                "resultado":snapshot.val().resultado, 
 		                "data":snapshot.val().data,
 		                "pontos":snapshot.val().pontos,
-		                "empate":snapshot.val().empate
+		                "empate":snapshot.val().empate,
+		                "jogo": snapshot.val().jogo
 		              })
 
 	   	//$scope.datos = snapshot.val();

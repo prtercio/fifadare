@@ -145,7 +145,8 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
                       gamertag: gamertag,
                       resultado: resultado,
                       pontos: $scope.suma,
-                      data:fechaFormatada
+                      data: fechaFormatada,
+                      jogo: idJogo
                     }).then(function(response) {
                       $ionicLoading.hide().then(function(){
                          console.log("The loading indicator is now hidden");
