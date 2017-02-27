@@ -119,6 +119,7 @@ angular.module('App').controller('loginController', function($scope, $state, $lo
                 var account = response.val();
                 $localStorage.account = account;
               });
+              window.localStorage.setItem('nuevoSocial', 0);
               $state.go('tab.dash');
 
             });

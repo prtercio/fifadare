@@ -4,7 +4,16 @@
 	<div class="list">
 		<a class="item item-icon-left item-text-wrap" ng-repeat="value in datos | orderBy:'data':true">
 		    <i class="icon"><div id="{{value.resultado}}"></div></i>
-		    <strong >{{value.gamertag}}</strong> teve uma {{value.resultado}} e somou + {{value.pontos}} ponto(s). {{value.data | date:'dd/MM/yyyy HH:m' : 'UTC'}}
+		    
+		    <span 
+		    ng-class="{verde:value.resultado=='Vitória', laranja:value.resultado=='Empate', vermelho:value.resultado=='Derrota'}"><strong >{{value.resultado}}</strong>
+		    </span>
+		    de 
+		    <strong >{{value.gamertag}}</strong>
+		    <span ng-if="value.resultado=='Vitória'">, somou + {{value.pontos}} pontos. </span>
+		    <span ng-if="value.resultado=='Empate'">, somou + {{value.pontos}} pontos. </span>
+		    <span ng-if="value.resultado=='Derrota'">, não somou pontos. </span>
+		    <span class="gris fontepequena">{{value.data | date:'dd/MM/yyyy HH:m:s' : 'UTC'}}</span>
 	  	</a>
 	  	<!--
 	  	<a class="item item-icon-left item-text-wrap" href="#">

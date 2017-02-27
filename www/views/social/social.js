@@ -1,44 +1,35 @@
 'Use Strict';
 var social = angular.module('App.Social', []);
 
-social.controller('SocialCtrl', function($scope, $state, $localStorage, Popup) {
+social.controller('SocialCtrl', function($scope, $state, $localStorage, Popup, $ionicHistory, $timeout) {
 
 	var resultado = [];
+	console.log("EFG "+$ionicHistory.currentStateName());
+	if($ionicHistory.currentStateName() === "tab.social"){
+		window.localStorage.setItem('nuevoSocial', 0);
+	}
 
+	$timeout(function() {
+	var ref = firebase.database().ref().child("fifadare/social").limitToLast(15);
+	ref.on("child_added", function(snapshot) {		
+	
+		console.log(window.localStorage.getItem('nuevoSocial'));
+	   //$scope.$apply(function(){
+	   	$scope.$apply(function(){
+	   		
+			   	resultado.push({               
+		                "gamertag":snapshot.val().gamertag, 
+		                "resultado":snapshot.val().resultado, 
+		                "data":snapshot.val().data,
+		                "pontos":snapshot.val().pontos,
+		                "empate":snapshot.val().empate
+		              })
 
-	var ref = firebase.database().ref("fifadare/social").limitToLast(15);
-	ref.once("value", function(snapshot) {
-	   $scope.$apply(function(){
 	   	//$scope.datos = snapshot.val();
-	   	snapshot.forEach(function(minisnapshot) {
-               
-          	   resultado.push({               
-                "gamertag":minisnapshot.val().gamertag, 
-                "resultado":minisnapshot.val().resultado, 
-                "data":minisnapshot.val().data,
-                "pontos":minisnapshot.val().pontos,
-                "empate":minisnapshot.val().empate
-              })
-          });
-	   	$scope.datos = resultado;
+	   	});
+	   	 $scope.datos = resultado;
 	   });
-
-
 	});
-	
-	
-	/*
-	var commentsRef = firebase.database().ref('fifadare/social').limitToLast(20);
-	/*
-	commentsRef.on('child_added', function(data) {
-	  addCommentElement(postElement, data.key, data.val().text, data.val().author);
-	});
-	*/
-	/*
-	commentsRef.on('child_changed', function(data) {
-	  //setCommentValues(postElement, data.key, data.val().text, data.val().author);
-	  console.log(data.key, data.val().pontos, data.val().resultado, data.val().gamertag);
-	});
-	*/
+	  //});
 
 });

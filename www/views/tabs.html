@@ -16,7 +16,14 @@ navigation history that also transitions its views in and out.
   </ion-tab>
 
   <!-- Chats Tab -->
-  <ion-tab title="Social" icon-off="ion-ios-cloud-outline" icon-on="ion-ios-cloud" href="#/tab/social">
+  <ion-tab  
+    ng-controller="TabsCtrl" 
+    title="Social" 
+    icon-off="ion-ios-cloud-outline" 
+    icon-on="ion-ios-cloud" 
+    badge="0" 
+    badge-style="badge-assertive" 
+    href="#/tab/social">
     <ion-nav-view name="tab-social"></ion-nav-view>
   </ion-tab>
 
@@ -24,6 +31,4 @@ navigation history that also transitions its views in and out.
   <ion-tab title="Regras" icon-off="ion-ios-copy-outline" icon-on="ion-ios-copy" href="#/tab/account">
     <ion-nav-view name="tab-account"></ion-nav-view>
   </ion-tab>
-
-
 </ion-tabs>
