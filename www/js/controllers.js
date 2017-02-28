@@ -15,7 +15,53 @@ tab.controller('ConquistasCtrl', function($scope, $state, $timeout) {
      });
       
      });
+
+
+    $scope.data = {};
+    $scope.obj;
+    var pictureSource;   // picture source
+    var destinationType; // sets the format of returned value
+    var url;
+
+    ionic.Platform.ready(function() {
+      //console.log("ready get camera types");
+      if (!navigator.camera)
+        {
+        console.log("Aqui toy");
+        return;
+        }
+      //pictureSource=navigator.camera.PictureSourceType.PHOTOLIBRARY;
+      var pictureSource=navigator.camera.PictureSourceType.CAMERA;
+      var destinationType=navigator.camera.DestinationType.FILE_URI;
+    });
   //});
+
+  $scope.takePicture = function() {
+    console.log("got camera button click");
+    var options =   {
+      quality: 50,
+      destinationType: destinationType,
+      sourceType: pictureSource,
+      encodingType: 0
+      };
+    if (!navigator.camera)
+      {
+      // error handling
+      return;
+      }
+    navigator.camera.getPicture(
+      function (imageURI) {
+        //console.log("got camera success ", imageURI);
+        $scope.mypicture = imageURI;
+        },
+      function (err) {
+        //console.log("got camera error ", err);
+        // error handling camera plugin
+        },
+      options);
+    };
+
+  // https://github.com/yafraorg/ionictests/blob/master/camera/www/js/controllers.js
 
 });
 
