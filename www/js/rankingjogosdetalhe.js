@@ -7,7 +7,7 @@ dashdetalle.controller('RankingJogosDetalheCtrl', function($scope, $state, $loca
 
   var id = idJogoDetalhe.substring(0, idJogoDetalhe.indexOf("|"));
   var keyUsuario = idJogoDetalhe.substring(idJogoDetalhe.indexOf("|") + 1);
-  console.log(id, keyUsuario);
+  //console.log(id, keyUsuario);
   var idJogo = id;
 
   var itemList=[];
@@ -19,7 +19,7 @@ dashdetalle.controller('RankingJogosDetalheCtrl', function($scope, $state, $loca
   $scope.verPontos = false;
   $scope.chat = "jogo"+idJogo; 
   $scope.jogoNome = "Jogo "+idJogo;
-  console.log("jogo: "+idJogo);
+  //console.log("jogo: "+idJogo);
   /*
     var jogo = $scope.chat.lastText;
   
@@ -44,7 +44,7 @@ dashdetalle.controller('RankingJogosDetalheCtrl', function($scope, $state, $loca
     refImagens.once("value").then(function(snapshot) {
        $scope.$apply(function(){
          $scope.imagenes = snapshot.val();         
-         console.log("imag "+snapshot.key)
+         //console.log("imag "+snapshot.key)
        });
     });   
     	
@@ -73,7 +73,7 @@ dashdetalle.controller('RankingJogosDetalheCtrl', function($scope, $state, $loca
 
         var conquistas = [];
         for(var i =0; i < itemList.length; i++){
-          console.log(itemList[i][0]+":"+itemList[i][1]);
+         // console.log(itemList[i][0]+":"+itemList[i][1]);
           conquistas.push(itemList[i][0]+":"+itemList[i][1]);
         }
         
@@ -92,7 +92,7 @@ dashdetalle.controller('RankingJogosDetalheCtrl', function($scope, $state, $loca
                 var proximoJogo = "jogo"+sumaNum;
 
                 if(idJogo < 5){
-                   console.log("menor que 6");
+                   //console.log("menor que 6");
                   firebase.database().ref().child('fifadare/users/'+key+'/jogos/'+proximoJogo).update({
                     bloqueado:false
                   }).then(function(response) {
@@ -128,7 +128,7 @@ dashdetalle.controller('RankingJogosDetalheCtrl', function($scope, $state, $loca
   	};
         
     $scope.changedValue=function(item){
-      console.log(itemList);
+      //console.log(itemList);
       var encontrouEmpate = buscarConflictos("Empate");
       var encontrouDerrota = buscarConflictos("Derrota");
       var encontrouVitoria = buscarConflictos("Vitória");
@@ -398,7 +398,7 @@ dashdetalle.controller('RankingJogosDetalheCtrl', function($scope, $state, $loca
     $scope.removeLista = function(shop){
     	itemList.splice(itemList.indexOf(shop), 1);
        if(itemList.length === 0){
-          console.log("nao há elementos");
+          //console.log("nao há elementos");
           $scope.verPontos =false;
         }
         somarPontos();
@@ -408,11 +408,11 @@ dashdetalle.controller('RankingJogosDetalheCtrl', function($scope, $state, $loca
     function buscarItemIgual(item) {
     	for (var i = 0; i < itemList.length; i++) {
         if (itemList[i][0] === item.descricao) {
-          console.log("hay um igual");          
+          //console.log("hay um igual");          
           return true;
         }
       }
-      console.log("nao há um igual");
+      //console.log("nao há um igual");
       return false;
     }
 
@@ -434,10 +434,10 @@ dashdetalle.controller('RankingJogosDetalheCtrl', function($scope, $state, $loca
     }
 
     function buscarConflictosP(selecao){
-      console.log("------"+itemList.length+"-------")
+      //console.log("------"+itemList.length+"-------")
       for (var i = 0; i < itemList.length; i++) {
           if(String(itemList[i][2]) === String(selecao)){
-            console.log("es igual" + true);
+            //console.log("es igual" + true);
             return true;
             break;
           }                        
@@ -477,7 +477,7 @@ dashdetalle.controller('RankingJogosDetalheCtrl', function($scope, $state, $loca
       var startMsec = startTime.getMilliseconds();
       startTime.setTime(500000);
       var elapsed = (startTime.getTime() - startMsec) / 1000; 
-      console.log(elapsed);
+      //console.log(elapsed);
     }
 
 

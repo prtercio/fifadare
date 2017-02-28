@@ -3,7 +3,7 @@ var dashRanking = angular.module('App.DashRanking', []);
 
 dashRanking.controller('RankingCtrl', function($scope, $state, $localStorage, Popup, Chats, $window, $ionicLoading) {
   $ionicLoading.show().then(function(){
-    console.log("Loading");
+    //console.log("Loading");
   });
 	
   $scope.usuario = $localStorage.account.gamertag;
@@ -16,7 +16,7 @@ dashRanking.controller('RankingCtrl', function($scope, $state, $localStorage, Po
         $scope.jogos = snapshot.val(); 
           snapshot.forEach(function(minisnapshot) {
                $ionicLoading.hide().then(function(){
-                  console.log("Loading Hide");
+                  //console.log("Loading Hide");
                 });
           	   ranking.push({
                 "key":minisnapshot.key, 

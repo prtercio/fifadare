@@ -3,7 +3,7 @@ var dash = angular.module('App.DashJogos', []);
 
 dash.controller('JogosCtrl', function($scope, $state, $localStorage, Popup, $window, $ionicLoading) {
 	$ionicLoading.show().then(function(){
-	   console.log("Loading Jogos");
+	   //console.log("Loading Jogos");
 	});
 	var resultado = [];
 
@@ -15,7 +15,7 @@ dash.controller('JogosCtrl', function($scope, $state, $localStorage, Popup, $win
       		//$scope.jogos = snapshot.val();
       		snapshot.forEach(function(minisnapshot) {
                $ionicLoading.hide().then(function(){
-                  console.log("Loading Hide");
+                  //console.log("Loading Hide");
                 });
           	   resultado.push({
                 "jogo":minisnapshot.val().jogo, 

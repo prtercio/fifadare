@@ -8,11 +8,11 @@
 angular.module('App', ['ionic', 'App.controllers', 'App.Dash', 'App.services', 'App.DashJogos', 'App.DashJogosDetalle','App.DashRanking', 'App.RankingJogosDetalhe', 'App.RankingJogos', 'App.Social', 'App.Tabs','ngStorage', 'ngCordovaOauth'])
 
 .constant('Social', {
-    facebookAppId: "1025234637591184",
-    googleWebClientId: "86899339460-kqrko1uuhu9a532l9f0jdhf9tgnp8b00.apps.googleusercontent.com",
-    twitterKey: "aJWByCgPhUgYZJMojyFeH2h8F",
-    twitterSecret: "XxqKHi6Bq3MHWESBLm0an5ndLxPYQ2uzLtIDy6f9vgKKc9kemI"
-  })
+  facebookAppId: "1025234637591184",
+  googleWebClientId: "86899339460-kqrko1uuhu9a532l9f0jdhf9tgnp8b00.apps.googleusercontent.com",
+  twitterKey: "aJWByCgPhUgYZJMojyFeH2h8F",
+  twitterSecret: "XxqKHi6Bq3MHWESBLm0an5ndLxPYQ2uzLtIDy6f9vgKKc9kemI"
+})
   //Constants for the Popup messages
   //For the icons, refer to http://ionicons.com for all icons.
   //Here you can edit the success and error messages on the popups.
@@ -45,11 +45,11 @@ angular.module('App', ['ionic', 'App.controllers', 'App.Dash', 'App.services', '
     enviarRegra: "A regra foi enviada com sucesso!",
     conflictoConquista:"Você não pode adicionar esta Conquista!",
     fotoNaoSelecionada:"Antes de selecionar uma conquista suba uma foto"
-   
+    
   })
 
-.run(function($ionicPlatform) {
-  $ionicPlatform.ready(function() {
+  .run(function($ionicPlatform) {
+    $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
@@ -62,15 +62,15 @@ angular.module('App', ['ionic', 'App.controllers', 'App.Dash', 'App.services', '
       StatusBar.styleDefault();
     }
   });
-})
+  })
 
 
-.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
-  $ionicConfigProvider.platform.android.navBar.alignTitle('center');
-  $ionicConfigProvider.platform.android.tabs.position("bottom");
-  $stateProvider
+  .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+    $ionicConfigProvider.platform.android.navBar.alignTitle('center');
+    $ionicConfigProvider.platform.android.tabs.position("bottom");
+    $stateProvider
   // setup an abstract state for the tabs directive
-    .state('tab', {
+  .state('tab', {
     url: '/tab',
     abstract: true,
     templateUrl: 'views/tabs.html',
@@ -89,97 +89,106 @@ angular.module('App', ['ionic', 'App.controllers', 'App.Dash', 'App.services', '
     }
   })
   .state('tab.rankingjogos', {
-      url: '/dash/:jogoId',
-      views: {
-        'tab-dash': {
-          templateUrl: 'views/rankingjogos.html',
-          controller: 'RankingJogosCtrl as idRankJogo'
-        }
-      },
-        resolve:{
-          idRankJogo: function($stateParams){
-            return $stateParams.jogoId;
-          }
-        }
+    url: '/dash/:jogoId',
+    views: {
+      'tab-dash': {
+        templateUrl: 'views/rankingjogos.html',
+        controller: 'RankingJogosCtrl as idRankJogo'
+      }
+    },
+    resolve:{
+      idRankJogo: function($stateParams){
+        return $stateParams.jogoId;
+      }
+    }
   })
 
   .state('tab.rankingjogosdetalhe', {
-      url: '/rankingjogosdetalhe/:jogoId',
-      views: {
-        'tab-dash': {
-          templateUrl: 'views/rankingjogosdetalhe.html',
-          controller: 'RankingJogosDetalheCtrl as idJogoDetalhe'
-        }
-      },
-        resolve:{
-          idJogoDetalhe: function($stateParams){
-            return $stateParams.jogoId;
-          }
-        }
+    url: '/rankingjogosdetalhe/:jogoId',
+    views: {
+      'tab-dash': {
+        templateUrl: 'views/rankingjogosdetalhe.html',
+        controller: 'RankingJogosDetalheCtrl as idJogoDetalhe'
+      }
+    },
+    resolve:{
+      idJogoDetalhe: function($stateParams){
+        return $stateParams.jogoId;
+      }
+    }
   })
 
 
   .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'views/tab-chats.html',
-          controller: 'JogosCtrl'
-        }
+    url: '/chats',
+    views: {
+      'tab-chats': {
+        templateUrl: 'views/tab-chats.html',
+        controller: 'JogosCtrl'
       }
+    }
   })
   .state('tab.chat-detail', {
-      url: '/chats/:jogoId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'views/chat-detail.html',
-          controller: 'JogosDetalheCtrl as idJogo'
-        }
-      },
-      resolve:{
-        idJogo: function($stateParams){
-            return $stateParams.jogoId;
-        }
+    url: '/chats/:jogoId',
+    views: {
+      'tab-chats': {
+        templateUrl: 'views/chat-detail.html',
+        controller: 'JogosDetalheCtrl as idJogo'
       }
+    },
+    resolve:{
+      idJogo: function($stateParams){
+        return $stateParams.jogoId;
+      }
+    }
   })
   .state('tab.social', {
-      url: '/social',
-      views: {
-        'tab-social': {
-          templateUrl: 'views/social/social.html',
-          controller: 'SocialCtrl'
-        }
+    url: '/social',
+    views: {
+      'tab-social': {
+        templateUrl: 'views/social/social.html',
+        controller: 'SocialCtrl'
       }
+    }
   })
   .state('tab.account', {
     url: '/account',
     views: {
       'tab-account': {
-        templateUrl: 'views/tab-account.html',
+        templateUrl: 'views/regras/regras.html',
         controller: 'AccountCtrl'
       }
     }
   })
+   .state('tab.conquistas', {
+    url: '/conquistas',
+    views: {
+      'tab-account': {
+        templateUrl: 'views/regras/conquistas.html',
+        controller: 'ConquistasCtrl'
+      }
+    }
+  })
   .state('login', {
-        url: '/login',
-        templateUrl: 'views/login/login.html',
-        controller: 'loginController'
-      })
-      .state('forgotPassword', {
-        url: '/forgotPassword',
-        templateUrl: 'views/forgotPassword/forgotPassword.html',
-        controller: 'forgotPasswordController'
-      })
-      .state('register', {
-        url: '/register',
-        templateUrl: 'views/register/register.html',
-        controller: 'registerController'
-      })
-      .state('completeAccount', {
-        url: '/completeAccount',
-        templateUrl: 'views/completeAccount/completeAccount.html',
-        controller: 'completeAccountController'
-      });
+    url: '/login',
+    templateUrl: 'views/login/login.html',
+    controller: 'loginController'
+  })
+  .state('forgotPassword', {
+    url: '/forgotPassword',
+    templateUrl: 'views/forgotPassword/forgotPassword.html',
+    controller: 'forgotPasswordController'
+  })
+  .state('register', {
+    url: '/register',
+    templateUrl: 'views/register/register.html',
+    controller: 'registerController'
+  })
+  .state('completeAccount', {
+    url: '/completeAccount',
+    templateUrl: 'views/completeAccount/completeAccount.html',
+    controller: 'completeAccountController'
+  });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/login');
