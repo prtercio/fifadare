@@ -1,5 +1,5 @@
 <ion-view view-title="Regras">
-  <ion-content class="padding"> 
+  <ion-content> 
     <div ng-if="agregarRegra">
      <form name="regraForm" novalidate ng-submit="regraForm.$valid && enviarregra(regra)">
       <div class="list">
@@ -24,7 +24,7 @@
     </div>
     <br />
 
-    <div class="list">
+    <div class="list padding" >
 
       <a class="item item-icon-left">
         <i class="icon ion-email"></i>
@@ -50,7 +50,7 @@
       -->
     </div>
     <h4 class="center">Regras</h4>
-    <div class="card">
+    <div class="list">
 
     <a class="item item-text-wrap">
       <i class="icon ion-checkmark"></i>
@@ -79,7 +79,7 @@ Caso o participante escolha a conquista 'Sequência de vitórias' DEVE tirar uma
     </a>
      <a class="item item-text-wrap">
       <i class="icon ion-checkmark"></i>      
-      Em caso de desconexão, contará o resultado do histórico do jogo.
+      Em caso de desconexão, contará o resultado do histórico do jogo.  O participante DEVE dubir uma foto(de preferencia na horizontal) do seu histórico.
     </a>
 
 

@@ -26,7 +26,19 @@ dash.controller('JogosCtrl', function($scope, $state, $localStorage, Popup, $win
           });
       	//});
       	$scope.jogosLista = resultado;  
-    });  
+    });
+
+     var refResumo = firebase.database().ref('fifadare/users/'+key);
+	    refResumo.once("value").then(function(snapshot) {
+	      $scope.$apply(function(){
+	          $scope.resumo = snapshot.val();
+	          $scope.jogosQuantidade = $scope.resumo.jogosQuantidade;
+	          $scope.vitoria = $scope.resumo.vitoria;
+	          $scope.empate = $scope.resumo.empate;
+	          $scope.derrota = $scope.resumo.derrota;
+	          $scope.pontos = $scope.resumo.pontos;
+	        });     
+	    });    
 
 	/*
 	var jogos = [];

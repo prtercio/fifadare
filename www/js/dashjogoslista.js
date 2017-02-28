@@ -126,7 +126,7 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
                 var sumaNum = parseInt(idJogo) +1;
                 var proximoJogo = "jogo"+sumaNum;
 
-                if(idJogo < 51){
+                if(idJogo < 50){
                    console.log("menor que 51");
                   firebase.database().ref().child('fifadare/users/'+key+'/jogos/'+proximoJogo).update({
                     bloqueado:false
