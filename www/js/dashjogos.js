@@ -1,29 +1,31 @@
 'Use Strict';
 var dash = angular.module('App.DashJogos', []);
 
-dash.controller('JogosCtrl', function($scope, $state, $localStorage, Popup, Chats, $window) {
-	$scope.atualizarPagina = function(){
-		$window.location.reload();
-	}
+dash.controller('JogosCtrl', function($scope, $state, $localStorage, Popup, $window, $ionicLoading) {
+	$ionicLoading.show().then(function(){
+	   console.log("Loading Jogos");
+	});
 	var resultado = [];
 
 	 var key = localStorage.getItem('key');
 
-    var refjogos = firebase.database().ref('fifadare/users/'+key+'/jogos').orderByChild('jogo');
-    refjogos.once("value").then(function(snapshot) {
-    	$scope.$apply(function(){
+    var refjogos = firebase.database().ref('fifadare/users/'+key+'/jogos');
+    refjogos.orderByChild('jogo').once("value").then(function(snapshot) {
+    	//$scope.$apply(function(){
       		//$scope.jogos = snapshot.val();
       		snapshot.forEach(function(minisnapshot) {
-               
+               $ionicLoading.hide().then(function(){
+                  console.log("Loading Hide");
+                });
           	   resultado.push({
                 "jogo":minisnapshot.val().jogo, 
                 "bloqueado":minisnapshot.val().bloqueado, 
                 "estado":minisnapshot.val().estado, 
                 "pontos":minisnapshot.val().pontos
-              })
+              });
           });
-      	});
-      	$scope.jogos = resultado;  
+      	//});
+      	$scope.jogosLista = resultado;  
     });  
 
 	/*

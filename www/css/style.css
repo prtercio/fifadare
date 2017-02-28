@@ -143,3 +143,7 @@ item.linearer{
 .fontepequena{
   font-size: .7em;
 }
+
+.badge-container{
+      position: relative;
+}

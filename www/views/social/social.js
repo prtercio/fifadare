@@ -4,9 +4,11 @@ var social = angular.module('App.Social', []);
 social.controller('SocialCtrl', function($scope, $state, $localStorage, Popup, $ionicHistory, $timeout) {
 
 	var resultado = [];
-	console.log("EFG "+$ionicHistory.currentStateName());
+
 	if($ionicHistory.currentStateName() === "tab.social"){
+		console.log("estou em "+$ionicHistory.currentStateName());
 		window.localStorage.setItem('nuevoSocial', 0);
+		$scope.resumoSocial = parseInt(window.localStorage.getItem('nuevoSocial'));
 	}
 
 	$timeout(function() {

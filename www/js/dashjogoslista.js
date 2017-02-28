@@ -156,7 +156,7 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
                       Utils.message(Popup.successIcon, Popup.PontosSuccess).then(function() {
 
                         $state.go('tab.chats');
-                        $window.location.reload();
+                        //$window.location.reload();
                         
                       });
                     });
@@ -188,7 +188,7 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
                       Utils.message(Popup.successIcon, Popup.concluir50Jogos).then(function() {
                       fotosEnviadas = false;                   
                         $state.go('tab.chats');
-                        $window.location.reload();
+                        //$window.location.reload();
                       });
                     });
 
