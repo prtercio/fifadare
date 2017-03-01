@@ -99,12 +99,20 @@ angular.module('App', ['ionic', 'App.controllers', 'App.Dash', 'App.services', '
       }
     }
   })
-    .state('tab.regras', {
+  .state('tab.regras', {
     url: '/regras',
     views: {
       'tab-dash': {
         templateUrl: 'views/regras/regras.html',
         controller: 'AccountCtrl'
+      }
+    }
+  })
+  .state('tab.configuracao', {
+    url: '/configuracao',
+    views: {
+      'tab-dash': {
+        templateUrl: 'views/regras/configuracao.html'
       }
     }
   })
