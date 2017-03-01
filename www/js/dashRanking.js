@@ -12,7 +12,7 @@ dashRanking.controller('RankingCtrl', function($scope, $state, $localStorage, Po
   var key = localStorage.getItem('key');
 
    $scope.refresh = function(){
-    $state.go($state.current, {}, {reload: true});
+    $window.location.reload(true);
   }
 
 	var refTodosjogos = firebase.database().ref('fifadare/users');
