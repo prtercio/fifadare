@@ -5,6 +5,7 @@ dash.controller('JogosCtrl', function($scope, $state, $localStorage, Popup, $win
 	$ionicLoading.show().then(function(){
 	   //console.log("Loading Jogos");
 	});
+
 	var resultado = [];
 
 	 var key = localStorage.getItem('key');
@@ -40,6 +41,7 @@ dash.controller('JogosCtrl', function($scope, $state, $localStorage, Popup, $win
 	        });     
 	    });    
 
+	
 	/*
 	var jogos = [];
 	console.log($localStorage.key);

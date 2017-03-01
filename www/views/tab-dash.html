@@ -1,4 +1,7 @@
 <ion-view view-title="Ranking">
+<ion-nav-buttons side="secondary">      
+      <a class="button button-icon icon ion-help-circled" ng-click="popover.show($event)"></a>
+  </ion-nav-buttons>
 	<ion-content class="padding">
 		<div class="row borderGris bgazure">		
 			<div class="col col-10"><strong>#</strong></div>
@@ -18,5 +21,29 @@
 			<div class="col col-10" ng-class="{bgverde:$index==0,bgazul:$index==1, bgbisque:$index==2, bgazure:$index>=3}" ng-if="value.quantidade > 0 && usuario!=value.gamertag"><a class="button button-small button-balanced" href="#/tab/dash/{{value.gamertag}}|{{value.key}}"> <i class="icon ion-ios-redo"></i></a></div>
 		</div>	
 		</div>
+		 <script id="templates/popover.html" type="text/ng-template">
+    <ion-popover-view style="height: 260px;">
+      <ion-content>
+        <ion-list>
+         <ion-item class="item item-icon-left verde" ng-href="#/tab/regras" ng-click="cerrarMenu()">
+            <i class="icon ion-clipboard"></i>Regras
+          </ion-item>          
+          <ion-item class="item item-icon-left verde" ng-href="#/tab/conquistas" ng-click="cerrarMenu()">
+            <i class="icon ion-ribbon-a"></i>Conquistas
+          </ion-item>
+          <div class="padding">
+          <div><strong>Participante:</strong></div>
+          <ul>
+          <li> <i class="icon ion-ios-game-controller-b"></i><span class="iconCustom">{{gamertag}}</span></li>
+          <li> <i class="icon ion-email"></i><span class="iconCustom">{{email}}</span></li>
+          </ul>
+          <hr>
+            Desenvolvido por:
+            <p><strong>Tércio Santos</strong></p>
+          </div> 
+        </ion-list>
+      </ion-content>
+    </ion-popover-view>
+  </script>
 	</ion-content>
 </ion-view>

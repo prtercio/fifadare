@@ -1,7 +1,7 @@
 'Use Strict';
 var tab = angular.module('App.controllers', []);
 
-tab.controller('ConquistasCtrl', function($scope, $state, $timeout) {
+tab.controller('ConquistasCtrl', function($scope, $state, $timeout, Utils, Popup) {
 
   //$timeout(function() {
     var ref = firebase.database().ref("fifadare/regra");
@@ -24,11 +24,18 @@ tab.controller('ConquistasCtrl', function($scope, $state, $timeout) {
     var url;
 
     ionic.Platform.ready(function() {
-      //console.log("ready get camera types");
+      console.log("ready get camera types");
       if (!navigator.camera)
-        {
-        console.log("Aqui toy");
+        {       
+           Utils.message(Popup.errorIcon, Popup.errorFoto).then(function() {
+             
+          });
         return;
+        } else {
+          Utils.message(Popup.successIcon, Popup.okFoto).then(function() {
+           
+          });
+          return;
         }
       //pictureSource=navigator.camera.PictureSourceType.PHOTOLIBRARY;
       var pictureSource=navigator.camera.PictureSourceType.CAMERA;
@@ -70,54 +77,11 @@ tab.controller('AccountCtrl', function($scope, $state, $localStorage, Popup, $io
     enableFriends: true
   };
 
-  var key = localStorage.getItem('key');
+
   var imageSelecionada1;
   var imageSelecionada2;
 
-  $scope.$on('$ionicView.enter', function() {
-    //Check if there's an authenticated user, if there is non, redirect to login.
-    if(firebase.auth().currentUser) {
-      $scope.loggedIn = true;
-    } else {
-      $scope.loggedIn = false;
-      $state.go('login');
-    }
-    if(!$localStorage.isGuest) {
-      //Authentication details.
-      //console.log("Firebase Auth: " + JSON.stringify(firebase.auth().currentUser));
-      //Account details.
-      var email = JSON.stringify(firebase.auth().currentUser.email);
-      var uid = JSON.stringify(firebase.auth().currentUser.uid); 
-      //console.log("Account: " + email);
-      //Set the variables to be shown on home.html
-      $scope.email = $localStorage.account.email;
-      $scope.provider = $localStorage.account.provider;
-      $scope.gamertag = $localStorage.account.gamertag;
-
-      var ref = firebase.database().ref("fifadare/users/"+key);
-      ref.once("value").then(function(snapshot) {
-       $scope.$apply(function(){
-            $scope.games = snapshot.val(); // {first:"Ada",last:"Lovelace"}
-            $scope.pontos = $scope.games.pontos;
-            $scope.jogosQuantidade = $scope.games.jogosQuantidade;
-          });
-     });
-
-
-      if($localStorage.account.email == "benbaodan@outlook.com"){
-        $scope.agregarRegra = true;
-      } else {
-        $scope.agregarRegra = false;
-      }
-    } else {
-      //Logged in user is previously logged in as guest. Set variables to Guest variables.
-      //console.log("Firebase Auth: " + JSON.stringify(firebase.auth().currentUser));
-      $scope.email = "Guest";
-      $scope.provider = "Firebase";
-      $scope.loggedIn = true;
-    }
-  })
-
+  
   $scope.logout = function() {
     if (firebase.auth()) {
       firebase.auth().signOut().then(function() {

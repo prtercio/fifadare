@@ -44,7 +44,9 @@ angular.module('App', ['ionic', 'App.controllers', 'App.Dash', 'App.services', '
     concluir50Jogos:"Os pontos foram enviados com sucesso!   Parabéns, você concluiu os 50 jogos!!!",
     enviarRegra: "A regra foi enviada com sucesso!",
     conflictoConquista:"Você não pode adicionar esta Conquista!",
-    fotoNaoSelecionada:"Antes de selecionar uma conquista suba uma foto"
+    fotoNaoSelecionada:"Antes de selecionar uma conquista suba uma foto",
+    errorFoto:"No funciona",
+    okFoto:"Funciona!!!"
     
   })
 
@@ -85,6 +87,24 @@ angular.module('App', ['ionic', 'App.controllers', 'App.Dash', 'App.services', '
       'tab-dash': {
         templateUrl: 'views/tab-dash.html',
         controller: 'RankingCtrl'
+      }
+    }
+  })
+   .state('tab.conquistas', {
+    url: '/conquistas',
+    views: {
+      'tab-dash': {
+        templateUrl: 'views/regras/conquistas.html',
+        controller: 'ConquistasCtrl'
+      }
+    }
+  })
+    .state('tab.regras', {
+    url: '/regras',
+    views: {
+      'tab-dash': {
+        templateUrl: 'views/regras/regras.html',
+        controller: 'AccountCtrl'
       }
     }
   })
@@ -151,24 +171,8 @@ angular.module('App', ['ionic', 'App.controllers', 'App.Dash', 'App.services', '
       }
     }
   })
-  .state('tab.account', {
-    url: '/account',
-    views: {
-      'tab-account': {
-        templateUrl: 'views/regras/regras.html',
-        controller: 'AccountCtrl'
-      }
-    }
-  })
-   .state('tab.conquistas', {
-    url: '/conquistas',
-    views: {
-      'tab-account': {
-        templateUrl: 'views/regras/conquistas.html',
-        controller: 'ConquistasCtrl'
-      }
-    }
-  })
+ 
+  
   .state('login', {
     url: '/login',
     templateUrl: 'views/login/login.html',

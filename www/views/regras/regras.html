@@ -1,7 +1,4 @@
 <ion-view view-title="Regras">
- <ion-nav-buttons side="secondary">      
-      <a class="button button-icon icon ion-help-circled" ng-click="popover.show($event)"></a>
-  </ion-nav-buttons>
   <ion-content> 
     <div ng-if="agregarRegra">
      <form name="regraForm" novalidate ng-submit="regraForm.$valid && enviarregra(regra)">
@@ -70,28 +67,6 @@ Caso o participante escolha a conquista 'Sequência de vitórias' DEVE tirar uma
 
    <button  class="button button-block button-assertive" ng-click="logout()">Logout</button>
    <br />
-
-   <br />
-   <script id="templates/popover.html" type="text/ng-template">
-    <ion-popover-view style="height: 200px;">
-      <ion-content>
-        <ion-list>          
-          <ion-item class="item item-icon-left verde" ng-href="#/tab/conquistas" ng-click="cerrarMenu()">
-            <i class="icon ion-ribbon-a"></i>Conquistas
-          </ion-item>
-          <div class="padding">
-          <div><strong>Participante:</strong></div>
-          <ul>
-          <li> <i class="icon ion-ios-game-controller-b"></i><span class="iconCustom">{{gamertag}}</span></li>
-          <li> <i class="icon ion-email"></i><span class="iconCustom">{{email}}</span></li>
-          </ul>
-          <hr>
-            Desenvolvido por:
-            <p><strong>Tércio Santos</strong></p>
-          </div> 
-        </ion-list>
-      </ion-content>
-    </ion-popover-view>
-  </script>
+   
   </ion-content>  
 </ion-view>
