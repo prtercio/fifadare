@@ -33,9 +33,12 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
   var fechaSeleccionada = new Date();
   var fechaFormatada;
 
+  var estadoRespuesta = [];
+
   fechaFormatada = Date.UTC(fechaSeleccionada.getFullYear(), fechaSeleccionada.getMonth(),
   fechaSeleccionada.getDate(),fechaSeleccionada.getHours(),fechaSeleccionada.getMinutes(),fechaSeleccionada.getSeconds());
 
+ 
 
   var refBuscar = firebase.database().ref('fifadare/users/'+key);
   refBuscar.once('value').then(function(snapshot){
@@ -50,7 +53,7 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
   });
 
 
-  var estadoRespuesta = [];
+
 
   var refjogos = firebase.database().ref('fifadare/users/'+key+'/jogos/'+$scope.chat);
   refjogos.once("value").then(function(snapshot) {
@@ -67,9 +70,6 @@ dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorag
     });   
   }); 
 
-
-
-   
 
   var refImagens = firebase.database().ref('fifadare/users/'+key+'/jogos/'+$scope.chat+'/capturas/');
   refImagens.once("value").then(function(snapshot) {

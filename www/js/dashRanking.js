@@ -9,7 +9,11 @@ dashRanking.controller('RankingCtrl', function($scope, $state, $localStorage, Po
   $scope.usuario = $localStorage.account.gamertag;
 
   var ranking = [];
-    var key = localStorage.getItem('key');
+  var key = localStorage.getItem('key');
+
+   $scope.refresh = function(){
+    $state.go($state.current, {}, {reload: true});
+  }
 
 	var refTodosjogos = firebase.database().ref('fifadare/users');
     refTodosjogos.orderByChild('pontos').once("value").then(function(snapshot) {
