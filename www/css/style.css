@@ -79,7 +79,7 @@ img.resize{
    border: 1px solid #ccc;
 }
 
-
+/*
 input#file{
   width: 0.1px;
   height: 0.1px;
@@ -93,7 +93,7 @@ input#file3{
   position: absolute;
   z-index: -1;
 }
-
+*/
 
 .botaoSubir{
   box-shadow: rgb(242, 156, 147) 0px 1px 0px 0px inset; 

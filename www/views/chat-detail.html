@@ -20,22 +20,24 @@
      <p ng-if="detalheJogo.estado == 'Próximo'">Adicione aqui a(s) foto(s):</p>
    <div class="row" id="camera1">
      <div class="col col-25">
+     <!--
        <label class="botaoSubir"><i class="icon ion-ios-camera"></i>
          <!--<input type="file" id="file" accept="image/*" capture="camera">-->
-         <<!--<input type="file" id="file" />-->
+         <!--<input type="file" id="file" />
          <input type="file" capture="camera" accept="image/*">
-        </label>
+        </label>-->
+        <input type="file" capture="camera" accept="image/*" id="file">
       </div>
+      <!--
       <div class="col col-75">
         <h4>{{imagen1.name}}</h4>
       </div>
+      -->
   </div>
 
     <div class="row">
      <div class="col col-25">
-       <label class="botaoSubir" id="botao2"><i class="icon ion-ios-camera"></i>
-         <input type="file" id="file3">
-        </label>
+       <input type="file" capture="camera" accept="image/*" id="file3">
       </div>
       <div class="col col-75">
         <h4>{{imagen2.name}}</h4>
@@ -46,9 +48,11 @@
       <div class="item item-image">
         <img src="{{img.imagem1}}">
       </div> 
+      <!--
       <div class="item item-image">
         <img src="{{img.imagem2}}">
-      </div>        
+      </div>  
+      -->      
     </div>
 
 <hr ng-if="detalheJogo.estado == 'Próximo'">
