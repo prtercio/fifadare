@@ -1,10 +1,18 @@
 'Use Strict';
 var dashRanking = angular.module('App.DashRanking', []);
 
-dashRanking.controller('RankingCtrl', function($scope, $state, $localStorage, Popup, Chats, $window, $ionicLoading, $ionicPopover) {
+dashRanking.controller('RankingCtrl', function($scope, $state, $localStorage, Popup, Chats, $window, $ionicLoading, $ionicPopover, $ionicHistory) {
   $ionicLoading.show().then(function(){
     //console.log("Loading");
   });
+
+  //var test = $ionicHistory.viewHistory();
+  //console.log("back "+ test.backViewId);
+
+  if(window.localStorage.getItem("lang")){
+      window.localStorage.setItem("lang", "pt");
+      console.log("Idioma selecionado.")
+    }
 	
   $scope.usuario = $localStorage.account.gamertag;
 
@@ -68,14 +76,17 @@ dashRanking.controller('RankingCtrl', function($scope, $state, $localStorage, Po
       $scope.provider = $localStorage.account.provider;
       $scope.gamertag = $localStorage.account.gamertag;
 
+      /*
+
       var ref = firebase.database().ref("fifadare/users/"+key);
       ref.once("value").then(function(snapshot) {
        $scope.$apply(function(){
             $scope.games = snapshot.val(); // {first:"Ada",last:"Lovelace"}
-            $scope.pontos = $scope.games.pontos;
-            $scope.jogosQuantidade = $scope.games.jogosQuantidade;
+            //$scope.pontos = $scope.games.pontos;
+            //$scope.jogosQuantidade = $scope.games.jogosQuantidade;
           });
      });
+     */
 
 
       if($localStorage.account.email == "benbaodan@outlook.com"){

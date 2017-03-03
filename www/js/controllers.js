@@ -23,24 +23,6 @@ tab.controller('ConquistasCtrl', function($scope, $state, $timeout, Utils, Popup
     var destinationType; // sets the format of returned value
     var url;
 
-    ionic.Platform.ready(function() {
-      console.log("ready get camera types");
-      if (!navigator.camera)
-        {       
-           Utils.message(Popup.errorIcon, Popup.errorFoto).then(function() {
-             
-          });
-        return;
-        } else {
-          Utils.message(Popup.successIcon, Popup.okFoto).then(function() {
-           
-          });
-          return;
-        }
-      //pictureSource=navigator.camera.PictureSourceType.PHOTOLIBRARY;
-      var pictureSource=navigator.camera.PictureSourceType.CAMERA;
-      var destinationType=navigator.camera.DestinationType.FILE_URI;
-    });
   //});
 
   $scope.takePicture = function() {

@@ -1,10 +1,17 @@
 'Use Strict';
 var dash = angular.module('App.DashJogos', []);
 
-dash.controller('JogosCtrl', function($scope, $state, $localStorage, Popup, $window, $ionicLoading) {
+dash.controller('JogosCtrl', function($scope, $state, $localStorage, Popup, $window, $ionicLoading, $ionicHistory) {
 	$ionicLoading.show().then(function(){
 	   //console.log("Loading Jogos");
 	});
+
+
+
+	if($ionicHistory.backView() === "tab.configuracao"){
+	   $window.location.reload(true);    
+	}
+
 
 	var resultado = [];
 
@@ -29,17 +36,24 @@ dash.controller('JogosCtrl', function($scope, $state, $localStorage, Popup, $win
       	$scope.jogosLista = resultado;  
     });
 
+
      var refResumo = firebase.database().ref('fifadare/users/'+key);
 	    refResumo.once("value").then(function(snapshot) {
-	      $scope.$apply(function(){
+	      //$scope.$apply(function(){
 	          $scope.resumo = snapshot.val();
+	          
 	          $scope.jogosQuantidade = $scope.resumo.jogosQuantidade;
 	          $scope.vitoria = $scope.resumo.vitoria;
 	          $scope.empate = $scope.resumo.empate;
 	          $scope.derrota = $scope.resumo.derrota;
 	          $scope.pontos = $scope.resumo.pontos;
-	        });     
-	    });    
+
+	        //});     
+	    }); 
+
+
+
+
 
 	
 	/*

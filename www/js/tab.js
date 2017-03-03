@@ -8,14 +8,15 @@ tab.controller('TabsCtrl', function($scope, $state, $localStorage, Popup, $ionic
 	$scope.resumoSocial = 1;
 	
 	var num = 0;
-	console.log("ABC "+$ionicHistory.currentStateName());
+	//console.log("ABC "+$ionicHistory.currentStateName());
+	//console.log("back "+$ionicHistory.backView());
 
-	$scope.resumoSocial = 10;
+	$scope.resumoSocial = 0;
 
 	var ref = firebase.database().ref().child("fifadare/social").limitToLast(15);
 	ref.on("child_added", function(snapshot) {
 		num++;
-		if($ionicHistory.currentStateName() === "tab.dash" || $ionicHistory.currentStateName() === "tab.chats" || $ionicHistory.currentStateName() === "tab.account"){
+		if($ionicHistory.currentStateName() === "tab.dash" || $ionicHistory.currentStateName() === "tab.chats"){
 			//console.log(num+" Dash");
 			if(num === 15){
 				

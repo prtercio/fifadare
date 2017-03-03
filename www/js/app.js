@@ -15,7 +15,8 @@ angular.module('App', [
   'App.DashRanking', 
   'App.RankingJogosDetalhe', 
   'App.RankingJogos', 
-  'App.Social', 
+  'App.Social',
+  'App.Configuracao', 
   'App.translations', 
   'App.Tabs',
   'ngStorage', 
@@ -127,7 +128,8 @@ angular.module('App', [
     url: '/configuracao',
     views: {
       'tab-dash': {
-        templateUrl: 'views/regras/configuracao.html'
+        templateUrl: 'views/regras/configuracao.html',
+        controller: 'ConfiguracaoCtrl'
       }
     }
   })
