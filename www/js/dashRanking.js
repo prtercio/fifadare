@@ -6,6 +6,8 @@ dashRanking.controller('RankingCtrl', function($scope, $state, $localStorage, Po
     //console.log("Loading");
   });
 
+  $ionicHistory.removeBackView();
+
   //var test = $ionicHistory.viewHistory();
   //console.log("back "+ test.backViewId);
 
@@ -14,12 +16,13 @@ dashRanking.controller('RankingCtrl', function($scope, $state, $localStorage, Po
       console.log("Idioma selecionado.")
     }
 	
-  $scope.usuario = $localStorage.account.gamertag;
+  
 
   var ranking = [];
   var key = localStorage.getItem('key');
 
-   $scope.refresh = function(){
+  $scope.refresh = function(){
+    $ionicHistory.removeBackView();
     $window.location.reload(true);
   }
 
@@ -101,6 +104,9 @@ dashRanking.controller('RankingCtrl', function($scope, $state, $localStorage, Po
       $scope.provider = "Firebase";
       $scope.loggedIn = true;
     }
-  })
+  });
+
+
+      //$scope.usuario = $localStorage.account.gamertag;
 
 });

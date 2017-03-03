@@ -17,7 +17,7 @@
 -->
   <ion-content class="padding">
 
-     <p ng-if="detalheJogo.estado == 'Próximo'">Adicione aqui a(s) foto(s):</p>
+     <p ng-if="detalheJogo.estado == 'Próximo'">{{'ADICIONEASFOTOS' | translate}}</p>
    <div class="row" id="camera1">
      <div class="col col-25">
      <!--
@@ -76,7 +76,7 @@
     <input type="submit" value="Enviar" class="button button-block button-positive" ng-disabled="regraSend.$invalid" />
     <form>
     -->
-    <p>Selecione uma ou mais conquistas:</p>
+    <p>{{'ADICIONEASFOTOS' | translate}}</p>
     <div class="list">
             <label class="item item-input item-select">
                 <div class="input-label">
@@ -89,8 +89,8 @@
   </label>
   </div>
   <div ng-show="verPontos">
-  <h5 class="center" >Conquistas selecionadas: </h5>
-  <p class="gris">Elimine um elemento movendo a conquista da direita para a esquerda e presionando o botão Delete.</p>
+  <h5 class="center" >{{'CONQUISTASSELECIONADAS' | translate}}</h5>
+  <p class="gris">{{'ELIMINECONQUISTAS' | translate}}</p>
   </div>
   <ion-list>
     <ion-item ng-repeat="shop in items" class="item item-icon-left item-verde"  >
@@ -103,7 +103,7 @@
   </ion-list>
 <br />
 <div class="center" ng-if="verPontos">
-    <h5>Total de Pontos das Conquistas selecionadas: <strong class="verde">{{suma}}</strong></h5>
+    <h5>{{'TOTALDEPONTOS' | translate}} <strong class="verde">{{suma}}</strong></h5>
 </div>
 <br />
 
@@ -122,11 +122,11 @@
   <button class="button button-block button-balanced" ng-show="verPontos" ng-disabled="!checked" ng-click="enviarPontos()">Enviar Conquista</button>
   </div>
   <div ng-if="detalheJogo.estado == 'Terminado'">
-    <h5 class="center vermelho">Este jogo já foi enviado.</h5>
+    <h5 class="center vermelho">{{'JOGOENVIADO' | translate}}</h5>
     <ion-item class="item">
-      <h2 class="center verde">Pontos: {{detalheJogo.pontos}}</h2>
+      <h2 class="center verde">{{'PONTOS' | translate}}: {{detalheJogo.pontos}}</h2>
     </ion-item>
-    <h5 class="center">Detalhe das conquistas:</h5>
+    <h5 class="center">{{'DETALHECONQUISTAS' | translate}}</h5>
     <ion-list>
       <ion-item ng-repeat="detalhe in detalheJogo.conquistas track by $index" class="verde">
         <p>{{detalhe}}</p>

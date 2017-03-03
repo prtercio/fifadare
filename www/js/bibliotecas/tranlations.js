@@ -28,7 +28,21 @@ trans.factory('asyncLoader', function ($q, $timeout) {
         REGISTRO: "Registrárse",
         VOLTAR: "Volver",
         PONTOS: "Puntos",
-        JOGOS:"Juegos"
+        JOGOS:"Juegos",
+        JOGO:"Juego",
+        REGRAS: "Reglas",
+        CONFIGURACAO: "Configuración",
+        DESENVOLVIDOPOR: "Desarrollado por",
+        SELECIONARIDIOMA:"Seleccionar el Idioma",
+        VITORIA: "Victoria",
+        ADICIONEASFOTOS: "Agregue aqui la(s) foto(s):",
+        SELECIONECONQUISTAS: "Seleccione una o más conquistas:",
+        CONQUISTASSELECIONADAS: "Conquistas seleccionadas:",
+        ELIMINECONQUISTAS: "Elimine un elemento moviendo la conquista de la derecha hacia la izquierda y click en el botón Delete.",
+        TOTALDEPONTOS:"Total de Puntos de las Conquistas seleccionadas:",
+        JOGOENVIADO: "Este juego fue enviado.",
+        DETALHECONQUISTAS:"Detalle de las conquistas:",
+        DETALHEJOGO:"Detalle del Juego"
       };
     } if (options.key === 'pt') {
       translations = {
@@ -40,7 +54,22 @@ trans.factory('asyncLoader', function ($q, $timeout) {
         REGISTRO: "Registro",
         VOLTAR:"Volver",
         PONTOS: "Pontos",
-        JOGOS:"Jogos"
+        JOGOS:"Jogos",
+        JOGO:"Jogo",
+        REGRAS: "Regras",
+        CONFIGURACAO: "Configuração",
+        DESENVOLVIDOPOR: "Desenvolvido por",
+        SELECIONARIDIOMA:"Selecione o Idioma",
+        VITORIA: "Vitória",
+        ADICIONEASFOTOS: "Adicione aqui a(s) foto(s):",
+        SELECIONECONQUISTAS: "Selecione uma o mais conquistas:",
+        CONQUISTASSELECIONADAS: "Conquistas selecionadas:",
+        ELIMINECONQUISTAS: "Elimine um elemento movendo a conquista da direita para a esquerda e presionando o botão Delete.",
+        TOTALDEPONTOS:"Total de Pontos das Conquistas selecionadas:",
+        JOGOENVIADO:"Este jogo já foi enviado.",
+        DETALHECONQUISTAS:"Detalhe das conquistas:",
+        DETALHEJOGO:"Detalhe do Jogo"
+
       };
     }
     if (options.key === 'en') {

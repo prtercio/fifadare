@@ -54,7 +54,7 @@ tab.controller('ConquistasCtrl', function($scope, $state, $timeout, Utils, Popup
 
 });
 
-tab.controller('AccountCtrl', function($scope, $state, $localStorage, Popup, $ionicPopover) {
+tab.controller('AccountCtrl', function($scope, $state, $localStorage, Popup, $ionicPopover, $ionicHistory) {
   $scope.settings = {
     enableFriends: true
   };
@@ -67,10 +67,12 @@ tab.controller('AccountCtrl', function($scope, $state, $localStorage, Popup, $io
   $scope.logout = function() {
     if (firebase.auth()) {
       firebase.auth().signOut().then(function() {
+        $ionicHistory.removeBackView();
         //Clear the saved credentials.
         $localStorage.$reset();
+        
         //Proceed to login screen.
-        $state.go('login');
+        $state.go('login', {}, {reload: true});
       }, function(error) {
         //Show error message.
         Utils.message(Popup.errorIcon, Popup.errorLogout);

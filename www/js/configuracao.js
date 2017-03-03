@@ -7,7 +7,7 @@ dash.controller('ConfiguracaoCtrl', function($scope, $state, $localStorage, Popu
 	$scope.showPopup = function() {
 	    $ionicPopup.show({
 	              template: '',
-	              title: 'Selecione o idioma',
+	              title: 'Idioma:',
 	              scope: $scope,
 	              buttons: [
 	                { text: 'Portugues', onTap: function(e) { return 'pt'; } },
