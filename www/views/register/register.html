@@ -2,7 +2,7 @@
   <ion-content class="padding">
     <div class="list text-center padding">
       <img class="resize" src="img/desafio.jpg">
-      <h2><span class="bold">Registro</span></h2>
+      <h2><span class="bold">{{'REGISTRO' | translate}}</span></h2>
       <!--
       <h4 class="line-height-160">We're so glad to have you join us! Awesomeness begins with you.</h4>
       -->
@@ -14,8 +14,8 @@
           <input name="email" type="email" ng-model="user.email" placeholder="Email" ng-minlength="5" ng-maxlength="30" required>
         </label>
         <label class="item item-input" style="border-radius:5px; margin-bottom: 10px;">
-          <span class="input-label">Password:</span>
-          <input name="password" type="password" ng-model="user.password" placeholder="Password" ng-minlength="5" ng-maxlength="30" required>
+          <span class="input-label">{{'SENHA' | translate}}:</span>
+          <input name="password" type="password" ng-model="user.password" placeholder="{{'SENHA' | translate}}" ng-minlength="5" ng-maxlength="30" required>
         </label>
          <label class="item item-input">
           <span class="input-label">Gamertag:</span>
@@ -24,6 +24,6 @@
         <input type="submit" value="Enviar" class="button button-block button-positive" ng-disabled="registerForm.$invalid" />
       </div>
     </form>
-    <button onclick="location.href='#/login';" class="button button-assertive button-block button-no-margin-top">Voltar</button>
+    <button onclick="location.href='#/login';" class="button button-assertive button-block button-no-margin-top">{{'VOLTAR' | translate}}</button>
   </ion-content>
 </ion-view>

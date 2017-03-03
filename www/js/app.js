@@ -5,7 +5,22 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('App', ['ionic', 'App.controllers', 'App.Dash', 'App.services', 'App.DashJogos', 'App.DashJogosDetalle','App.DashRanking', 'App.RankingJogosDetalhe', 'App.RankingJogos', 'App.Social', 'App.Tabs','ngStorage', 'ngCordovaOauth'])
+angular.module('App', [
+  'ionic', 
+  'App.controllers', 
+  'App.Dash', 
+  'App.services', 
+  'App.DashJogos', 
+  'App.DashJogosDetalle',
+  'App.DashRanking', 
+  'App.RankingJogosDetalhe', 
+  'App.RankingJogos', 
+  'App.Social', 
+  'App.translations', 
+  'App.Tabs',
+  'ngStorage', 
+  'ngCordovaOauth'
+  ])
 
 .constant('Social', {
   facebookAppId: "1025234637591184",

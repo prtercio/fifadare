@@ -5,7 +5,7 @@
 // Afterwhich, an account will be saved on the Firebase Database which is independent from the Firebase Auth and Social Auth accounts.
 // If the user is previously logged in and the app is closed, the user is automatically logged back in whenever the app is reopened.
 'Use Strict';
-angular.module('App').controller('loginController', function($scope, $state, $localStorage, Social, Utils, $cordovaOauth, Popup) {
+angular.module('App').controller('loginController', function($scope, $state, $localStorage, Social, Utils, $cordovaOauth, Popup, $ionicPopup, $window) {
   $scope.$on('$ionicView.enter', function() {
     //Clear the Login Form.
     $scope.user = {
@@ -236,5 +236,37 @@ angular.module('App').controller('loginController', function($scope, $state, $lo
         break;
     }
   };
+
+
+  $scope.showPopup = function() {
+    if(window.localStorage.getItem("lang")){
+      console.log("Idioma selecionado.")
+    } else {
+    $ionicPopup.show({
+              template: '',
+              title: 'Selecione o idioma',
+              scope: $scope,
+              buttons: [
+                { text: 'Portugues', onTap: function(e) { return 'pt'; } },
+                { text: 'Español', onTap: function(e) { return 'es'; } }
+
+              ]
+              }).then(function(res) {
+                console.log('Tapped!', res);
+                if(res === "pt"){
+                      window.localStorage.setItem("lang", "pt");
+                      $window.location.reload(true);
+                } else {
+                      window.localStorage.setItem("lang", "es");
+                      $window.location.reload(true);
+                }
+              }, function(err) {
+                console.log('Err:', err);
+              }, function(msg) {
+                console.log('message:', msg);
+              });
+
+  }
+}
 
 });
