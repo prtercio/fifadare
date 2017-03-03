@@ -9,7 +9,7 @@ dashRanking.controller('RankingCtrl', function($scope, $state, $localStorage, Po
   //var test = $ionicHistory.viewHistory();
   //console.log("back "+ test.backViewId);
 
-  if(window.localStorage.getItem("lang")){
+  if(window.localStorage.getItem("lang") == null){
       window.localStorage.setItem("lang", "pt");
       console.log("Idioma selecionado.")
     }
