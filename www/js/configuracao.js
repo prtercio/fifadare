@@ -37,6 +37,22 @@ dash.controller('ConfiguracaoCtrl', function($scope, $state, $localStorage, Popu
 
 	  }
 
+	$scope.logout = function() {
+	    if (firebase.auth()) {
+	      firebase.auth().signOut().then(function() {
+	        $ionicHistory.removeBackView();
+	        //Clear the saved credentials.
+	        $localStorage.$reset();
+	        
+	        //Proceed to login screen.
+	        $state.go('login', {}, {reload: true});
+	      }, function(error) {
+	        //Show error message.
+	        Utils.message(Popup.errorIcon, Popup.errorLogout);
+	      });
+	    }
+	  };
+
 
 
 });

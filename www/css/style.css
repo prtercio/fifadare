@@ -3,6 +3,11 @@ img.resize{
     height: auto;
 }
 
+img.resizePeq{
+    width:100px; /* you can use % */
+    height: auto;
+}
+
 .borderGris{
   border: 1px;
   border-color: grey;
