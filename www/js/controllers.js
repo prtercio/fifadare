@@ -64,21 +64,7 @@ tab.controller('AccountCtrl', function($scope, $state, $localStorage, Popup, $io
   var imageSelecionada2;
 
   
-  $scope.logout = function() {
-    if (firebase.auth()) {
-      firebase.auth().signOut().then(function() {
-        $ionicHistory.removeBackView();
-        //Clear the saved credentials.
-        $localStorage.$reset();
-        
-        //Proceed to login screen.
-        $state.go('login', {}, {reload: true});
-      }, function(error) {
-        //Show error message.
-        Utils.message(Popup.errorIcon, Popup.errorLogout);
-      });
-    }
-  };
+  
 
   $scope.enviarregra = function(regra) {
 //Check if form is filled up.
