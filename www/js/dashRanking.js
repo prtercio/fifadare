@@ -1,12 +1,62 @@
 'Use Strict';
 var dashRanking = angular.module('App.DashRanking', []);
 
-dashRanking.controller('RankingCtrl', function($scope, $state, $localStorage, Popup, Chats, $window, $ionicLoading, $ionicPopover, $ionicHistory) {
+dashRanking.controller('RankingCtrl', function($scope, $state, $localStorage, Popup, Chats, $window, $ionicLoading, $ionicPopover, $ionicHistory, dataService) {
+  var dadosXbox = [];
+
   $ionicLoading.show().then(function(){
     //console.log("Loading");
   });
 
   $ionicHistory.removeBackView();
+
+   $scope.$on('$ionicView.enter', function() {
+        //Check if there's an authenticated user, if there is non, redirect to login.
+        if(firebase.auth().currentUser) {
+          $scope.loggedIn = true;
+        } else {
+          $scope.loggedIn = false;
+          $state.go('login');
+        }
+        if(!$localStorage.isGuest) {
+          //Authentication details.
+          //console.log("Firebase Auth: " + JSON.stringify(firebase.auth().currentUser));
+          //Account details.
+          var email = JSON.stringify(firebase.auth().currentUser.email);
+          var uid = JSON.stringify(firebase.auth().currentUser.uid); 
+          //console.log("Account: " + email);
+          //Set the variables to be shown on home.html
+          $scope.email = $localStorage.account.email;
+          $scope.provider = $localStorage.account.provider;
+          $scope.gamertag = $localStorage.account.gamertag;
+
+          /*
+
+          var ref = firebase.database().ref("fifadare/users/"+key);
+          ref.once("value").then(function(snapshot) {
+           $scope.$apply(function(){
+                $scope.games = snapshot.val(); // {first:"Ada",last:"Lovelace"}
+                //$scope.pontos = $scope.games.pontos;
+                //$scope.jogosQuantidade = $scope.games.jogosQuantidade;
+              });
+         });
+         */
+
+
+          if($localStorage.account.email == "benbaodan@outlook.com"){
+            $scope.agregarRegra = true;
+          } else {
+            $scope.agregarRegra = false;
+          }
+        } else {
+          //Logged in user is previously logged in as guest. Set variables to Guest variables.
+          //console.log("Firebase Auth: " + JSON.stringify(firebase.auth().currentUser));
+          $scope.email = "Guest";
+          $scope.provider = "Firebase";
+          $scope.loggedIn = true;
+        }
+      });
+
 
   //var test = $ionicHistory.viewHistory();
   //console.log("back "+ test.backViewId);
@@ -34,6 +84,17 @@ dashRanking.controller('RankingCtrl', function($scope, $state, $localStorage, Po
                $ionicLoading.hide().then(function(){
                   //console.log("Loading Hide");
                 });
+               if(minisnapshot.val().email == $scope.email){
+                 $scope.idXbox = minisnapshot.val().idXbox;
+                 dadosXbox.push({
+                "Gamertag":minisnapshot.val().gamertag,
+                "ImagenGt":minisnapshot.val().imagenGt,
+                "Gamerscore":minisnapshot.val().gamerscore
+                });
+                 dataService.set(dadosXbox);
+               }              
+
+
           	   ranking.push({
                 "key":minisnapshot.key, 
                 "gamertag":minisnapshot.val().gamertag, 
@@ -46,6 +107,8 @@ dashRanking.controller('RankingCtrl', function($scope, $state, $localStorage, Po
           });
        });      
       });  
+   
+
     $scope.resultado = ranking;
 
     //abrir menuFlotante
@@ -59,53 +122,7 @@ dashRanking.controller('RankingCtrl', function($scope, $state, $localStorage, Po
          $scope.popover.hide();
       };
 
-      $scope.$on('$ionicView.enter', function() {
-    //Check if there's an authenticated user, if there is non, redirect to login.
-    if(firebase.auth().currentUser) {
-      $scope.loggedIn = true;
-    } else {
-      $scope.loggedIn = false;
-      $state.go('login');
-    }
-    if(!$localStorage.isGuest) {
-      //Authentication details.
-      //console.log("Firebase Auth: " + JSON.stringify(firebase.auth().currentUser));
-      //Account details.
-      var email = JSON.stringify(firebase.auth().currentUser.email);
-      var uid = JSON.stringify(firebase.auth().currentUser.uid); 
-      //console.log("Account: " + email);
-      //Set the variables to be shown on home.html
-      $scope.email = $localStorage.account.email;
-      $scope.provider = $localStorage.account.provider;
-      $scope.gamertag = $localStorage.account.gamertag;
-
-      /*
-
-      var ref = firebase.database().ref("fifadare/users/"+key);
-      ref.once("value").then(function(snapshot) {
-       $scope.$apply(function(){
-            $scope.games = snapshot.val(); // {first:"Ada",last:"Lovelace"}
-            //$scope.pontos = $scope.games.pontos;
-            //$scope.jogosQuantidade = $scope.games.jogosQuantidade;
-          });
-     });
-     */
-
-
-      if($localStorage.account.email == "benbaodan@outlook.com"){
-        $scope.agregarRegra = true;
-      } else {
-        $scope.agregarRegra = false;
-      }
-    } else {
-      //Logged in user is previously logged in as guest. Set variables to Guest variables.
-      //console.log("Firebase Auth: " + JSON.stringify(firebase.auth().currentUser));
-      $scope.email = "Guest";
-      $scope.provider = "Firebase";
-      $scope.loggedIn = true;
-    }
-  });
-
+     
 
       //$scope.usuario = $localStorage.account.gamertag;
 

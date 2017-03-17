@@ -37,6 +37,7 @@ img.resizePeq{
 
 .bgazure{
   background:  #F8F8FF;
+
 }
 
 .vermelho{
@@ -156,4 +157,43 @@ item.linearer{
 
 .iconCustom{
  padding-left: 7px;
+}
+
+.profile-item {
+  text-align: center;
+}
+
+.profile-picture {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 3px;
+  border-radius: 100%;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 0 auto;
+  width: 128px;
+  height: 128px;
+  overflow: hidden;
+}
+
+.profile-picture img {
+  width: 128px;
+  border-radius: 100%;
+}
+
+.profile-name {
+  padding-top: 20px;
+  font-size: x-large !important;
+  font-weight: bold !important;
+  text-transform: capitalize;
+}
+
+textarea#styled {
+  width: 300px;
+  height: 200px;
+  border: 3px solid #cccccc;
+  padding: 5px;
+  font-family: Tahoma, sans-serif;
+  background-position: bottom right;
+  background-repeat: no-repeat;
 }

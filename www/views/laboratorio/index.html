@@ -1,0 +1,39 @@
+<ion-view view-title="Laboratorio" cache-view="false">
+  <ion-content>
+  	 <p>Presione o botao para recuperar o resultado do jogo:</p>
+  	 <div class="list">
+            <label class="item item-input item-select">
+                <div class="input-label">
+                  Participantes:
+                </div>
+  <select class="styled-select" ng-model="blisterPackTemplateSelected" ng-change="changedValue(blisterPackTemplateSelected)" 
+    data-ng-options="blisterPackTemplate as blisterPackTemplate.gamertag for blisterPackTemplate in blisterPackTemplates">
+    <!--<option value="">Conquista:</option> -->
+  </select>
+  </label>
+  </div>
+    <div class="row">
+    	<div class="col col-25">
+    		<form class="list" ng-submit="recuperarJogo()">      
+		        <div class="list list-inset">
+		         	<button class="button button-positive icon ion-ios-football" type="submit" ng-disabled="btnDisabled"></button>
+		  		</div>
+  			</form>
+    	</div>
+    	<div class="col col-75">
+		    <div class="card" align="center" ng-if="placar">
+		    	<h2 class="verde">{{placar}}</h2>
+		    	<div class="padding" >
+			    	<h4>Seleccione seu time:</h4>
+			    	<ion-list>
+					  <ion-radio ng-model="choice" ng-value="'A'" ng-change='jogoSelecionado(choice)'>Local: {{casa}}</ion-radio>
+					  <ion-radio ng-model="choice" ng-value="'B'" ng-change='jogoSelecionado(choice)'>Visitante: {{fora}}</ion-radio>
+					</ion-list>
+					<div ng-class="{'verde':placarFinal=='Vitoria','laranja':placarFinal=='Empate','vermelho':placarFinal=='Derrota'}"><h3>{{placarFinal}}</h3></div>
+				</div>
+		    </div>
+		 </div>
+	</div>
+	<textarea class="padding" name="styled-textarea" id="styled">{{respuesta}}</textarea>
+	</ion-content>
+</ion-view>

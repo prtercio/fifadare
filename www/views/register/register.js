@@ -2,15 +2,32 @@
 // This is the controller that handles the registration of the user through Firebase.
 // When the user is done registering, the user is automatically logged in.
 'Use Strict';
-angular.module('App').controller('registerController', function($scope, $state, $localStorage, Utils, Popup) {
+angular.module('App').controller('registerController', function(
+  $scope, 
+  $state, 
+  $localStorage, 
+  Utils, 
+  Popup, 
+  $ionicPopup, 
+  $http, 
+  $ionicPopup, 
+  $ionicLoading,
+  dataService) {
   $scope.$on('$ionicView.enter', function() {
     //Clear the Registration Form.
     $scope.user = {
       email: '',
       password: ''
     };
-  })
-  
+  })  
+
+  var gtValido = false;
+  var gamertag = "";
+  var idXbox = "";
+  var datosXboxRec = false;
+  var imagenGt = "";
+  var gamerscore = "";
+
   var jogos = {
     "jogo1":{"estado":"Próximo","jogo":1,"pontos":0, "bloqueado":false},
     "jogo2":{"estado":"Próximo","jogo":2,"pontos":0, "bloqueado":true},
@@ -63,6 +80,84 @@ angular.module('App').controller('registerController', function($scope, $state, 
     "jogo49":{"estado":"Próximo","jogo":49,"pontos":0, "bloqueado":true},
     "jogo50":{"estado":"Próximo","jogo":50,"pontos":0, "bloqueado":true}
   }
+
+  $scope.buscarGamertag = function(gt){
+    gtValido = false;
+     $ionicLoading.show({template:"Verificando Gamertag..."});
+    var gtEspacio = String(gt);
+    var espacio = "-";
+    console.log(gtEspacio+" encontrou "+gtEspacio.indexOf(espacio));
+    //if(gtEspacio.indexOf(espacio) != -1){
+      var gtSemEspacio = String(gtEspacio.replace(/\s/g,'%20'));
+      console.log("P1 - Buscando GT");
+    //}    
+
+     $http({
+          url: 'https://xboxapi.com/v2/xuid/'+gtSemEspacio,
+          method: 'GET',
+          headers: {
+                      'Access-Control-Allow-Origin': '*',                
+                      'X-AUTH': '4a58d6c0d49e5884e43a756d729940c95c82cca7', //Benbaodan
+                      //'X-AUTH' : '5056c2081205740a2d765ebe3ff5807dd4178a87', // BenbaodanJr
+                      //'X-Authorization':idXbl,
+                      //'Access-Control-Allow-Methods': 'GET',
+                      'Accept-Language':'es-ES',
+                      'Content-Type':'application/json'
+                    }
+          }).then(function(respuesta) { 
+            gtValido = true; 
+            $scope.gtValido = gtValido; 
+
+            idXbox = respuesta.data.xuid;
+           
+            $ionicLoading.hide(); 
+            $ionicLoading.show({template:"Gamertag encontrado. Recuperando dados..."});
+             console.log("P2 - GT encontrado");
+                 $http({
+                  url: 'https://xboxapi.com/v2/'+idXbox+'/profile',
+                  method: 'GET',
+                  headers: {
+                              'Access-Control-Allow-Origin': '*',                
+                              //'X-AUTH': '4a58d6c0d49e5884e43a756d729940c95c82cca7', //Benbaodan
+                              'X-AUTH' : '5056c2081205740a2d765ebe3ff5807dd4178a87', // BenbaodanJr
+                              //'X-Authorization':idXbl,
+                              //'Access-Control-Allow-Methods': 'GET',
+                              'Accept-Language':'es-ES',
+                              'Content-Type':'application/json'
+                            }
+                  }).then(function(respuesta) {
+                    console.log("P3 - Datos encontrado");
+                    datosXboxRec = true;  
+                    $ionicLoading.hide(); 
+                    gamertag = respuesta.data.Gamertag;
+                    imagenGt = respuesta.data.GameDisplayPicRaw;
+                    gamerscore = respuesta.data.Gamerscore;
+                     $scope.msg = "Este é o seu Gamertag?";
+                    $scope.gamertag = gamertag;
+                    $scope.imagenGt = imagenGt;
+
+  
+                  }, function(err) { 
+                    gtValido = false;
+                    datosXboxRec = false;        
+                    if(err.data.success == false){
+                      $scope.msg = "Error."; 
+                      $scope.gt = "";
+                    }                 
+                    $ionicLoading.hide();
+                  }); 
+
+          }, function(err) { 
+            gtValido = false;
+            $scope.gtValido = gtValido;        
+            if(err.data.success == false){
+              $scope.msg = "No found."; 
+              $scope.gt = "";
+            }                 
+            $ionicLoading.hide();
+          }); 
+         
+  }
     
   $scope.register = function(user) {
     //Check if form is filled up.
@@ -72,13 +167,19 @@ angular.module('App').controller('registerController', function($scope, $state, 
         if (accounts.exists()) {
           Utils.message(Popup.errorIcon, Popup.emailAlreadyExists);
         } else {
+    
+              
+
+          if(datosXboxRec == true){
+            console.log("Gamertag ok.");
           //Create Firebase account.
+          
           firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
             .then(function() {
               //Add Firebase account reference to Database. Firebase v3 Implementation.
               firebase.database().ref().child('fifadare/users').push({
                 email: user.email,
-                gamertag: user.gamertag,
+                gamertag: gamertag,
                 userId: firebase.auth().currentUser.uid,
                 dateCreated: Date(),
                 provider: 'Firebase',
@@ -87,7 +188,10 @@ angular.module('App').controller('registerController', function($scope, $state, 
                 jogos: jogos,
                 vitoria: 0,
                 empate: 0,
-                derrota: 0
+                derrota: 0,
+                idXbox: idXbox,
+                imagenGt: imagenGt,
+                gamerscore: gamerscore
 
               }).then(function(response) {
                 //Account created successfully, logging user in automatically after a short delay.
@@ -96,11 +200,6 @@ angular.module('App').controller('registerController', function($scope, $state, 
                     getAccountAndLogin(response.key);
                     $localStorage.key = response.key;
                     window.localStorage.setItem('key', response.key);
-                    /*
-                    firebase.database().ref().child('fifadare/users/'+response.key).push({}).then(function(response) {
-                      console.log("exito");
-                    });
-                    */
 
                   })
                   .catch(function() {
@@ -139,6 +238,14 @@ angular.module('App').controller('registerController', function($scope, $state, 
                   break;
               }
             });
+            
+          } else {
+            $ionicLoading.hide();
+            $ionicPopup.alert({
+               title: '( ! ) Error Gamertag',
+               template: 'Volte a recuperar seu Gamertag!'
+            });
+          }
         }
       });
     }

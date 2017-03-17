@@ -6,16 +6,13 @@ dash.controller('JogosCtrl', function($scope, $state, $localStorage, Popup, $win
 	   //console.log("Loading Jogos");
 	});
 
-
-
 	if($ionicHistory.backView() === "tab.configuracao"){
 	   $window.location.reload(true);    
 	}
 
-
 	var resultado = [];
 
-	 var key = localStorage.getItem('key');
+	var key = localStorage.getItem('key');
 
     var refjogos = firebase.database().ref('fifadare/users/'+key+'/jogos');
     refjogos.orderByChild('jogo').once("value").then(function(snapshot) {
@@ -40,8 +37,7 @@ dash.controller('JogosCtrl', function($scope, $state, $localStorage, Popup, $win
      var refResumo = firebase.database().ref('fifadare/users/'+key);
 	    refResumo.once("value").then(function(snapshot) {
 	      //$scope.$apply(function(){
-	          $scope.resumo = snapshot.val();
-	          
+	          $scope.resumo = snapshot.val();	          
 	          $scope.jogosQuantidade = $scope.resumo.jogosQuantidade;
 	          $scope.vitoria = $scope.resumo.vitoria;
 	          $scope.empate = $scope.resumo.empate;

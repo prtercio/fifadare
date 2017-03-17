@@ -1,8 +1,48 @@
 'Use Strict';
 var dash = angular.module('App.Configuracao', []);
 
-dash.controller('ConfiguracaoCtrl', function($scope, $state, $localStorage, Popup, $ionicPopup, $window, $ionicHistory) {
-	console.log($ionicHistory.currentStateName());
+dash.controller('ConfiguracaoCtrl', function($scope, $state, $localStorage, Popup, $ionicPopup, $window, $ionicHistory, idXbox, $http, $ionicLoading, dataService) {
+	
+	var keyUsuario = localStorage.getItem("key");
+	console.log(" - "+idXbox);
+	$ionicLoading.show().then(function(){
+    //console.log("Loading");
+  	});
+
+	$ionicLoading.hide();
+	var dadosRecuperados = dataService.get();
+	console.log(dadosRecuperados);
+	$scope.profile = dadosRecuperados;
+	//});
+
+
+	//Xbox
+	/*
+	$scope.$on('$ionicView.enter', function() {
+	 $http({
+       url: 'https://xboxapi.com/v2/'+idXbox+'/profile',
+      method: 'GET',
+      headers: {
+                  'Access-Control-Allow-Origin': '*',                
+                  'X-AUTH': '4a58d6c0d49e5884e43a756d729940c95c82cca7', //Benbaodan
+                  //'X-AUTH' : '5056c2081205740a2d765ebe3ff5807dd4178a87', // BenbaodanJr
+                  //'X-Authorization':idXbl,
+                  //'Access-Control-Allow-Methods': 'GET',
+                  'Accept-Language':'es-ES',
+                  'Content-Type':'application/json'
+                }
+      }).then(function(respuesta) { 
+      	$ionicLoading.hide();
+      	console.log("Resp "+respuesta.data);
+      	$scope.profile = respuesta.data;
+      }, function(err) {
+             console.log("Error2 "+err.data);
+             $scope.error = err;
+             $ionicLoading.hide();
+    	});    
+    });
+    */
+
 
 	$scope.showPopup = function() {
 	    $ionicPopup.show({

@@ -1,16 +1,26 @@
 <ion-view view-title="{{'CONFIGURACAO' | translate}}">
   <ion-content>
+  
+    <div class="list card" ng-if="profile">
+        <ion-item class="profile-item">
+          <div class="profile-picture big-profile-picture">
+            <img src="{{profile[0].ImagenGt}}">
+          </div>
+          <h2 class="profile-name dark">{{profile[0].Gamertag}}</h2>
+          <div class="profile-info">{{profile[0].Gamerscore}}</div>
+        </ion-item>
+        <!--
+        <ion-item class="profile-item">
+          
+        </ion-item>
+        -->
+      </div>
     <div class="padding">
       <button class="button button-block button-royal" ng-click="showPopup()">{{'SELECIONARIDIOMA' | translate}}</button>
     </div>
     <br />
-    <br />
-    <br />
-    <br />
-    <br />
     <div class="padding">
     <button  class="button button-block button-assertive" ng-click="logout()">Logout</button>
     </div>
-   
 	</ion-content>
 </ion-view>

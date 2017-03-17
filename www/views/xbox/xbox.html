@@ -1,0 +1,11 @@
+<ion-view view-title="Xbox">
+  <ion-content>
+  	<div class="list">
+	    <a class="item item-avatar" ng-repeat="xbox in listaXbox | orderBy:'pontos':true">
+	      <img src="{{xbox.ImagenGt}}">
+	      <h2>{{xbox.gamertag}}</h2>
+	      <p>{{xbox.quantidade}} Jogos. {{xbox.vitoria}} Vitórias. {{xbox.pontos}} Pontos</p>
+	    </a>
+	</div>
+  </ion-content>
+</ion-view>

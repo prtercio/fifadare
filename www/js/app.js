@@ -19,6 +19,9 @@ angular.module('App', [
   'App.Configuracao', 
   'App.translations', 
   'App.Tabs',
+  'App.Xbox',
+  'App.Lab',
+  'App.dataServices',
   'ngStorage', 
   'ngCordovaOauth'
   ])
@@ -125,11 +128,16 @@ angular.module('App', [
     }
   })
   .state('tab.configuracao', {
-    url: '/configuracao',
+    url: '/configuracao/:xboxId',
     views: {
       'tab-dash': {
         templateUrl: 'views/regras/configuracao.html',
-        controller: 'ConfiguracaoCtrl'
+        controller: 'ConfiguracaoCtrl as idXbox'
+      }
+    },
+    resolve:{
+      idXbox: function($stateParams){
+        return $stateParams.xboxId;
       }
     }
   })
@@ -162,7 +170,16 @@ angular.module('App', [
       }
     }
   })
-
+  //laboratorio
+  .state('tab.laboratorio', {
+    url: '/laboratorio',
+    views: {
+      'tab-dash': {
+        templateUrl: 'views/laboratorio/index.html',
+        controller: 'LabCtrl'
+      }
+    }
+  })
 
   .state('tab.chats', {
     url: '/chats',
@@ -193,6 +210,15 @@ angular.module('App', [
       'tab-social': {
         templateUrl: 'views/social/social.html',
         controller: 'SocialCtrl'
+      }
+    }
+  })
+  .state('tab.xbox', {
+    url: '/xbox',
+    views: {
+      'tab-xbox': {
+        templateUrl: 'views/xbox/xbox.html',
+        controller: 'XboxCtrl'
       }
     }
   })
