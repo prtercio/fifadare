@@ -88,7 +88,7 @@ $scope.placar = "";
   $scope.placar = "";
   $scope.respuesta = "";
     $http({
-       url: 'https://xboxapi.com/v2/2533274906763963/presence',
+       url: 'https://xboxapi.com/v2/'+idUsuario+'/presence',
       method: 'GET',
       headers: {
                   'Access-Control-Allow-Origin': '*',                
