@@ -151,12 +151,24 @@ $scope.placar = "";
                    var array = "";
                    array = recortarTime.split(sep);
                    console.log("--"+ array); 
-                   
-                     time1 = array[4]+array[5]+array[6];
+
+                   if(array[6] == undefined){
+                      time1 = array[4]+array[5]
+                   } else {
+                      time1 = array[4]+array[5]+array[6];
+                   }
+
+                    if(array[12] == undefined){
+                      time2 = array[10]+array[11];
+                    } else {
+                      time2 = array[10]+array[11]+array[12];
+                    }
+                     
                      resultado1 = array[0];
-                     time2 = array[10]+array[11]+array[12];
+                     
                      resultado2 = array[2];
                    if(resultado1 != undefined){
+
                    $scope.placar = time1+" "+resultado1+" X "+resultado2+" "+time2;
                      $scope.casa = time1+" "+resultado1;
                      $scope.fora = time2+" "+resultado2;
