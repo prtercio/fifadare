@@ -6,13 +6,12 @@
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
 angular.module('App', [
-  'ionic', 
+  'ionic',
+  'App.Ranking',  
   'App.controllers', 
-  'App.Dash', 
   'App.services', 
   'App.DashJogos', 
-  'App.DashJogosDetalle',
-  'App.DashRanking', 
+  'App.SubirJogosDetalle',  
   'App.RankingJogosDetalhe', 
   'App.RankingJogos', 
   'App.Social',
@@ -21,6 +20,7 @@ angular.module('App', [
   'App.Tabs',
   'App.Xbox',
   'App.Lab',
+  'App.Fifa',
   'App.dataServices',
   'ngStorage', 
   'ngCordovaOauth'
@@ -100,19 +100,47 @@ angular.module('App', [
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.ranking', {
+    url: '/ranking',
     views: {
-      'tab-dash': {
-        templateUrl: 'views/tab-dash.html',
+      'tab-ranking': {
+        templateUrl: 'views/TabRanking/tab-ranking.html',
         controller: 'RankingCtrl'
+      }
+    }
+  }) 
+  .state('tab.rankingjogos', {
+    url: '/ranking/:jogoId',
+    views: {
+      'tab-ranking': {
+        templateUrl: 'views/TabRanking/rankingjogos.html',
+        controller: 'RankingJogosCtrl as idRankJogo'
+      }
+    },
+    resolve:{
+      idRankJogo: function($stateParams){
+        return $stateParams.jogoId;
+      }
+    }
+  })
+  .state('tab.rankingjogosdetalhe', {
+    url: '/rankingjogosdetalhe/:jogoId',
+    views: {
+      'tab-ranking': {
+        templateUrl: 'views/TabRanking/rankingjogosdetalhe.html',
+        controller: 'RankingJogosDetalheCtrl as idJogoDetalhe'
+      }
+    },
+    resolve:{
+      idJogoDetalhe: function($stateParams){
+        return $stateParams.jogoId;
       }
     }
   })
    .state('tab.conquistas', {
     url: '/conquistas',
     views: {
-      'tab-dash': {
+      'tab-ranking': {
         templateUrl: 'views/regras/conquistas.html',
         controller: 'ConquistasCtrl'
       }
@@ -121,7 +149,7 @@ angular.module('App', [
   .state('tab.regras', {
     url: '/regras',
     views: {
-      'tab-dash': {
+      'tab-ranking': {
         templateUrl: 'views/regras/regras.html',
         controller: 'AccountCtrl'
       }
@@ -130,7 +158,7 @@ angular.module('App', [
   .state('tab.configuracao', {
     url: '/configuracao/:xboxId',
     views: {
-      'tab-dash': {
+      'tab-ranking': {
         templateUrl: 'views/regras/configuracao.html',
         controller: 'ConfiguracaoCtrl as idXbox'
       }
@@ -141,42 +169,23 @@ angular.module('App', [
       }
     }
   })
-  .state('tab.rankingjogos', {
-    url: '/dash/:jogoId',
-    views: {
-      'tab-dash': {
-        templateUrl: 'views/rankingjogos.html',
-        controller: 'RankingJogosCtrl as idRankJogo'
-      }
-    },
-    resolve:{
-      idRankJogo: function($stateParams){
-        return $stateParams.jogoId;
-      }
-    }
-  })
-
-  .state('tab.rankingjogosdetalhe', {
-    url: '/rankingjogosdetalhe/:jogoId',
-    views: {
-      'tab-dash': {
-        templateUrl: 'views/rankingjogosdetalhe.html',
-        controller: 'RankingJogosDetalheCtrl as idJogoDetalhe'
-      }
-    },
-    resolve:{
-      idJogoDetalhe: function($stateParams){
-        return $stateParams.jogoId;
-      }
-    }
-  })
+ 
   //laboratorio
   .state('tab.laboratorio', {
     url: '/laboratorio',
     views: {
-      'tab-dash': {
+      'tab-ranking': {
         templateUrl: 'views/laboratorio/index.html',
         controller: 'LabCtrl'
+      }
+    }
+  })
+  .state('tab.fifa', {
+    url: '/fifa',
+    views: {
+      'tab-ranking': {
+        templateUrl: 'views/laboratorio/fifa.html',
+        controller: 'FifaCtrl'
       }
     }
   })

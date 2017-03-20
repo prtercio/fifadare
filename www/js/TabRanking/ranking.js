@@ -1,5 +1,5 @@
 'Use Strict';
-var dashRanking = angular.module('App.DashRanking', []);
+var dashRanking = angular.module('App.Ranking', []);
 
 dashRanking.controller('RankingCtrl', function($scope, $state, $localStorage, Popup, Chats, $window, $ionicLoading, $ionicPopover, $ionicHistory, dataService) {
   var dadosXbox = [];

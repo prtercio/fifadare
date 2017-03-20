@@ -166,8 +166,7 @@ angular.module('App').controller('registerController', function(
       firebase.database().ref('fifadare/users').orderByChild('email').equalTo(user.email).once('value').then(function(accounts) {
         if (accounts.exists()) {
           Utils.message(Popup.errorIcon, Popup.emailAlreadyExists);
-        } else {
-    
+        } else {  
               
 
           if(datosXboxRec == true){

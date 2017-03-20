@@ -1,0 +1,2669 @@
+[
+  {
+    "id": 1,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Telepatía",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "Achieved",
+    "progression": {
+      "requirements": [
+        {
+          "id": "f33f15d9-cb62-463e-9553-85f6142ef30c",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "2016-09-24T03:30:46.5275298Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "d4a78eba-4243-4f59-b0d4-c865da3f434e.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/d4a78eba-4243-4f59-b0d4-c865da3f434e.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Da una asistencia de gol con un pase entre líneas",
+    "lockedDescription": "Da una asistencia de gol con un pase entre líneas",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 30,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 60.15
+    }
+  },
+  {
+    "id": 2,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Enchufado",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "Achieved",
+    "progression": {
+      "requirements": [
+        {
+          "id": "e10387cc-42b6-4032-8f7e-6e6f25e3179a",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "2016-09-29T17:33:53.1193231Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "a585fe10-7ad7-4242-9197-e906d93ee722.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/a585fe10-7ad7-4242-9197-e906d93ee722.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Marca con un tiro raso",
+    "lockedDescription": "Marca con un tiro raso",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 58.6
+    }
+  },
+  {
+    "id": 3,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "El arquitecto",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "NotStarted",
+    "progression": {
+      "requirements": [
+        {
+          "id": "69b39016-10e7-42b5-9982-c2cc5b4364e0",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "0001-01-01T00:00:00.0000000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "ee10c31c-41a4-4820-86ba-079c385d64ed.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/ee10c31c-41a4-4820-86ba-079c385d64ed.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Realiza tres pases entre líneas con éxito con el mismo jugador en el tercio rival del campo",
+    "lockedDescription": "Realiza tres pases entre líneas con éxito con el mismo jugador en el tercio rival del campo",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 30,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Rare",
+      "currentPercentage": 4.33
+    }
+  },
+  {
+    "id": 4,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "¿Cómo has podido tragarte esa?",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "NotStarted",
+    "progression": {
+      "requirements": [
+        {
+          "id": "fa97bcd8-0489-4903-83cc-0e9e87a79d15",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "0001-01-01T00:00:00.0000000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "6fa62e16-9c0f-4c42-8f70-588e287956ee.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/6fa62e16-9c0f-4c42-8f70-588e287956ee.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Marca un penalti después de una paradiña",
+    "lockedDescription": "Marca un penalti después de una paradiña",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Rare",
+      "currentPercentage": 9.63
+    }
+  },
+  {
+    "id": 5,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "100 %",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "Achieved",
+    "progression": {
+      "requirements": [
+        {
+          "id": "a960ceba-75bb-4e61-8210-27b3882d449d",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "2016-12-10T23:38:28.2350000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "e8601fbd-b352-4ad8-bb69-1b664285b4e8.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/e8601fbd-b352-4ad8-bb69-1b664285b4e8.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Gana una tanda de penaltis sin fallar ninguno",
+    "lockedDescription": "Gana una tanda de penaltis sin fallar ninguno",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 30,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 18.14
+    }
+  },
+  {
+    "id": 6,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "El portero inicia el ataque",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "NotStarted",
+    "progression": {
+      "requirements": [
+        {
+          "id": "6b92fc07-023d-4c89-8583-0a12e7f20b3c",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "0001-01-01T00:00:00.0000000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "a41da9a3-7e73-4774-86f6-86b12f80e4e1.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/a41da9a3-7e73-4774-86f6-86b12f80e4e1.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Marca un gol con un contraataque que haya empezado con un saque potente del portero",
+    "lockedDescription": "Marca un gol con un contraataque que haya empezado con un saque potente del portero",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 80,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Rare",
+      "currentPercentage": 5.06
+    }
+  },
+  {
+    "id": 7,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Pura clase",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "NotStarted",
+    "progression": {
+      "requirements": [
+        {
+          "id": "05239923-2928-47dc-82ff-cbce763f2c40",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "0001-01-01T00:00:00.0000000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "b1cf73c0-4d55-4360-b405-6189393d9151.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/b1cf73c0-4d55-4360-b405-6189393d9151.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Marca de libre directo con el exterior del pie",
+    "lockedDescription": "Marca de libre directo con el exterior del pie",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Rare",
+      "currentPercentage": 1.38
+    }
+  },
+  {
+    "id": 8,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Amenaza aérea",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "Achieved",
+    "progression": {
+      "requirements": [
+        {
+          "id": "1a052dd2-3668-4ba0-859b-290d06076dd2",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "2016-10-03T08:00:18.0308135Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "b4d7750f-4efd-470e-a872-fcdd410d29d0.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/b4d7750f-4efd-470e-a872-fcdd410d29d0.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Marca un gol con un cabezazo picado",
+    "lockedDescription": "Marca un gol con un cabezazo picado",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 45.75
+    }
+  },
+  {
+    "id": 9,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "El punto justo",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "Achieved",
+    "progression": {
+      "requirements": [
+        {
+          "id": "3d374f18-b76f-45ae-b374-f6233b7937a1",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "2016-10-26T05:14:49.9025433Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "f6168542-650a-41df-a4b0-6b77bab88e8a.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/f6168542-650a-41df-a4b0-6b77bab88e8a.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Con el balón en juego, marca un gol desde lejos (22,9 metros o más) con un defensa",
+    "lockedDescription": "Con el balón en juego, marca un gol desde lejos (22,9 metros o más) con un defensa",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 23.9
+    }
+  },
+  {
+    "id": 10,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Han hecho los deberes",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "Achieved",
+    "progression": {
+      "requirements": [
+        {
+          "id": "989a0b04-f8ff-4cd2-990b-879530a3f02b",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "2016-10-03T21:11:11.6106815Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "57d5a099-08d5-47e9-9d90-97cd09dcc95c.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/57d5a099-08d5-47e9-9d90-97cd09dcc95c.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Marca dos goles de córner en un partido",
+    "lockedDescription": "Marca dos goles de córner en un partido",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 24.12
+    }
+  },
+  {
+    "id": 11,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "¿Dónde está el balón?",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "NotStarted",
+    "progression": {
+      "requirements": [
+        {
+          "id": "67600aef-e2af-4df0-9ed8-4a3caac12f02",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "0001-01-01T00:00:00.0000000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "e6f41f43-1353-4e4b-bfc7-d0854a87dd9d.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/e6f41f43-1353-4e4b-bfc7-d0854a87dd9d.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Marca un gol tras 10 pases consecutivos en el tercio rival del campo",
+    "lockedDescription": "Marca un gol tras 10 pases consecutivos en el tercio rival del campo",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Rare",
+      "currentPercentage": 5.02
+    }
+  },
+  {
+    "id": 12,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Primer intercambio",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "Achieved",
+    "progression": {
+      "requirements": [
+        {
+          "id": "b8dbea46-fcf0-46c5-8ef9-ae9d46a48fc9",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "2016-10-01T08:12:22.6457611Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "fbdee6e4-8a52-40e8-87c8-0a0cd1ed607f.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/fbdee6e4-8a52-40e8-87c8-0a0cd1ed607f.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Completa el primer desafío de creación de plantillas en FIFA Ultimate Team",
+    "lockedDescription": "Completa el primer desafío de creación de plantillas en FIFA Ultimate Team",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 31.99
+    }
+  },
+  {
+    "id": 13,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Trabajo en equipo",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "NotStarted",
+    "progression": {
+      "requirements": [
+        {
+          "id": "667ff05a-718e-47ba-b0d0-0778cd325586",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "0001-01-01T00:00:00.0000000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "031bfc76-401d-459b-b7d0-1a8d8acf21a1.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/031bfc76-401d-459b-b7d0-1a8d8acf21a1.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Completa el primer grupo de desafíos de creación de plantillas en FIFA Ultimate Team",
+    "lockedDescription": "Completa el primer grupo de desafíos de creación de plantillas en FIFA Ultimate Team",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 28.09
+    }
+  },
+  {
+    "id": 14,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Prueba de poder",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "NotStarted",
+    "progression": {
+      "requirements": [
+        {
+          "id": "2efeaa60-4863-4c8c-a2aa-c43eac3359aa",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "0001-01-01T00:00:00.0000000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "07697f6c-56f2-475f-bca0-64e1a194db9f.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/07697f6c-56f2-475f-bca0-64e1a194db9f.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Gana los 4 partidos de una sesión online de FUT Draft en FIFA Ultimate Team",
+    "lockedDescription": "Gana los 4 partidos de una sesión online de FUT Draft en FIFA Ultimate Team",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 80,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Rare",
+      "currentPercentage": 3.1
+    }
+  },
+  {
+    "id": 15,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "¡Aprovecha la oportunidad!",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "Achieved",
+    "progression": {
+      "requirements": [
+        {
+          "id": "2ba9075c-50e9-42f9-9f4c-933adce225f4",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "2016-09-29T19:29:07.0313114Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "f56a055d-f898-473f-b6ce-5ed5585f09a7.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/f56a055d-f898-473f-b6ce-5ed5585f09a7.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Debut, como titular o suplente, de un jugador comprado en el Mercado de transferibles en FUT",
+    "lockedDescription": "Debut, como titular o suplente, de un jugador comprado en el Mercado de transferibles en FUT",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 33.47
+    }
+  },
+  {
+    "id": 16,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Ensayo general",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "NotStarted",
+    "progression": {
+      "requirements": [
+        {
+          "id": "9b5b59b9-5e3c-4548-8e4d-53c557386b83",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "0001-01-01T00:00:00.0000000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "b48427b1-def3-4885-b043-a0c6bab3ff3d.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/b48427b1-def3-4885-b043-a0c6bab3ff3d.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Gana los 4 partidos de una sesión de FUT Draft para Un jugador en FIFA Ultimate Team",
+    "lockedDescription": "Gana los 4 partidos de una sesión de FUT Draft para Un jugador en FIFA Ultimate Team",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Rare",
+      "currentPercentage": 5.02
+    }
+  },
+  {
+    "id": 17,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Medio siglo",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "NotStarted",
+    "progression": {
+      "requirements": [
+        {
+          "id": "da95aae0-dc07-4fac-99a3-a1c6de2a1aa8",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "0001-01-01T00:00:00.0000000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "9fbeeae0-fb1e-4d50-b641-353d373b45c5.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/9fbeeae0-fb1e-4d50-b641-353d373b45c5.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Consigue que un jugador marque su 50.º gol en el club en FIFA Ultimate Team",
+    "lockedDescription": "Consigue que un jugador marque su 50.º gol en el club en FIFA Ultimate Team",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Rare",
+      "currentPercentage": 6.83
+    }
+  },
+  {
+    "id": 18,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "La amistad perdura",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "NotStarted",
+    "progression": {
+      "requirements": [
+        {
+          "id": "5d2b2678-6f54-41ec-b161-3dca1139b693",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "0001-01-01T00:00:00.0000000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "e379590f-150c-4c0b-b3b3-3174f4e1ce41.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/e379590f-150c-4c0b-b3b3-3174f4e1ce41.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Gana una Temporada de amistosos en FIFA Ultimate Team",
+    "lockedDescription": "Gana una Temporada de amistosos en FIFA Ultimate Team",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Rare",
+      "currentPercentage": 5.94
+    }
+  },
+  {
+    "id": 19,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Estudiante de intercambio",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "Achieved",
+    "progression": {
+      "requirements": [
+        {
+          "id": "cf98df2a-c837-4b5c-a2df-7cadd906b887",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "2016-10-01T08:18:08.0687141Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "ca194176-ae67-4585-bc22-efb3874aa66c.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/ca194176-ae67-4585-bc22-efb3874aa66c.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Ficha a un jugador cedido del Catálogo de EAS FC",
+    "lockedDescription": "Ficha a un jugador cedido del Catálogo de EAS FC",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 23.9
+    }
+  },
+  {
+    "id": 20,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "La ciencia de FUT",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "Achieved",
+    "progression": {
+      "requirements": [
+        {
+          "id": "0c109ca9-e3b8-4518-87fe-d341ad1496a2",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "2016-09-30T05:52:28.5200871Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "0f22862e-aeed-41c0-bcef-839109981e9f.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/0f22862e-aeed-41c0-bcef-839109981e9f.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Aplica tu primer consumible de Estilo de química en FIFA Ultimate Team",
+    "lockedDescription": "Aplica tu primer consumible de Estilo de química en FIFA Ultimate Team",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 25.41
+    }
+  },
+  {
+    "id": 21,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Demuestra lo que vales",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "NotStarted",
+    "progression": {
+      "requirements": [
+        {
+          "id": "16cd1ac3-1079-4031-a2f0-23e74e950005",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "0001-01-01T00:00:00.0000000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "3c2f46a2-5f8c-4d39-8fc9-54195a022f2d.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/3c2f46a2-5f8c-4d39-8fc9-54195a022f2d.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Desafía al Equipo de la Semana y completa un partido contra él en FIFA Ultimate Team",
+    "lockedDescription": "Desafía al Equipo de la Semana y completa un partido contra él en FIFA Ultimate Team",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Rare",
+      "currentPercentage": 8.71
+    }
+  },
+  {
+    "id": 23,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "¡Campeones!",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "Achieved",
+    "progression": {
+      "requirements": [
+        {
+          "id": "ee9fa1b6-1f41-4146-8b44-a3c9b9e22714",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "2016-10-05T19:26:51.5546227Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "df998563-641f-4b4f-b4b9-6a0f351b675d.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/df998563-641f-4b4f-b4b9-6a0f351b675d.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Gana un título de división en Temporadas FIFA Ultimate Team",
+    "lockedDescription": "Gana un título de división en Temporadas FIFA Ultimate Team",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 30,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 27.14
+    }
+  },
+  {
+    "id": 24,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Un cambio en el poder...",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "NotStarted",
+    "progression": {
+      "requirements": [
+        {
+          "id": "8f78446f-a061-4f72-b451-970ae7c1dc02",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "0001-01-01T00:00:00.0000000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "ab550efc-bcd7-44fa-87ae-30bdbd66a4ca.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/ab550efc-bcd7-44fa-87ae-30bdbd66a4ca.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Cambia a tu capitán en FIFA Ultimate Team",
+    "lockedDescription": "Cambia a tu capitán en FIFA Ultimate Team",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Rare",
+      "currentPercentage": 8.26
+    }
+  },
+  {
+    "id": 25,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Relaciones públicas",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "NotStarted",
+    "progression": {
+      "requirements": [
+        {
+          "id": "8e12ebee-67d7-4f45-8fe9-279fb74eb741",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "0001-01-01T00:00:00.0000000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "7747d9fd-8f44-4bed-8d7d-d41a678903a1.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/7747d9fd-8f44-4bed-8d7d-d41a678903a1.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Completa un objetivo de difusión de la marca en el modo Carrera",
+    "lockedDescription": "Completa un objetivo de difusión de la marca en el modo Carrera",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 18.97
+    }
+  },
+  {
+    "id": 26,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Flujo de caja positivo",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "NotStarted",
+    "progression": {
+      "requirements": [
+        {
+          "id": "c03b8516-0f6a-4002-b2e3-137a6f09b4ee",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "0001-01-01T00:00:00.0000000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "76d348b1-17d7-4223-aba8-55c4fd9fe636.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/76d348b1-17d7-4223-aba8-55c4fd9fe636.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Completa un objetivo financiero en el modo Carrera",
+    "lockedDescription": "Completa un objetivo financiero en el modo Carrera",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 13.28
+    }
+  },
+  {
+    "id": 27,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Planificación estratégica",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "NotStarted",
+    "progression": {
+      "requirements": [
+        {
+          "id": "a56094e3-8ded-4a92-a24f-3fbec5f9b9c7",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "0001-01-01T00:00:00.0000000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "7e3080ed-e951-4bc8-b3c4-7d3a938fb11b.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/7e3080ed-e951-4bc8-b3c4-7d3a938fb11b.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Completa un objetivo de desarrollo juvenil en el modo Carrera",
+    "lockedDescription": "Completa un objetivo de desarrollo juvenil en el modo Carrera",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 10.49
+    }
+  },
+  {
+    "id": 28,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Muéstrame tus habilidades",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "NotStarted",
+    "progression": {
+      "requirements": [
+        {
+          "id": "97f79430-8980-4745-a732-9d8f5daac8e4",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "0001-01-01T00:00:00.0000000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "eae28afb-37b5-4a05-9b71-20120e8945a7.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/eae28afb-37b5-4a05-9b71-20120e8945a7.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Completa un juego de habilidad multijugador",
+    "lockedDescription": "Completa un juego de habilidad multijugador",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 26.42
+    }
+  },
+  {
+    "id": 29,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Toda ayuda es poca",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "NotStarted",
+    "progression": {
+      "requirements": [
+        {
+          "id": "0c2261e5-afbc-476c-8f7d-bdc5def54f1c",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "0001-01-01T00:00:00.0000000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "6445e333-44d0-4e2d-95c7-327c1c9d9c98.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/6445e333-44d0-4e2d-95c7-327c1c9d9c98.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Juega durante todo un partido con la información del FIFA Trainer activada",
+    "lockedDescription": "Juega durante todo un partido con la información del FIFA Trainer activada",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 13.83
+    }
+  },
+  {
+    "id": 30,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Allá vamos...",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "Achieved",
+    "progression": {
+      "requirements": [
+        {
+          "id": "4f4c7f1d-4b61-4c4f-acdb-38dac1b24dbb",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "2016-11-06T00:16:43.0463709Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "50c72b4b-08c3-4294-8214-fed0f689a06d.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/50c72b4b-08c3-4294-8214-fed0f689a06d.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Gana un título de división en Temporadas Cara a Cara online (debe lograrse jugando los partidos)",
+    "lockedDescription": "Gana un título de división en Temporadas Cara a Cara online (debe lograrse jugando los partidos)",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 30,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 12.67
+    }
+  },
+  {
+    "id": 31,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "¿Un partidito?",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "NotStarted",
+    "progression": {
+      "requirements": [
+        {
+          "id": "1db7c997-f738-4497-923f-301319eef4a4",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "0001-01-01T00:00:00.0000000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "4fc4ae84-9f7c-4a1d-99e3-fbdb400893f2.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/4fc4ae84-9f7c-4a1d-99e3-fbdb400893f2.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Juega un partido informal en Clubes Pro",
+    "lockedDescription": "Juega un partido informal en Clubes Pro",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Rare",
+      "currentPercentage": 9.98
+    }
+  },
+  {
+    "id": 32,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "¿Seguimos siendo amigos?",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "Achieved",
+    "progression": {
+      "requirements": [
+        {
+          "id": "b69658e1-d6c9-46b6-af98-48d07a80adcd",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "2016-10-09T00:43:18.9803743Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "a9445dba-a76f-4ba2-a1b9-a00156df7b19.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/a9445dba-a76f-4ba2-a1b9-a00156df7b19.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Termina una Temporada de Amistosos online",
+    "lockedDescription": "Termina una Temporada de Amistosos online",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 10.01
+    }
+  },
+  {
+    "id": 33,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Solo estoy calentando",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "Achieved",
+    "progression": {
+      "requirements": [
+        {
+          "id": "0031610d-05b8-463e-b0ea-ed669d4a75aa",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "2016-10-08T00:02:24.0743622Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "0c8115de-abbc-403a-aaa8-a5135aadf615.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/0c8115de-abbc-403a-aaa8-a5135aadf615.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Completa y gana tu primer partido de liga en Temporadas Clubes Pro",
+    "lockedDescription": "Completa y gana tu primer partido de liga en Temporadas Clubes Pro",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 10.78
+    }
+  },
+  {
+    "id": 34,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "¡Mejorado!",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "NotStarted",
+    "progression": {
+      "requirements": [
+        {
+          "id": "048313c7-7441-40d5-94b3-642660a02358",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "0001-01-01T00:00:00.0000000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "8acbe83a-f939-469b-9311-bf5022126e6e.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/8acbe83a-f939-469b-9311-bf5022126e6e.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Invierte un punto de habilidad en Clubes Pro",
+    "lockedDescription": "Invierte un punto de habilidad en Clubes Pro",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 12.81
+    }
+  },
+  {
+    "id": 35,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Espíritu de equipo",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "Achieved",
+    "progression": {
+      "requirements": [
+        {
+          "id": "7906dded-cec9-4b9a-be40-8267fc0feb62",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "2016-10-07T23:40:58.6756922Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "a0d8f587-b32a-4029-848c-af42f409d105.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/a0d8f587-b32a-4029-848c-af42f409d105.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Únete a un club con tu Pro online y juega tu primer partido en Clubes Pro",
+    "lockedDescription": "Únete a un club con tu Pro online y juega tu primer partido en Clubes Pro",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 13.02
+    }
+  },
+  {
+    "id": 36,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Karma instantáneo",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "Achieved",
+    "progression": {
+      "requirements": [
+        {
+          "id": "118f3150-699b-4cf2-ad69-a77e4321056b",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "2016-10-06T15:27:14.5665578Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "1e96bee7-c4fd-4372-a505-276f7b6f0ed3.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/1e96bee7-c4fd-4372-a505-276f7b6f0ed3.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Regala un artículo del Catálogo de EA SPORTS Football Club",
+    "lockedDescription": "Regala un artículo del Catálogo de EA SPORTS Football Club",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Rare",
+      "currentPercentage": 4.75
+    }
+  },
+  {
+    "id": 37,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "¡Mío!",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "Achieved",
+    "progression": {
+      "requirements": [
+        {
+          "id": "ef00c91e-c052-4eee-a38e-5ac94a820a18",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "2016-09-26T06:50:52.9901876Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "7865cdbb-90c0-4598-99ea-a9aff7cbec47.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/7865cdbb-90c0-4598-99ea-a9aff7cbec47.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Compra un artículo del catálogo de EA SPORTS Football Club",
+    "lockedDescription": "Compra un artículo del catálogo de EA SPORTS Football Club",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 42.96
+    }
+  },
+  {
+    "id": 38,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "A jugar",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "Achieved",
+    "progression": {
+      "requirements": [
+        {
+          "id": "150d76fe-9181-4e54-923d-697dc30878f1",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "2016-10-08T23:44:07.9792750Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "7eb4be6b-5298-4c87-9cfe-c0d96ae55ecf.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/7eb4be6b-5298-4c87-9cfe-c0d96ae55ecf.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Juega un partido de fútbol femenino",
+    "lockedDescription": "Juega un partido de fútbol femenino",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Rare",
+      "currentPercentage": 9.08
+    }
+  },
+  {
+    "id": 39,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "La mejor de las mejores",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "NotStarted",
+    "progression": {
+      "requirements": [
+        {
+          "id": "cf5283c2-2906-4d19-9973-db98341b09b9",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "0001-01-01T00:00:00.0000000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "1c42c443-ac40-4c45-a141-f80d91024b38.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/1c42c443-ac40-4c45-a141-f80d91024b38.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Gana la Copa Internacional Femenina",
+    "lockedDescription": "Gana la Copa Internacional Femenina",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 30,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Rare",
+      "currentPercentage": 0.9
+    }
+  },
+  {
+    "id": 40,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Imparable",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "NotStarted",
+    "progression": {
+      "requirements": [
+        {
+          "id": "6dac00e0-f32b-4f45-b9dd-3090826a767b",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "0001-01-01T00:00:00.0000000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "35939dde-af20-4e2b-a4d2-5ed4f0876c95.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/35939dde-af20-4e2b-a4d2-5ed4f0876c95.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Marca 5 goles en un partido femenino",
+    "lockedDescription": "Marca 5 goles en un partido femenino",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Rare",
+      "currentPercentage": 2.56
+    }
+  },
+  {
+    "id": 41,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "¿Tienes clase?",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "NotStarted",
+    "progression": {
+      "requirements": [
+        {
+          "id": "f1fa1ee1-b09f-4c40-820e-64795449b9c1",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "0001-01-01T00:00:00.0000000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "aff6020d-274f-40c4-87e3-fa7a94a0574e.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/aff6020d-274f-40c4-87e3-fa7a94a0574e.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Marca un gol con un tiro con clase en un partido femenino",
+    "lockedDescription": "Marca un gol con un tiro con clase en un partido femenino",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 15,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Rare",
+      "currentPercentage": 0.48
+    }
+  },
+  {
+    "id": 42,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "El mejor de la clase",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "Achieved",
+    "progression": {
+      "requirements": [
+        {
+          "id": "77905409-acaa-47d3-bc94-4b10e1504666",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "2016-09-25T16:40:44.1476629Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "6a3906c5-2e20-4947-8dd7-5c8d992cf41c.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/6a3906c5-2e20-4947-8dd7-5c8d992cf41c.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Completa todos los ejercicios de entrenamiento en una semana con nota A en El Camino (sin simular)",
+    "lockedDescription": "Completa todos los ejercicios de entrenamiento en una semana con nota A en El Camino (sin simular)",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 30,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 36.81
+    }
+  },
+  {
+    "id": 43,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Difícil de conseguir",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "NotStarted",
+    "progression": {
+      "requirements": [
+        {
+          "id": "8d60683a-e700-46bd-a41b-35cc5463b8ab",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "0001-01-01T00:00:00.0000000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "3dd0bd6f-bb91-474e-8df2-9724bd47449e.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/3dd0bd6f-bb91-474e-8df2-9724bd47449e.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Consigue un valor de traspaso de 8 000 000 £ en El Camino",
+    "lockedDescription": "Consigue un valor de traspaso de 8 000 000 £ en El Camino",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 30,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 12.47
+    }
+  },
+  {
+    "id": 44,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Estrella de las redes sociales",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "NotStarted",
+    "progression": {
+      "requirements": [
+        {
+          "id": "ffff7d04-14bb-41e5-8082-4d9cdb8dc2fd",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "0001-01-01T00:00:00.0000000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "66ce8a27-60f6-40ed-b50d-64341f885625.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/66ce8a27-60f6-40ed-b50d-64341f885625.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Consigue 50 000 seguidores en El Camino",
+    "lockedDescription": "Consigue 50 000 seguidores en El Camino",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 30,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 35.36
+    }
+  },
+  {
+    "id": 45,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Lo mejor está por llegar",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "NotStarted",
+    "progression": {
+      "requirements": [
+        {
+          "id": "ac05af52-85f5-4187-b72b-9055a8e33a4e",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "0001-01-01T00:00:00.0000000Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "72e06fcb-0a99-422f-b5a3-bdf96896b350.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/72e06fcb-0a99-422f-b5a3-bdf96896b350.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": false,
+    "description": "Acaba El Camino",
+    "lockedDescription": "Acaba El Camino",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Persistent",
+    "participationType": "Individual",
+    "timeWindow": null,
+    "rewards": [
+      {
+        "name": null,
+        "description": null,
+        "value": 90,
+        "type": "Gamerscore",
+        "mediaAsset": null,
+        "valueType": "Int"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Common",
+      "currentPercentage": 14.55
+    }
+  },
+  {
+    "id": 57,
+    "serviceConfigId": "f0570100-561a-43a0-b48d-0262041e4bf4",
+    "name": "Logro de reto EA Access de FIFA 17",
+    "titleAssociations": [
+      {
+        "name": "EA SPORTS™ FIFA 17",
+        "id": 69094388
+      }
+    ],
+    "progressState": "Achieved",
+    "progression": {
+      "requirements": [
+        {
+          "id": "59d220cf-2f90-45b8-8ffc-c7545083268b",
+          "current": null,
+          "target": 1,
+          "operationType": "Sum",
+          "valueType": "Integer",
+          "ruleParticipationType": "Individual"
+        }
+      ],
+      "timeUnlocked": "2016-09-24T01:33:01.2886398Z"
+    },
+    "mediaAssets": [
+      {
+        "name": "bcf9f0da-d4ee-40d0-8db4-493784f23a4b.png",
+        "type": "Icon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/bcf9f0da-d4ee-40d0-8db4-493784f23a4b.png"
+      },
+      {
+        "name": "527d117e-2d9e-4a0d-9165-e2a05b1805c5.png",
+        "type": "ChallengePromoIcon",
+        "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/527d117e-2d9e-4a0d-9165-e2a05b1805c5.png"
+      }
+    ],
+    "platforms": [
+      "Durango"
+    ],
+    "isSecret": true,
+    "description": "Marca un gol con tu club favorito",
+    "lockedDescription": "Marca un gol con tu club favorito",
+    "productId": "933aad8d-84b8-47c4-8cab-cbda59f0fad9",
+    "achievementType": "Challenge",
+    "participationType": "Individual",
+    "timeWindow": {
+      "startDate": "2016-06-22T16:34:00.0000000Z",
+      "endDate": "2016-09-30T17:34:00.0000000Z"
+    },
+    "rewards": [
+      {
+        "name": "Auténticos colores",
+        "description": "Fondo de pantalla EA Access FIFA 17 para la interfaz: Portada de Reus",
+        "value": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/f91eaee3-80fd-4e6a-89d1-80a46dda4851.png",
+        "type": "Art",
+        "mediaAsset": {
+          "name": "f91eaee3-80fd-4e6a-89d1-80a46dda4851.png",
+          "type": "Icon",
+          "url": "http://dlassets.xboxlive.com/public/content/f0570100-561a-43a0-b48d-0262041e4bf4/RETAIL/f91eaee3-80fd-4e6a-89d1-80a46dda4851.png"
+        },
+        "valueType": "String"
+      }
+    ],
+    "estimatedTime": "00:00:00",
+    "deeplink": null,
+    "isRevoked": false,
+    "rarity": {
+      "currentCategory": "Rare",
+      "currentPercentage": 7.72
+    }
+  }
+]

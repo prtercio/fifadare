@@ -52,6 +52,10 @@ img.resizePeq{
   color: grey;
 }
 
+.gris2{
+  color: #D8D8D8;
+}
+
 .azul{
   color: blue;
 }
@@ -196,4 +200,13 @@ textarea#styled {
   font-family: Tahoma, sans-serif;
   background-position: bottom right;
   background-repeat: no-repeat;
+}
+
+.desbloqueado{
+  background-color: red;
+}
+
+img.custom-thumbnail {
+    max-width: 80px !important;
+    max-height: 50px !important;
 }

@@ -160,6 +160,10 @@ $scope.placar = "";
                    $scope.placar = time1+" "+resultado1+" X "+resultado2+" "+time2;
                      $scope.casa = time1+" "+resultado1;
                      $scope.fora = time2+" "+resultado2;
+                     $scope.timeCasa = time1;
+                     $scope.timeVisitante = time2;
+                     $scope.resCasa = resultado1;
+                     $scope.resVisitante = resultado2;
                      console.log("Placar "+$scope.placar);
                     } else {
                        $scope.placar = "Vc está no Menú";

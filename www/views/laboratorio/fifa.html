@@ -1,0 +1,23 @@
+<ion-view view-title="Fifa">
+  <ion-content> 
+  <textarea>{{online}}</textarea>
+  <div class="list">
+
+    <a class="item item-avatar" ng-repeat="dato in datos">
+      <img src="venkman.jpg">
+      <h2>{{dato.state}}</h2>
+      <p>Back off, man. I'm a scientist.</p>
+    </a>
+
+    ...
+
+</div>
+     <div class="list">
+        <a class="item item-thumbnail-left item-text-wrap" ng-repeat="fifa in listafifa" ng-class="{bgverde: fifa.progressState=='Achieved'}">
+          <img class="custom-thumbnails" src="{{fifa.mediaAssets[0].url}}">
+          <h2 >{{fifa.name}}</h2>
+          <p>{{fifa.description}} - {{fifa.rewards[0].value}}</p>
+        </a>
+    </div>
+  </ion-content>
+</ion-view>

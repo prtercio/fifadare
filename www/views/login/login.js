@@ -120,7 +120,7 @@ angular.module('App').controller('loginController', function($scope, $state, $lo
                 $localStorage.account = account;
               });
               window.localStorage.setItem('nuevoSocial', 0);
-              $state.go('tab.dash');
+              $state.go('tab.ranking');
 
             });
           } 

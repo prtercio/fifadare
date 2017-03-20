@@ -1,5 +1,5 @@
 'Use Strict';
-var dashdetalle = angular.module('App.DashJogosDetalle', []);
+var dashdetalle = angular.module('App.SubirJogosDetalle', []);
 
 dashdetalle.controller('JogosDetalheCtrl', function($scope, $state, $localStorage, Popup, Chats, $stateParams, Utils, $window, idJogo, $ionicNavBarDelegate, $ionicLoading) {
 
