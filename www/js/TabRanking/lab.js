@@ -115,13 +115,7 @@ var gamerSeleccionado;
                 }
       }).then(function(resp) { 
                 $scope.respuesta = resp.data;
-
-               console.log("RichPresence: "+richPresence);
-             
-              
-
-               //console.log(resp.data.devices[0].titles[2].id);
-              //console.log("Resp2a: "+resp.data.devices[0].titles[1].activity.richPresence); 
+               console.log("RichPresence: "+richPresence);            
               if(resp.data.state === "Online"){
                 $ionicLoading.hide();
                 if(resp.data.devices[0].titles.length == 1){
