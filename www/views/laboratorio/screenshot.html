@@ -1,0 +1,32 @@
+<ion-view view-title="Screenshots">
+  <ion-content>
+
+    <div class="row">
+      <div class="col col-75">
+          <label class="item item-input item-select">
+                <div class="input-label">
+                  <img src="img/gamer.png"/>
+                </div>
+            <select class="styled-select" ng-model="blisterPackTemplateSelected" ng-change="changedValue(blisterPackTemplateSelected)" 
+              data-ng-options="blisterPackTemplate as blisterPackTemplate.gamertag for blisterPackTemplate in blisterPackTemplates">
+              <!--<option value="">Conquista:</option> -->
+            </select>
+          </label>
+      </div>
+
+      <div class="col col-25">   
+        <div class="list list-inset">
+          <button class="button button-positive icon ion-ios-football" ng-click="buscarScreens()" ng-disabled="btnDisabled"></button>
+        </div>
+      </div>
+    </div>  
+
+  <!-- xboxapi -->
+  <!-- /{id}/screenshots     -->
+  <h5 ng-if="datos" align="center">Vc tem um total de {{datos.length}} capturas</h5>
+    <div class="card" ng-repeat="ele in datos track by $index" ng-if="ele.type == 'UserGenerated'">
+    	<img class="resizeTotal" src="{{ele.thumbnails[0].uri}}" />
+    	<h4 align="center">{{ele.datePublished | date:'dd/MM/yyyy HH:mm:ss a' }}</h4>
+    </div>
+  </ion-content>
+</ion-view>

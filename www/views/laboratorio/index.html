@@ -1,7 +1,6 @@
 <ion-view view-title="Laboratorio" cache-view="false">
   <ion-content>
-  	 <p>Presione o botao para recuperar o resultado do jogo:</p>
-  	
+  	 <p>Presione o botao para recuperar o resultado do jogo:</p>  	
     <div class="row">
     	<div class="col col-75">
 
@@ -25,7 +24,7 @@
 
 		    </div>
 		 </div>
-	</div>
+	 <h4 ng-if="status">{{semFifa}}</h4>
 
   <div class="card" ng-if="timeCasa">
     <div class="row">
@@ -53,7 +52,8 @@
           </ion-list>
           <div align="center" ng-class="{'verde':placarFinal=='Vitoria','laranja':placarFinal=='Empate','vermelho':placarFinal=='Derrota'}"><h3>{{placarFinal}}</h3></div>
     </div>
-	<textarea class="padding" name="styled-textarea" id="styled">{{respuesta}}</textarea>
+
+
 
 	</ion-content>
 </ion-view>

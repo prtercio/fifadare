@@ -21,6 +21,7 @@ angular.module('App', [
   'App.Xbox',
   'App.Lab',
   'App.Fifa',
+  'App.Screenshot',
   'App.dataServices',
   'ngStorage', 
   'ngCordovaOauth'
@@ -189,7 +190,15 @@ angular.module('App', [
       }
     }
   })
-
+  .state('tab.screenshot', {
+    url: '/screenshot',
+    views: {
+      'tab-ranking': {
+        templateUrl: 'views/laboratorio/screenshot.html',
+        controller: 'ScreenshotCtrl'
+      }
+    }
+  })
   .state('tab.chats', {
     url: '/chats',
     views: {

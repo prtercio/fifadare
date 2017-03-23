@@ -8,6 +8,11 @@ img.resizePeq{
     height: auto;
 }
 
+img.resizeTotal{
+    width:100%; /* you can use % */
+    height: auto;
+}
+
 .borderGris{
   border: 1px;
   border-color: grey;

@@ -14,6 +14,7 @@ lab.controller('LabCtrl', function($scope, $state, $ionicLoading, $ionicPopup, $
  $scope.btnDisabled = true;
  $scope.verBtn = true;
 $scope.placar = "";
+var gamerSeleccionado;
 
 	var listauser = firebase.database().ref('fifadare/users');
     listauser.orderByChild('pontos').once("value").then(function(snapshot) {
@@ -40,6 +41,7 @@ $scope.placar = "";
      $scope.changedValue=function(item){
       console.log(item.idXbox);
       idUsuario = item.idXbox;
+      gamerSeleccionado = item.gamertag;
       $scope.btnDisabled = false;
      }
 
@@ -81,52 +83,104 @@ $scope.placar = "";
   var urlLocal = 'js/BD/presenceJonathan.json';
 
  $scope.recuperarJogo = function(){
+  $scope.status = false;
   $scope.lista = false;
+
   $ionicLoading.show().then(function(){
             //console.log("Loading Jogos");
          });
   $scope.placar = "";
+  $scope.semFifa = "";
   $scope.respuesta = "";
+  var richPresence = false;
+
+  var idioma;
+  if(window.localStorage.getItem("lang") === "pt"){
+    idioma = "pt-BR";
+  } else {
+    idioma = "es-ES";
+  }
+
     $http({
        url: 'https://xboxapi.com/v2/'+idUsuario+'/presence',
       method: 'GET',
       headers: {
                   'Access-Control-Allow-Origin': '*',                
-                  'X-AUTH': '4a58d6c0d49e5884e43a756d729940c95c82cca7', //Benbaodan
+                  'X-AUTH': '5056c2081205740a2d765ebe3ff5807dd4178a87', //Benbaodan
                   //'X-AUTH' : '5056c2081205740a2d765ebe3ff5807dd4178a87', // BenbaodanJr
                   //'X-Authorization':idXbl,
                   //'Access-Control-Allow-Methods': 'GET',
-                  'Accept-Language':'es-ES',
+                  'Accept-Language':idioma,
                   'Content-Type':'application/json'
                 }
       }).then(function(resp) { 
-               var richPresence;
-               $scope.respuesta = resp.data;
+                $scope.respuesta = resp.data;
+
+               console.log("RichPresence: "+richPresence);
+             
+              
+
+               //console.log(resp.data.devices[0].titles[2].id);
               //console.log("Resp2a: "+resp.data.devices[0].titles[1].activity.richPresence); 
               if(resp.data.state === "Online"){
                 $ionicLoading.hide();
-                if(resp.data.devices[0].titles[0].id === 69094388){
-                  richPresence  = resp.data.devices[0].titles[0].activity.richPresence;
-                  console.log(richPresence);
-                } else if(resp.data.devices[0].titles[1].id === 69094388){
-                  richPresence  = resp.data.devices[0].titles[1].activity.richPresence;
-                  console.log(richPresence);
-                } else if(resp.data.devices[0].titles[2].id === 69094388){
-                 richPresence  = resp.data.devices[0].titles[2].activity.richPresence;
-                 console.log(richPresence);
-                } else {
-                  $scope.placar = "Please goto Fifa.";
-                  richPresence = false;
+                if(resp.data.devices[0].titles.length == 1){
+                    $scope.semFifa = "Please goto Fifa.";
+                    richPresence = false;                 
+                } else if(resp.data.devices[0].titles.length == 2){
+                   if(resp.data.devices[0].titles[1].id === 69094388){                
+                      richPresence  = resp.data.devices[0].titles[1].activity.richPresence;
+                      $scope.status = true;
+                      $scope.semFifa = "Status: "+richPresence;                                  
+                  } else {
+                     $scope.semFifa = "Status: "+richPresence; 
+           
+                     $ionicLoading.hide();
+                     var alertPopup = $ionicPopup.alert({
+                       title: 'Opps!',
+                       template: "<p align='center'><strong>"+gamerSeleccionado+"</strong> no está no Fifa!</p>"
+                     });
+
+                     alertPopup.then(function(res) {
+                       console.log('cerrar');
+                        richPresence = false;
+                        $scope.status = false;
+                     });
+                  }
+                } else{
+                  if(resp.data.devices[0].titles[2].id === 69094388){                
+                      richPresence  = resp.data.devices[2].titles[1].activity.richPresence;
+                      $scope.status = true;
+                      $scope.semFifa = "Status: "+richPresence; 
+
+                  } else {
+                    $scope.timeCasa = false;
+                     $scope.semFifa = "Status: "+richPresence;
+                    richPresence = false;
+                    console.log("Please goto Fifa.");
+                    var alertPopup = $ionicPopup.alert({
+                       title: 'Opps!',
+                       template: "<p align='center'><strong>"+gamerSeleccionado+"</strong> no está no Fifa!</p>"
+                     });
+
+                     alertPopup.then(function(res) {
+                       console.log('cerrar');
+                                richPresence = false;
+                    $scope.status = false;
+                     });
+                  }
                 } 
+                
 
                 if(richPresence != false){
                  var fifaMenu = 'FIFA 17 Temporadas (en los menús)';
                    if(fifaMenu === richPresence){
                       $scope.placar = "No se mostrará el resultado";
-                      
+                      $scope.status = true;
                    } else {
                      var idFifa = 69094388;
                      $scope.lista = true;
+                     $scope.status = false;
                    
                    //console.log("Resp2: "+resp.data.devices[0].titles[0].activity.richPresence);               
                    
@@ -181,9 +235,6 @@ $scope.placar = "";
                        $scope.placar = "Vc está no Menú";
                     }
 
-                     /*
-                     
-                     */
                   }
                 }
 
@@ -193,8 +244,8 @@ $scope.placar = "";
                 console.log("Off");
                   $ionicLoading.hide();
                    var alertPopup = $ionicPopup.alert({
-                   title: 'Error',
-                   template: 'Vc está offline!'
+                   title: 'Opps!',
+                   template: "<p align='center'><strong>"+gamerSeleccionado+"</strong> está offline!</p>"
                  });
 
                  alertPopup.then(function(res) {
@@ -206,9 +257,11 @@ $scope.placar = "";
 
     }, function(err) {
              console.log("Error2 "+err.data);
-             $scope.error = err;
+             $scope.error = err.data;
              $ionicLoading.hide();
     });
+
+   
 
 } // function
 });
