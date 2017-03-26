@@ -97,7 +97,7 @@ angular.module('App').controller('registerController', function(
           method: 'GET',
           headers: {
                       'Access-Control-Allow-Origin': '*',                
-                      'X-AUTH': '4a58d6c0d49e5884e43a756d729940c95c82cca7', //Benbaodan
+                      'X-AUTH': '5056c2081205740a2d765ebe3ff5807dd4178a87', //Benbaodan
                       //'X-AUTH' : '5056c2081205740a2d765ebe3ff5807dd4178a87', // BenbaodanJr
                       //'X-Authorization':idXbl,
                       //'Access-Control-Allow-Methods': 'GET',
